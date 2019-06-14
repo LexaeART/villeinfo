@@ -1,0 +1,85 @@
+body{
+  background-color: #a9ad9b;
+}
+
+.nav-item .nav-link{
+  font-size: 30px;
+  width: 12.5vw;
+  text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+}
+
+.navbar-light{
+  background-color: #434933;
+}
+
+.navbar-brand img{
+  width: 15vw;
+  position: absolute;
+  top: -20px;
+  left: 42vw;
+  z-index: 20000;
+}
+
+#VIN{
+  background-color: red;
+  height: 340px;
+  position: relative;
+  color: white;
+}
+
+#VIN p{
+  margin-bottom: 0;
+}
+
+#VIN hr{
+  border-color: white;
+  border-width: 10px;
+  margin-top: 5px;
+}
+
+#title{
+  position: absolute;
+  bottom: 5%;
+  font-size: 60px;
+}
+
+#read{
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  color: #9cbd57;
+  font-size: 35px;
+}
+
+#read hr{
+  border-color: #9cbd57;
+}
+
+#important{
+  position: absolute;
+  top: 5%;
+  font-size: 25px;
+}
+
+#actu{
+  text-align: center;
+}
+
+#actu h1{
+  color: #444939;
+  font-size: 48px;
+}
+
+#actualités{
+  margin-top: 30px;
+}
+
+#actualités hr{
+  border-width: 9px;
+  border-color: white;
+  margin-top: 30px;
+}
