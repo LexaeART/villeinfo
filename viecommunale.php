@@ -31,7 +31,7 @@
           <a class="nav-link" href="#">Activités</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Ecole</a>
+          <a class="nav-link" href="#">école</a>
         </li>
       </ul>
         <a class="navbar-brand" href="#"><img src="assets/images/logoville.png" /></a>
@@ -52,6 +52,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="VIN">
+          <div class="innerBackground">
+          </div>
           <div class="col-1" id="important">
             <p>
               A la une
@@ -80,6 +82,71 @@
         </div>
         <div class=" col-4">
           <hr />
+        </div>
+      </div>
+      <div class="row" id="filActu">
+        <div class="offset-1 col-2">
+          <div class="imgActu">
+
+          </div>
+          <div class="row" id="infoNews">
+            <div class="col-3">
+              <hr />
+            </div>
+            <div class="col-6">
+              <h3>Catégorie</h3>
+            </div>
+            <div class="col-3">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 titleNews">
+              <h2>Titre de l'article</h2>
+            </div>
+          </div>
+        </div>
+        <div class="offset-2 col-2">
+          <div class="imgActu">
+
+          </div>
+          <div class="row" id="infoNews">
+            <div class="col-3">
+              <hr />
+            </div>
+            <div class="col-6">
+              <h3>Catégorie</h3>
+            </div>
+            <div class="col-3">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 titleNews">
+              <h2>Titre de l'article</h2>
+            </div>
+          </div>
+        </div>
+        <div class="offset-2 col-2">
+          <div class="imgActu">
+
+          </div>
+          <div class="row" id="infoNews">
+            <div class="col-3">
+              <hr />
+            </div>
+            <div class="col-6">
+              <h3>Catégorie</h3>
+            </div>
+            <div class="col-3">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 titleNews">
+              <h2>Titre de l'article</h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>

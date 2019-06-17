@@ -27,7 +27,7 @@
       <div class="col-xs-12 col-lg-6" id="communale">
         <div id="comGlobal">
           <div id="txtCategorie">
-            <a href="test.php" title="Vie Municipale" id="vieCom">Vie Communale</a>
+            <a href="viecommunale.php" title="Vie Municipale" id="vieCom">Vie Communale</a>
           </div>
           <div id="com-bg"></div>
         </div>
