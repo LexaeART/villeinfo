@@ -17,7 +17,31 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-
-    <script src="assets/js/main.js" type="text/javascript"></script>
-  </body>
-  </html>
+  <div class="container-fluid">
+    <div class="row" id="welcome">
+<div class="col-12">
+  <h1>Bienvenue sur le site de la commune de Ville</h1>
+</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-lg-6" id="communale">
+        <div id="comGlobal">
+          <div id="txtCategorie">
+            <a href="test.php" title="Vie Municipale" id="vieCom">Vie Communale</a>
+          </div>
+          <div id="com-bg"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6" id="municipal">
+        <div id="municipalGlobal">
+          <div id="txtCategorie">
+            <a href="test.php" title="Vie Municipale" id="vieMun">Vie Municipale</a>
+          </div>
+          <div id="municipal-bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+</html>

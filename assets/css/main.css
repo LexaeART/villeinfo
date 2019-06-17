@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "LemonMilk";
+  src: url('../fonts/LemonMilk.otf');
+}
+body{
+  overflow: hidden;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-family: 'LemonMilk';
+  margin: 0;
+}
+#welcome{
+  position: absolute;
+  z-index: 10000;
+  background-color: rgba(255,255,255,0.5);
+  left: 25vw;
+  top:50px;
+  line-height: 28px;
+}
+#communale, #municipal{
+  height: 105vh;
+}
+#communale{
+  padding: 0;
+  background-color: #002600;
+}
+#municipal{
+  padding: 0;
+  background-color: #003D6C;
+}
+#txtCategories, #txtCategorie{
+  text-align: center;
+}
+#txtCategories #vieCom{
+  line-height: 100vh;
+  color: white;
+  font-family: 'LemonMilk';
+  font-size:50px;
+    display: block;
+    height: 100vh;
+    width:100%;
+}
+#municipalGlobal{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+  margin:0 auto;
+  box-shadow:0 2px 15px -5px rgba(0,0,0,1);
+  z-index: 1;
+
+}
+#municipalGlobal:hover #municipal-bg {
+    transform: scale(0.95);
+  cursor:pointer;
+}
+#vieMun {
+  position: absolute;
+  color:white;
+  z-index:10;
+  font-family: 'LemonMilk';
+  font-size: 50px;
+  height: 100vh;
+  width:100%;
+  top:0;
+  left:0;
+  line-height: 100vh;
+}
+
+#municipal-bg{
+  position:absolute;
+  top:0;
+  left:0;
+  transition: 0.5s ease all;
+  height:100%;
+  width:100%;
+  background:url('../images/mairie.jpg');
+  background-size:cover;
+  background-color:rgba(0,0,0,0.3);
+  background-blend-mode:overlay;
+  z-index: 0;
+}
+
+
+
+
+
+
+
+#comGlobal{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+  margin:0 auto;
+  box-shadow:0 2px 15px -5px rgba(0,0,0,1);
+  z-index: 1;
+
+}
+#comGlobal:hover #com-bg {
+    transform: scale(0.95);
+  cursor:pointer;
+}
+#vieCom {
+  position: absolute;
+  color:white;
+  z-index:10;
+  font-family: 'LemonMilk';
+  font-size: 50px;
+  height: 100vh;
+  width:100%;
+  top:0;
+  left:0;
+  line-height: 100vh;
+}
+
+#com-bg{
+  position:absolute;
+  top:0;
+  left:0;
+  transition: 0.5s ease all;
+  height:100%;
+  width:100%;
+  background:url('../images/commune.jpg');
+  background-size:cover;
+  background-color:rgba(0,0,0,0.3);
+  background-blend-mode:overlay;
+  z-index: 0;
+}
+@media screen and (max-width: 991px){
+  body{
+    overflow: visible;
+  }
+}
