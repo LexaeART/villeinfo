@@ -13,7 +13,7 @@
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
-  <link href="assets/css/viecommunale.css" rel="stylesheet" type="text/css"/>
+  <link href="assets/css/associations.css" rel="stylesheet" type="text/css"/>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
@@ -51,107 +51,44 @@
   <main id="">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12" id="VIN">
-          <div class="innerBackground">
-          </div>
-          <div class="col-1" id="important">
-            <p>
-              A la une
-            </p>
-            <hr />
-          </div>
-          <div class="col-5" id="title">
-            <p>
-              Titre de l'article
-            </p>
-          </div>
-          <div class="col-2" id="read">
-            <p>
-              Lire l'article
-            </p>
-            <hr />
-          </div>
+        <div class="col-12" id="frontImage">
+
         </div>
       </div>
-      <div class="row" id="actualités">
-        <div class="offset-1 col-4">
-          <hr />
-        </div>
-        <div class=" col-2" id="actu">
-          <h1>Actualités</h1>
-        </div>
-        <div class=" col-4">
-          <hr />
-        </div>
-      </div>
-      <div class="row" id="filActu">
-        <div class="offset-1 col-2">
-          <div class="imgActu">
-
-          </div>
-          <div class="row" id="infoNews">
-            <div class="col-3">
-              <hr />
-            </div>
-            <div class="col-6">
-              <h3>Catégorie</h3>
-            </div>
-            <div class="col-3">
-              <hr />
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-12" id="breadcrumbs">
           <div class="row">
-            <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
-            </div>
-          </div>
-        </div>
-        <div class="offset-2 col-2">
-          <div class="imgActu">
-
-          </div>
-          <div class="row" id="infoNews">
-            <div class="col-3">
-              <hr />
-            </div>
-            <div class="col-6">
-              <h3>Catégorie</h3>
-            </div>
-            <div class="col-3">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
-            </div>
-          </div>
-        </div>
-        <div class="offset-2 col-2">
-          <div class="imgActu">
-
-          </div>
-          <div class="row" id="infoNews">
-            <div class="col-3">
-              <hr />
-            </div>
-            <div class="col-6">
-              <h3>Catégorie</h3>
-            </div>
-            <div class="col-3">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
+            <div class="offset-1 col-5">
+              <p>
+                Accueil \ Associations
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <div class="row">
+        <div id="change" class="col-12">
+          <div class="row">
+            <div class="col-3 imgAssoc">
+              <img src="assets/images/fondUne.jpg" />
+            </div>
+            <div class="offset-1 col-8">
+              <h2>Les Galopins</h2>
+              <p>
+                L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
+
+Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
+
+Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
+              </p>
+            </div>
+          </div>
+        </div>
+</div>
     </div>
   </main>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
-    <script src="assets/js/viecommunale.js" type="text/javascript"></script>
+  <script src="assets/js/associations.js" type="text/javascript"></script>
+
   </body>
   </html>
