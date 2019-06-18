@@ -85,6 +85,25 @@ Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et 
           </div>
         </div>
 </div>
+<div class="row">
+  <div id="change" class="col-12">
+    <div class="row">
+      <div class="col-3 imgAssoc">
+        <img src="assets/images/fondUne.jpg" />
+      </div>
+      <div class="offset-1 col-8">
+        <h2>Les Galopins</h2>
+        <p>
+          L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
+
+Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
+
+Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </main>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>

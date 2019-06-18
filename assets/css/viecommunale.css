@@ -3,7 +3,7 @@ body{
 }
 
 .nav-item .nav-link{
-  font-size: 30px;
+  font-size: 20px;
   width: 12.5vw;
   text-align: center;
 }
@@ -127,7 +127,7 @@ body{
 }
 
 #filActu h3{
-  font-size: 20px;
+  font-size: 15px;
   color: #444939;
   font-family: 'LemonMilk';
   padding: 0;
@@ -141,6 +141,10 @@ body{
   margin-top: 10px;
 }
 
+#infoNews h3{
+  text-align: center;
+}
+
 .titleNews{
   text-align: center;
   font-family: 'LemonMilk';
@@ -148,4 +152,29 @@ body{
 .titleNews h2{
   color: white;
   font-size: 26px;
+}
+
+@media screen and (max-width: 994px) {
+  #actu h1{
+    font-size: 25px;
+  }
+  #actualités hr{
+    margin-top:10px;
+  }
+  #filActu h3{
+    font-size: 10px;
+  }
+  #filActu hr{
+    margin-top:4px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  #filActu h3{
+    font-size: 13px;
+  }
+  #actu h1{
+    font-size: 30px;
+  }
 }

@@ -54,18 +54,18 @@
         <div class="col-12" id="VIN">
           <div class="innerBackground">
           </div>
-          <div class="col-1" id="important">
+          <div class="col-3 col-lg-1" id="important">
             <p>
               A la une
             </p>
             <hr />
           </div>
-          <div class="col-5" id="title">
+          <div class="col-5 col-lg-5" id="title">
             <p>
               Titre de l'article
             </p>
           </div>
-          <div class="col-2" id="read">
+          <div class="col-4 col-lg-2" id="read">
             <p>
               Lire l'article
             </p>
@@ -74,26 +74,26 @@
         </div>
       </div>
       <div class="row" id="actualités">
-        <div class="offset-1 col-4">
+        <div class="offset-1 col-3 col-md-3 col-lg-4">
           <hr />
         </div>
-        <div class=" col-2" id="actu">
+        <div class="col-4 col-md-3 col-lg-2" id="actu">
           <h1>Actualités</h1>
         </div>
-        <div class=" col-4">
+        <div class=" col-3 col-md-3 col-lg-4">
           <hr />
         </div>
       </div>
       <div class="row" id="filActu">
-        <div class="offset-1 col-2">
+        <div class="col-12 col-md-6 offset-lg-1 col-lg-2">
           <div class="imgActu">
 
           </div>
           <div class="row" id="infoNews">
-            <div class="col-3">
+            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
               <hr />
             </div>
-            <div class="col-6">
+            <div class="col-4 col-lg-6">
               <h3>Catégorie</h3>
             </div>
             <div class="col-3">
@@ -106,15 +106,15 @@
             </div>
           </div>
         </div>
-        <div class="offset-2 col-2">
+        <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
           <div class="imgActu">
 
           </div>
           <div class="row" id="infoNews">
-            <div class="col-3">
+            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
               <hr />
             </div>
-            <div class="col-6">
+            <div class="col-4 col-lg-6">
               <h3>Catégorie</h3>
             </div>
             <div class="col-3">
@@ -127,15 +127,15 @@
             </div>
           </div>
         </div>
-        <div class="offset-2 col-2">
+        <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
           <div class="imgActu">
 
           </div>
           <div class="row" id="infoNews">
-            <div class="col-3">
+            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
               <hr />
             </div>
-            <div class="col-6">
+            <div class="col-4 col-lg-6">
               <h3>Catégorie</h3>
             </div>
             <div class="col-3">
