@@ -8,8 +8,14 @@ body{
   text-align: center;
 }
 
+@font-face {
+  font-family: "LemonMilk";
+  src: url('../fonts/LemonMilk.otf');
+}
+
 .navbar-light .navbar-nav .nav-link{
   color: white;
+  font-family: 'LemonMilk';
 }
 
 .navbar-light{
@@ -25,10 +31,29 @@ body{
 }
 
 #VIN{
-  background-color: red;
   height: 340px;
   position: relative;
   color: white;
+  font-family: 'LemonMilk';
+  padding: 0;
+  overflow: hidden;
+  transition: 200ms;
+}
+
+.innerBackground{
+  position: relative;
+  height: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/fondUne.jpg');
+  background-size: cover;
+  transition: 200ms;
+}
+
+.innerBackground:hover{
+  transform: scale(1.2);
+}
+
+#VIN:hover{
+  border: 20px white solid;
 }
 
 #VIN p{
@@ -44,7 +69,7 @@ body{
 #title{
   position: absolute;
   bottom: 5%;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 #read{
@@ -52,7 +77,7 @@ body{
   bottom: 5%;
   right: 3%;
   color: #9cbd57;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 #read hr{
@@ -62,7 +87,7 @@ body{
 #important{
   position: absolute;
   top: 5%;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #actu{
@@ -71,7 +96,8 @@ body{
 
 #actu h1{
   color: #444939;
-  font-size: 48px;
+  font-size: 43px;
+  font-family: 'LemonMilk';
 }
 
 #actualités{
@@ -81,5 +107,45 @@ body{
 #actualités hr{
   border-width: 9px;
   border-color: white;
+  margin-top: 20px;
+}
+
+#filActu{
   margin-top: 30px;
+}
+
+#filActu hr{
+  border-width: 4px;
+  border-color: white;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.imgActu{
+  background-color: red;
+  height: 150px;
+}
+
+#filActu h3{
+  font-size: 20px;
+  color: #444939;
+  font-family: 'LemonMilk';
+  padding: 0;
+}
+
+#filActu .col-3{
+  padding: 0;
+}
+
+#infoNews{
+  margin-top: 10px;
+}
+
+.titleNews{
+  text-align: center;
+  font-family: 'LemonMilk';
+}
+.titleNews h2{
+  color: white;
+  font-size: 26px;
 }
