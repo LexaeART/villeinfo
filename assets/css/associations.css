@@ -3,7 +3,7 @@ body{
 }
 
 .nav-item .nav-link{
-  font-size: 30px;
+  font-size: 20px;
   width: 12.5vw;
   text-align: center;
 }
@@ -23,7 +23,7 @@ body{
 }
 
 .navbar-brand img{
-  width: 15vw;
+  width: 10vw;
   position: absolute;
   top: -20px;
   left: 42vw;
@@ -70,4 +70,10 @@ object-fit: cover;
 
 #change p{
   color: white;
+}
+
+@media screen and (max-width: 800px) {
+  #change{
+    height: 55vh;
+  }
 }
