@@ -1,0 +1,11 @@
+body{
+  background-color: #A9AD9B;
+}
+div{
+  margin: auto;
+}
+#loginBox{
+  height: 50vh;
+  background-color: #434933;
+  margin-top: 25vh;
+}
