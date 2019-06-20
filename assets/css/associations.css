@@ -47,13 +47,13 @@ body{
 }
 
 #change {
-height:200px;
+min-height:200px;
 background-color:#434933;
 border-left: red 20px solid;
 }
 
 .imgAssoc{
-  height: 200px;
+  min-height: 200px;
 }
 
 .imgAssoc img{
@@ -72,8 +72,12 @@ object-fit: cover;
   color: white;
 }
 
+#change .second{
+  background-color: #626b49;
+}
+
 @media screen and (max-width: 800px) {
   #change{
-    height: 55vh;
+    min-height: 55vh;
   }
 }
