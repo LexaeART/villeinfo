@@ -38,6 +38,7 @@ body{
   padding: 0;
   overflow: hidden;
   transition: 200ms;
+  background-color: white;
 }
 
 .innerBackground{
@@ -45,15 +46,15 @@ body{
   height: 100%;
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/fondUne.jpg');
   background-size: cover;
-  transition: 200ms;
+  background-color:rgba(0,0,0,0.3);
+  transition: 0.5s ease all;
 }
 
 .innerBackground:hover{
-  transform: scale(1.2);
+  transform: scale(0.95);
 }
 
 #VIN:hover{
-  border: 20px white solid;
 }
 
 #VIN p{
@@ -69,6 +70,7 @@ body{
 #title{
   position: absolute;
   bottom: 5%;
+  left: 2%;
   font-size: 50px;
 }
 
@@ -87,6 +89,7 @@ body{
 #important{
   position: absolute;
   top: 5%;
+  left: 2%;
   font-size: 20px;
 }
 
