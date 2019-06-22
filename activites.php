@@ -14,6 +14,7 @@
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/activites.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
@@ -34,7 +35,7 @@
           <a class="nav-link" href="ecole.php">école</a>
         </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
+      <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="patrimoine.php">Patrimoine</a>
@@ -52,7 +53,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="frontImage">
-
+            <h1>Activités</h1>
         </div>
       </div>
       <div class="row">
@@ -60,54 +61,89 @@
           <div class="row">
             <div class="offset-1 col-5">
               <p>
-                Accueil \ Activités
+                Accueil \ Accueil Vie communale \ Activités
               </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div id="change" class="col-12">
-          <div class="row">
-            <div class="col-3 imgAssoc">
-              <img src="assets/images/fondUne.jpg" />
-            </div>
-            <div class="offset-1 col-8">
-              <h2>Les Galopins</h2>
-              <p>
-                L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
-
-Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
-
-Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
-              </p>
-            </div>
-          </div>
-        </div>
-</div>
-<div class="row">
-  <div id="change" class="col-12">
-    <div class="row">
-      <div class="col-3 imgAssoc">
-        <img src="assets/images/fondUne.jpg" />
-      </div>
-      <div class="offset-1 col-8">
-        <h2>Les Galopins</h2>
-        <p>
-          L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
-
-Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
-
-Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
-        </p>
       </div>
     </div>
-  </div>
-</div>
+    <div class="container">
+      <div id="groupAssoc">
+        <div class="row">
+          <div id="change" class="col-12">
+            <div class="row  second">
+              <div class="col-3 imgAssoc">
+                <img src="assets/images/fondUne.jpg" />
+              </div>
+              <div class="offset-1 col-8">
+                <h2>Football</h2>
+                <p>
+                  Activité Libre
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="change" class="col-12">
+            <div class="row">
+              <div class="col-3 imgAssoc">
+                <img src="assets/images/fondUne.jpg" />
+              </div>
+              <div class="offset-1 col-8">
+                <h2>Tennis </h2>
+                <p>
+                  Inscription : Mairie de Ville<br />
+
+                  Tarifs :
+                  <ul>
+                    <li>
+                      Habitants de Ville = 16 € /an
+                    </li>
+                    <li>
+                      Habitants de Passel = 23 €/an
+                    </li>
+                    <li>
+                      Extérieurs = 39 €/an
+                    </li>
+                    <li>
+                      Invité = 4€
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="change" class="col-12">
+            <div class="row  second">
+              <div class="col-3 imgAssoc">
+                <img src="assets/images/fondUne.jpg" />
+              </div>
+              <div class="offset-1 col-8">
+                <h2>La Salle Polyvalente</h2>
+                <p>
+                  Pour toutes ses activités communales, la municipalité dispose d'une salle polyvalente de 540 m2 (voir ci dessous)
+
+                  Cette salle peut recevoir jusqu'à 300 personnes, et est équipée d'une cuisine adaptée aux besoins de grandes réceptions.
+
+                  Pour organiser vos festivités ou cérémonie, la salle polyvalente vous ouvre ses portes.<br />
+
+                  Réservation : Mairie de Ville<br />
+
+                  Tarifs de Location : Cliquer Ici pour obtenir les tarifs (pdf)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
-  </body>
-  </html>
+</body>
+</html>

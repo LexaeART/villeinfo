@@ -14,6 +14,7 @@
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/ecole.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
@@ -52,7 +53,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="frontImage">
-
+          <h1>écoles</h1>
         </div>
       </div>
       <div class="row">
@@ -60,26 +61,32 @@
           <div class="row">
             <div class="offset-1 col-5">
               <p>
-                Accueil \ École
+                Accueil \ Accueil Vie communale \ école
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="row" id="preface">
-        <div class="offset-1 col-10">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 intro">
           <p>
-            Ville fait partie du R.P.I. de Ville-Suzoy-Passel.
+            Ville fait partie du R.P.I. de Ville-Suzoy-Passel.<br />
 
             Les Classes sont réparties ainsi :</p>
-
-            <ul>
-              <li> Maternelles : Ville </li>
-              <li> CP - CE1 - CE2 : Suzoy </li>
-              <li> CM1 - CM2 : Passel </li>
-            </ul>
-
-            <p>Une cantine et un accueil périscolaire sont ouverts le  matin, le midi et le soir après la classe à Suzoy.
+            <strong><ul>
+              <li>
+                Maternelles : Ville
+              </li>
+              <li>
+                CP - CE1 - CE2 : Suzoy
+              </li>
+              <li>
+                CM1 - CM2 : Passel
+              </li>
+            </ul></strong><p>
+            Une cantine et un accueil périscolaire sont ouverts le  matin, le midi et le soir après la classe à Suzoy
 
             Un car scolaire transporte les enfants entre les trois communes.
 
@@ -89,48 +96,93 @@
           </p>
         </div>
       </div>
-      <div class="row">
-        <div id="change" class="col-12">
-          <div class="row">
-            <div class="col-3 imgAssoc">
-              <img src="assets/images/fondUne.jpg" />
+      <div id="groupAssoc">
+        <div class="row">
+          <div id="change" class="col-12">
+            <div class="row  second">
+              <div class="col-3 imgAssoc">
+                <img src="assets/images/fondUne.jpg" />
+              </div>
+              <div class="offset-1 col-8">
+                <h2>école de Ville</h2>
+                <p>
+                  <strong>Directrice :</strong> <br />
+                  Christine Meersseman<br />
+                  <strong>Institutrices :</strong>
+                  <ul>
+                    <li>
+                      Christine Meersseman
+                    </li>
+                    <li>
+                      Sylvie Henry
+                    </li>
+                    <li>
+                      Sarah Da Peixao
+                    </li>
+                    <li>
+                      Céline Hericher
+                    </li>
+                  </ul>
+                </p>
+              </div>
             </div>
-            <div class="offset-1 col-8">
-              <h2>Les Galopins</h2>
-              <p>
-                L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
-
-                Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
-
-                Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
-              </p>
+          </div>
+        </div>
+        <div class="row">
+          <div id="change" class="col-12">
+            <div class="row">
+              <div class="col-3 imgAssoc">
+                <img src="assets/images/fondUne.jpg" />
+              </div>
+              <div class="offset-1 col-8">
+                <h2>Ecole de Suzoy </h2>
+                <p>
+                  <strong>Directrice :</strong> <br />
+                  Marie-Pierre Desseaux<br />
+                  <strong>Institutrices :</strong>
+                  <ul>
+                    <li>
+                      Marie-Pierre Desseaux
+                    </li>
+                    <li>
+                      Nathalie Sobusiak
+                    </li>
+                  </ul>
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="change" class="col-12">
+              <div class="row  second">
+                <div class="col-3 imgAssoc">
+                  <img src="assets/images/fondUne.jpg" />
+                </div>
+                <div class="offset-1 col-8">
+                  <h2>Ecole de Passel</h2>
+                  <p>
+                    <strong>Directrice :</strong> <br />
+                    Elisabeth Chevalier<br />
+                    <strong>Institutrices :</strong>
+                    <ul>
+                      <li>
+                        Elisabeth Chevalier
+                      </li>
+                      <li>
+                        Corentine Querrec
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div id="change" class="col-12">
-          <div class="row">
-            <div class="col-3 imgAssoc">
-              <img src="assets/images/fondUne.jpg" />
-            </div>
-            <div class="offset-1 col-8">
-              <h2>Les Galopins</h2>
-              <p>
-                L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
+    </main>
+    <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="assets/js/associations.js" type="text/javascript"></script>
 
-                Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
-
-                Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
-  <script src="assets/js/associations.js" type="text/javascript"></script>
-
-</body>
-</html>
+  </body>
+  </html>

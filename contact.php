@@ -34,7 +34,7 @@
           <a class="nav-link" href="ecole.php">école</a>
         </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
+      <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="patrimoine.php">Patrimoine</a>
@@ -52,7 +52,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="frontImage">
-
+          <h1>Contact</h1>
         </div>
       </div>
       <div class="row">
@@ -66,48 +66,26 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div id="change" class="col-12">
-          <div class="row">
-            <div class="col-3 imgAssoc">
-              <img src="assets/images/fondUne.jpg" />
-            </div>
-            <div class="offset-1 col-8">
-              <h2>Les Galopins</h2>
-              <p>
-                L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
-
-Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
-
-Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
-              </p>
+      <div class="container">
+        <div class="row">
+          <div id="change" class="col-12">
+            <div class="row  second">
+              <div class="col-3 imgAssoc">  
+              </div>
+              <div class="offset-1 col-8">
+                <h2>Nous contacter</h2>
+                <p>
+                  Vous pouvez nous contacter en envoyant un mail à <a HREF="mailto:mairie.ville@wanadoo.fr">mairie.ville@wanadoo.fr</a><br />
+                  Vous pouvez aussi nous contacter en nous appellant au <a href="tel:+33344092404">03.44.09.24.04</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-</div>
-<div class="row">
-  <div id="change" class="col-12">
-    <div class="row">
-      <div class="col-3 imgAssoc">
-        <img src="assets/images/fondUne.jpg" />
       </div>
-      <div class="offset-1 col-8">
-        <h2>Les Galopins</h2>
-        <p>
-          L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
-
-Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
-
-Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-  </main>
-  <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
-  <script src="assets/js/associations.js" type="text/javascript"></script>
+    </main>
+    <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="assets/js/associations.js" type="text/javascript"></script>
 
   </body>
   </html>
