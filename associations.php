@@ -14,6 +14,7 @@
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/associations.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
@@ -52,7 +53,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="frontImage">
-
+          <h1>Associations</h1>
         </div>
       </div>
       <div class="row">
@@ -66,6 +67,8 @@
           </div>
         </div>
       </div>
+    </div>
+        <div class="container">
       <div id="groupAssoc">
         <div class="row">
           <div id="change" class="col-12">

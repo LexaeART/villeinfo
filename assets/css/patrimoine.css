@@ -30,9 +30,37 @@ body{
   z-index: 20000;
 }
 
+.intro{
+  text-align: center;
+}
+
+.intro p{
+  color: white;
+  font-family: 'Raleway';
+font-size: 20px;
+}
+
+ul li{
+  list-style: none;
+    color: white;
+    font-family: 'Raleway'
+}
+
 #frontImage{
   background-color: red;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/patrimoine.jpg');
+  background-position: center;
   height: 200px;
+}
+
+#frontImage h1{
+  font-family: 'LemonMilk';
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 39%;
+  font-size: 50px;
+  color: white;
 }
 
 #breadcrumbs{
@@ -47,13 +75,13 @@ body{
 }
 
 #change {
-height:200px;
+min-height:200px;
 background-color:#434933;
-border-left: red 20px solid;
+margin-bottom: 20px;
 }
 
 .imgAssoc{
-  height: 200px;
+  min-height: 200px;
 }
 
 .imgAssoc img{
@@ -71,24 +99,19 @@ object-fit: cover;
 #change p{
   color: white;
 }
-#preface{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
+
+#change .second{
+  background-color: #626b49;
 }
 
-#preface p{
-  font-size: 20px;
-}
-
-#preface ul li{
-  list-style: none;
-
-    font-size: 20px;
+h3{
+  font-size: 18px;
+  font-family: 'LemonMilk';
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
   #change{
-    height: 55vh;
+    min-height: 55vh;
   }
 }

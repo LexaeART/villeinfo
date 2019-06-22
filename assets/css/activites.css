@@ -32,7 +32,19 @@ body{
 
 #frontImage{
   background-color: red;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/activites.png');
+  background-position: center;
   height: 200px;
+}
+
+#frontImage h1{
+  font-family: 'LemonMilk';
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  font-size: 50px;
+  color: white;
 }
 
 #breadcrumbs{
@@ -47,13 +59,13 @@ body{
 }
 
 #change {
-height:200px;
+min-height:200px;
 background-color:#434933;
-border-left: red 20px solid;
+margin-bottom: 20px;
 }
 
 .imgAssoc{
-  height: 200px;
+  min-height: 200px;
 }
 
 .imgAssoc img{
@@ -72,8 +84,17 @@ object-fit: cover;
   color: white;
 }
 
+#change .second{
+  background-color: #626b49;
+}
+
 @media screen and (max-width: 800px) {
   #change{
-    height: 55vh;
+    min-height: 55vh;
   }
+}
+
+ul li{
+  color: white;
+  list-style: none;
 }
