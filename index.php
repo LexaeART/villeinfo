@@ -35,7 +35,7 @@
       <div class="col-xs-12 col-lg-6" id="municipal">
         <div id="municipalGlobal">
           <div id="txtCategorie">
-            <a href="test.php" title="Vie Municipale" id="vieMun">Vie Municipale</a>
+            <a href="viemunicipale.php" title="Vie Municipale" id="vieMun">Vie Municipale</a>
           </div>
           <div id="municipal-bg"></div>
         </div>

@@ -1,0 +1,86 @@
+body{
+  background-color: #455A70;
+}
+
+.nav-item .nav-link{
+  font-size: 20px;
+  width: 12.5vw;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url('../fonts/LemonMilk.otf');
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+  font-family: 'LemonMilk';
+}
+
+.navbar-light{
+  background-color: #003D6C;
+}
+
+.navbar-brand img{
+  width: 10vw;
+  position: absolute;
+  top: -20px;
+  left: 42vw;
+  z-index: 20000;
+}
+
+#frontImage{
+  background-color: red;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/associations.jpg');
+  background-position: center;
+  height: 200px;
+}
+
+#frontImage h1{
+  font-family: 'LemonMilk';
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 40vw;
+  font-size: 50px;
+  color: white;
+}
+
+#breadcrumbs{
+  height: 60px;
+  background-color: #4B8AFF;
+}
+
+#breadcrumbs p{
+  line-height: 60px;
+  color: white;
+  font-family: 'LemonMilk';
+}
+
+#change {
+min-height:200px;
+background-color:#003D6C;
+margin-bottom: 20px;
+margin-top: 30px;
+}
+
+.imgAssoc{
+  min-height: 200px;
+}
+
+.imgAssoc img{
+  width: 100%; height: 100%;
+object-fit: cover;
+}
+
+#change h2{
+  color: white;
+  font-family: 'LemonMilk';
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+
+#change p{
+  color: white;
+}

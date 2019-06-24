@@ -1,0 +1,199 @@
+body{
+  background-color: #455A70;
+}
+
+.nav-item .nav-link{
+  font-size: 20px;
+  width: 12.5vw;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url('../fonts/LemonMilk.otf');
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+  font-family: 'LemonMilk';
+}
+
+.navbar-light{
+  background-color: #003D6C;
+}
+
+.navbar-brand img{
+  width: 10vw;
+  position: absolute;
+  top: -20px;
+  left: 42vw;
+  z-index: 20000;
+}
+
+#VIN{
+  height: 340px;
+  position: relative;
+  color: white;
+  font-family: 'LemonMilk';
+  padding: 0;
+  overflow: hidden;
+  transition: 200ms;
+  background-color: white;
+}
+
+.innerBackground{
+  position: relative;
+  height: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/fondUne.jpg');
+  background-size: cover;
+  background-color:rgba(0,0,0,0.3);
+  transition: 0.5s ease all;
+}
+
+.innerBackground:hover{
+  transform: scale(0.95);
+}
+
+#VIN:hover{
+}
+
+#VIN p{
+  margin-bottom: 0;
+}
+
+#VIN hr{
+  border-color: white;
+  border-width: 10px;
+  margin-top: 5px;
+}
+
+#title{
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  font-size: 50px;
+}
+
+#read{
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  color: #9cbd57;
+  font-size: 25px;
+}
+
+#read hr{
+  border-color: #9cbd57;
+}
+
+#important{
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-size: 20px;
+}
+
+#actu{
+  text-align: center;
+}
+
+#actu h1{
+  color: #444939;
+  font-size: 43px;
+  font-family: 'LemonMilk';
+}
+
+#actualités{
+  margin-top: 30px;
+}
+
+#actualités hr{
+  border-width: 9px;
+  border-color: white;
+  margin-top: 20px;
+}
+
+#filActu{
+  margin-top: 30px;
+}
+
+#filActu hr{
+  border-width: 4px;
+  border-color: white;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.imgActu{
+  background-color: red;
+  height: 150px;
+}
+
+#filActu h3{
+  font-size: 15px;
+  color: #444939;
+  font-family: 'LemonMilk';
+  padding: 0;
+}
+
+#filActu .col-3{
+  padding: 0;
+}
+
+#infoNews{
+  margin-top: 10px;
+}
+
+#infoNews h3{
+  text-align: center;
+}
+
+.titleNews{
+  text-align: center;
+  font-family: 'LemonMilk';
+}
+.titleNews h2{
+  color: white;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 994px) {
+  #actu h1{
+    font-size: 25px;
+  }
+  #actualités hr{
+    margin-top:10px;
+  }
+  #filActu h3{
+    font-size: 10px;
+  }
+  #filActu hr{
+    margin-top:4px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  #filActu h3{
+    font-size: 13px;
+  }
+  #actu h1{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #actu h1{
+    font-size: 16px;
+  }
+
+  #actualités hr{
+    border-width: 5px;
+  }
+  #title{
+    font-size: 40px;
+  }
+  #read{
+    font-size: 20px;
+  }
+}
