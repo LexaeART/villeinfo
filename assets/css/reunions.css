@@ -113,3 +113,26 @@ object-fit: cover;
 .btn-link{
   color: white;
 }
+
+.card-body a{
+  color: black;
+  transition: 200ms;
+}
+
+.card-body a:hover{
+  color: #4B8AFF;
+}
+
+.lastCR > li:nth-child(1)::before{
+  content: "‼";
+}
+
+.lastCR > li:nth-child(1) a{
+  color: #4B8AFF;
+  font-weight: bold;
+}
+
+.lastCR > li:nth-child(1){
+  color: #4B8AFF;
+  font-weight: bold;
+}

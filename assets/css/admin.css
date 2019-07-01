@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "LemonMilk";
+  src: url('../fonts/LemonMilk.otf');
+}
+
+body{
+  background-color: #a9ad9b;
+}
+
+.titlePage{
+  background-color: #434933;
+  height: 80px;
+}
+.titlePage img{
+  margin-top: 3%;
+  width:80%;
+  height:100%;
+  display:block;
+}
+
+.title{
+  color: white;
+    font-family: "LemonMilk";
+    text-align: center;
+}
+
+.btnAdmin{
+  background-color: white;
+  height: 200px;
+}
+
+.lineAdmin{
+  margin-top: 8  0px;
+}
