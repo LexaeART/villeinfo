@@ -18,26 +18,61 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div class="row" id="welcome">
-<div class="col-12">
-  <h1>Bienvenue sur le site de la commune de Ville</h1>
-</div>
-    </div>
     <div class="row">
-      <div class="col-xs-12 col-lg-6" id="communale">
-        <div id="comGlobal">
-          <div id="txtCategorie">
-            <a href="viecommunale.php" title="Vie Municipale" id="vieCom">Vie Communale</a>
+      <div class="col-12 titlePage">
+        <div class="row">
+          <div class="col-1">
+            <img src="assets/images/logovillet.png" />
           </div>
-          <div id="com-bg"></div>
+          <div class="col-10 title">
+            <h1>Page d'administration de Ville</h1>
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-lg-6" id="municipal">
-        <div id="municipalGlobal">
-          <div id="txtCategorie">
-            <a href="test.php" title="Vie Municipale" id="vieMun">Vie Municipale</a>
+    </div>
+    <div class="row lineAdmin">
+      <div class="offset-1 col-11">
+        <div class="row">
+          <div class="col-2 btnAdmin">
+
           </div>
-          <div id="municipal-bg"></div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
+        </div>
+        <div class="row lineAdmin">
+          <div class="col-2 btnAdmin">
+
+          </div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
+        </div>
+        <div class="row lineAdmin">
+          <div class="col-2 btnAdmin">
+
+          </div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
+          <div class="offset-1 col-2 btnAdmin">
+
+          </div>
         </div>
       </div>
     </div>

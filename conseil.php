@@ -1,4 +1,9 @@
 <!doctype html>
+<?php
+    include_once 'models/dataBase.php';
+    include_once 'models/conseil.php';
+    include_once 'controlers/conseilController.php';
+?>
 <html lang="fr">
 <head>
   <!--        <base href="https://www.villeinfo.fr" />-->
@@ -9,7 +14,7 @@
   <meta name="publisher" content="Kaiartsu">
   <meta name="author" content="Kaiartsu" />
   <meta name="reply-to" content="contact@kaiartsu.fr">
-  <title>Accueil | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
+  <title>Conseil | Vie Municipale | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -32,7 +37,7 @@
           <a class="nav-link" href="villinfos.php">Vill'Infos</a>
         </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
+        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="reunions.php">Réunions</a>
@@ -69,7 +74,7 @@
           <div class="row">
             <div class="col-12 intro">
               <p>
-                Il est composé de 15 conseillers municipaux.
+                Il est composé de 13 conseillers municipaux.
 
  Le rôle du conseil municipal est de prendre toutes les décisions concernant la gestion de la commune en matière de voirie, de bâtiments (constructions et entretien).<br/>
  Il fixe tous les ans le budget communal et répartit les dépenses de fonctionnement et d'investissement selon les orientations qui ont été prises.<br/>
@@ -80,20 +85,27 @@ Le C.C.A.S. est chargé d'étudier les dossiers des personnes en difficulté.
             </div>
           </div>
       <div id="groupAssoc">
-  <div class="row">
-    <div id="change" class="offset-2 col-8">
-      <div class="row">
-        <div class="col-4 imgAssoc">
-          <img src="assets/images/maire.jpg" />
-        </div>
-        <div class="offset-1 col-7">
-          <h2>Philippe Barbillon</h2>
-          <p>
-             Maire  </p>
-        </div>
-      </div>
-    </div>
-  </div>
+        <?php
+          foreach ($conseillers as $conseiller) {
+            ?>
+            <div class="row">
+              <div id="change" class="offset-2 col-8">
+                <div class="row">
+                  <div class="col-4 imgAssoc">
+                    <img src="assets/images/conseil/<?= $conseiller->id?>" />
+                  </div>
+                  <div class="offset-1 col-7">
+                    <h2> <?= $conseiller->name ?> </h2>
+                    <p>
+                        <?= $conseiller->fonction ?>  </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <?php
+          }
+         ?>
       </div>
     </div>
   </main>

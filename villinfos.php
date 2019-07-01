@@ -1,4 +1,9 @@
 <!doctype html>
+<?php
+    include_once 'models/dataBase.php';
+    include_once 'models/villinfos.php';
+    include_once 'controlers/villinfosController.php';
+?>
 <html lang="fr">
 <head>
   <!--        <base href="https://www.villeinfo.fr" />-->
@@ -9,7 +14,7 @@
   <meta name="publisher" content="Kaiartsu">
   <meta name="author" content="Kaiartsu" />
   <meta name="reply-to" content="contact@kaiartsu.fr">
-  <title>Accueil | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
+  <title>Vill'infos | Vie Municipale | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -32,7 +37,7 @@
           <a class="nav-link" href="villinfos.php">Vill'Infos</a>
         </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
+        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="reunions.php">Réunions</a>
@@ -69,26 +74,25 @@
       <div id="groupAssoc">
         <a href="#">
           <div class="row">
-            <div id="change" class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
-              <div class="row">
-                <div class="col-2 imgAssoc">
+            <?php
+            foreach ($infos as $info) {
+              ?>
+
+                <div id="change" class="mr-auto col-xs-12 col-sm-12 col-md-12 col-lg-5">
+                  <div class="row">
+                    <div class="col-2 imgAssoc">
+                    </div>
+                    <div class="offset-1 col-8">
+                      <h2><?= $info->name ?></h2>
+                      <p><?= $info->date ?></p>
+                    </div>
+                  </div>
                 </div>
-                <div class="offset-1 col-8">
-                  <h2>Vill'Infos N° 96</h2>
-                  <p>4ème Trimestre 2018</p>
-                </div>
-              </div>
-            </div>
-            <div id="change" class="offset-lg-1 col-xs-12 col-sm-12 col-md-12 col-lg-5">
-              <div class="row">
-                <div class="col-2 imgAssoc">
-                </div>
-                <div class="offset-1 col-8">
-                  <h2>Vill'Infos N° 95</h2>
-                  <p>3ème Trimestre 2018</p>
-                </div>
-              </div>
-            </div>
+
+              <?php
+            }
+
+            ?>
     </div>
         </a>
       </div>
