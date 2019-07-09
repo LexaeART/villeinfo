@@ -17,18 +17,25 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-6">
+        <div class="col-12">
+          <h1>Connexion - Mairie de Ville</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-lg-6">
           <div id="loginBox">
             <form class="formInscription" action="#" method="post">
                 <div class="form-group">
-                    <label for="inputPseudo">Ton pseudo : </label>
+                    <label for="inputPseudo">Pseudo</label>
                     <input type="text" class="form-control" id="inputPseudo" aria-describedby="pseudoHelp" placeholder="Entres ton pseudo" name="pseudoLog">
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword">Mot de passe : </label>
+                  <div class="col-12">
+                    <label for="inputPassword">Mot de passe</label>
+                  </div>
                     <input type="password" class="form-control" id="inputPassword" placeholder="Entres ton mot de passe" name="passwordLog">
                 </div>
-                <button type="submit" class="submitInscription" name="logInSubmit">Submit</button>
+                <button type="submit" class="submitInscription" name="logInSubmit">Se connecter</button>
                 <p class="errorsLoginSub"><?= isset($formError['passwordLog']) ? $formError['passwordLog'] : '' ?><?= isset($formError['pseudoLog']) ? $formError['pseudoLog'] : '' ?></p>
             </form>
           </div>
