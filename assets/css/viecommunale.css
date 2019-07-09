@@ -78,8 +78,15 @@ body{
   position: absolute;
   bottom: 5%;
   right: 3%;
-  color: #9cbd57;
   font-size: 25px;
+}
+
+#read a{
+  color: #9cbd57;
+}
+
+#read a:hover{
+  text-decoration: none;
 }
 
 #read hr{
@@ -127,6 +134,7 @@ body{
 .imgActu{
   background-color: red;
   height: 150px;
+  background-size: cover;
 }
 
 #filActu h3{
