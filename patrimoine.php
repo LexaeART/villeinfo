@@ -94,7 +94,7 @@
           <div id="change" class="col-12">
             <div class="row  second">
               <div class="col-3 imgAssoc">
-                <img src="assets/images/fondUne.jpg" />
+                <img src="assets/images/cathedrale.jpg" />
               </div>
               <div class="offset-1 col-8">
                 <h2>Sites aux environs</h2>
@@ -117,7 +117,7 @@
           <div id="change" class="col-12">
             <div class="row">
               <div class="col-3 imgAssoc">
-                <img src="assets/images/fondUne.jpg" />
+                <img src="assets/images/cinqpiliers.jpg" />
               </div>
               <div class="offset-1 col-8">
                 <h2>Les Cinq Piliers</h2>
@@ -135,7 +135,7 @@
             <div id="change" class="col-12">
               <div class="row  second">
                 <div class="col-3 imgAssoc">
-                  <img src="assets/images/fondUne.jpg" />
+                  <img src="assets/images/pierre.jpg" />
                 </div>
                 <div class="offset-1 col-8">
                   <h2>La Pierre Levée</h2>
@@ -154,7 +154,7 @@
             <div id="change" class="col-12">
               <div class="row">
                 <div class="col-3 imgAssoc">
-                  <img src="assets/images/fondUne.jpg" />
+                  <img src="assets/images/ville.jpg" />
                 </div>
                 <div class="offset-1 col-8">
                   <h2>Présentation</h2>

@@ -74,7 +74,7 @@
           <div id="change" class="col-12">
             <div class="row  second">
               <div class="col-3 imgAssoc">
-                <img src="assets/images/fondUne.jpg" />
+                <img src="assets/images/football.jpg" />
               </div>
               <div class="offset-1 col-8">
                 <h2>Football</h2>
@@ -89,7 +89,7 @@
           <div id="change" class="col-12">
             <div class="row">
               <div class="col-3 imgAssoc">
-                <img src="assets/images/fondUne.jpg" />
+                <img src="assets/images/tennis.jpg" />
               </div>
               <div class="offset-1 col-8">
                 <h2>Tennis </h2>
@@ -120,7 +120,7 @@
           <div id="change" class="col-12">
             <div class="row  second">
               <div class="col-3 imgAssoc">
-                <img src="assets/images/fondUne.jpg" />
+                <img src="assets/images/salle.jpg" />
               </div>
               <div class="offset-1 col-8">
                 <h2>La Salle Polyvalente</h2>

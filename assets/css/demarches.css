@@ -151,3 +151,17 @@ tr {
   font-family: 'Raleway';
 font-size: 20px;
 }
+
+
+@media screen and (max-width: 800px) {
+  #frontImage h1{
+    left: 29%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #frontImage h1{
+    left: 19%;
+    font-size: 40px;
+  }
+}

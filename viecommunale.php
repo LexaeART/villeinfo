@@ -66,9 +66,9 @@
             </p>
           </div>
           <div class="col-4 col-lg-2" id="read">
-            <p>
+            <a href="#">
               Lire l'article
-            </p>
+            </a>
             <hr />
           </div>
         </div>
@@ -86,9 +86,11 @@
       </div>
       <div class="row" id="filActu">
         <div class="col-12 col-md-6 offset-lg-1 col-lg-2">
-          <div class="imgActu">
+          <a href="#">
+            <div class="imgActu" style="background-image:url('assets/images/commune.jpg');">
 
-          </div>
+            </div>
+          </a>
           <div class="row" id="infoNews">
             <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
               <hr />
@@ -107,9 +109,11 @@
           </div>
         </div>
         <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
-          <div class="imgActu">
+          <a href="#">
+            <div class="imgActu" style="background-image:url('assets/images/fondUne.jpg');">
 
-          </div>
+            </div>
+          </a>
           <div class="row" id="infoNews">
             <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
               <hr />
@@ -128,9 +132,11 @@
           </div>
         </div>
         <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
-          <div class="imgActu">
+          <a href="#">
+            <div class="imgActu" style="background-image:url('assets/images/mairie.jpg');">
 
-          </div>
+            </div>
+          </a>
           <div class="row" id="infoNews">
             <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
               <hr />
