@@ -34,6 +34,8 @@ body{
   background-color: red;
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/papier.jfif');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 200px;
 }
 
@@ -48,15 +50,17 @@ body{
 }
 
 #breadcrumbs{
-  height: 60px;
+  padding-top: 20px;
+  min-height: 60px;
   background-color: #9cbd57;
 }
 
 #breadcrumbs p{
-  line-height: 60px;
+  line-height: 20px;
   color: white;
   font-family: 'LemonMilk';
 }
+
 
 #change {
 min-height:200px;
@@ -146,10 +150,4 @@ tr {
   color: white;
   font-family: 'Raleway';
 font-size: 20px;
-}
-
-@media screen and (max-width: 800px) {
-  #change{
-    min-height: 55vh;
-  }
 }

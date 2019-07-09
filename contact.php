@@ -58,7 +58,7 @@
       <div class="row">
         <div class="col-12" id="breadcrumbs">
           <div class="row">
-            <div class="offset-1 col-5">
+            <div class="offset-1 col-lg-5 col-xs-11">
               <p>
                 Accueil \ Contact
               </p>
@@ -70,7 +70,7 @@
         <div class="row">
           <div id="change" class="col-12">
             <div class="row  second">
-              <div class="col-3 imgAssoc">  
+              <div class="col-3 imgAssoc">
               </div>
               <div class="offset-1 col-8">
                 <h2>Nous contacter</h2>

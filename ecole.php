@@ -59,7 +59,7 @@
       <div class="row">
         <div class="col-12" id="breadcrumbs">
           <div class="row">
-            <div class="offset-1 col-5">
+            <div class="offset-1 col-lg-5 col-xs-11">
               <p>
                 Accueil \ Accueil Vie communale \ école
               </p>
