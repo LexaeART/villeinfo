@@ -61,6 +61,11 @@ body{
   font-family: 'LemonMilk';
 }
 
+#breadcrumbs p a{
+  color: white;
+}
+
+
 #change {
 min-height:200px;
 background-color:#434933;

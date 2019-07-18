@@ -60,6 +60,9 @@ body{
   color: white;
   font-family: 'LemonMilk';
 }
+#breadcrumbs p a{
+  color: white;
+}
 
 
 #change {
