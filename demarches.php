@@ -73,11 +73,11 @@
         <div class="col-12 intro">
           <p>
             Les mairies et autres administrations
-vous délivrent sur demande des documents,
-attestations et pièces d'identité.<br />
-Afin d'éviter des déplacements inutiles,
-nous vous proposons un récapitulatif des
-démarches et documents à présenter.
+            vous délivrent sur demande des documents,
+            attestations et pièces d'identité.<br />
+            Afin d'éviter des déplacements inutiles,
+            nous vous proposons un récapitulatif des
+            démarches et documents à présenter.
           </p>
         </div>
       </div>
