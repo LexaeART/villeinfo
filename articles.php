@@ -15,7 +15,9 @@
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/article.css" rel="stylesheet" type="text/css"/>
   <link href="assets/css/footer.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/9d0dc13277.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">

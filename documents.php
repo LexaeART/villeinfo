@@ -75,7 +75,7 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <table class="table">
+              <table class="table table-sm">
   <thead>
     <tr>
       <th scope="col">COMMISSIONS</th>
