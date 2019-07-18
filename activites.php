@@ -17,6 +17,11 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/activitesModel.php';
+include_once 'controlers/activitesController.php';
+?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +58,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="frontImage">
-            <h1>Activités</h1>
+          <h1>Activités</h1>
         </div>
       </div>
       <div class="row">
@@ -70,75 +75,36 @@
     </div>
     <div class="container">
       <div id="groupAssoc">
-        <div class="row">
-          <div id="change" class="col-12">
-            <div class="row  second">
-              <div class="col-3 imgAssoc">
-                <img src="assets/images/football.jpg" />
-              </div>
-              <div class="offset-1 col-8">
-                <h2>Football</h2>
-                <p>
-                  Activité Libre
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div id="change" class="col-12">
-            <div class="row">
-              <div class="col-3 imgAssoc">
-                <img src="assets/images/tennis.jpg" />
-              </div>
-              <div class="offset-1 col-8">
-                <h2>Tennis </h2>
-                <p>
-                  Inscription : Mairie de Ville<br />
-
-                  Tarifs :
-                  <ul>
-                    <li>
-                      Habitants de Ville = 16 € /an
-                    </li>
-                    <li>
-                      Habitants de Passel = 23 €/an
-                    </li>
-                    <li>
-                      Extérieurs = 39 €/an
-                    </li>
-                    <li>
-                      Invité = 4€
-                    </li>
-                  </ul>
-                </p>
+        <?php
+        foreach ($activInfosQuery as $activInfosQuery) {
+          $activInfos->id = $activInfosQuery->id;
+          $activTarifs = $activInfos->allTarifs();
+          ?>
+          <div class="row">
+            <div id="change" class="col-12">
+              <div class="row  second">
+                <div class="col-3 imgAssoc">
+                  <img src="assets/images/<?=$activInfosQuery->picture?>" />
+                </div>
+                <div class="offset-1 col-8">
+                  <h2><?=$activInfosQuery->name?></h2>
+                  <p>
+                    <?=$activInfosQuery->description?>
+                  </p>
+                  <?php
+                  foreach ($activTarifs as $activTarifs) {
+                   ?>
+                    <p><strong><?= $activTarifs->statut ?></strong> <?= $activTarifs->prix ?> <strong><?= $activTarifs->caution ?></strong></p>
+                   <?php
+                 }
+                    ?>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div id="change" class="col-12">
-            <div class="row  second">
-              <div class="col-3 imgAssoc">
-                <img src="assets/images/salle.jpg" />
-              </div>
-              <div class="offset-1 col-8">
-                <h2>La Salle Polyvalente</h2>
-                <p>
-                  Pour toutes ses activités communales, la municipalité dispose d'une salle polyvalente de 540 m2 (voir ci dessous)
-
-                  Cette salle peut recevoir jusqu'à 300 personnes, et est équipée d'une cuisine adaptée aux besoins de grandes réceptions.
-
-                  Pour organiser vos festivités ou cérémonie, la salle polyvalente vous ouvre ses portes.<br />
-
-                  Réservation : Mairie de Ville<br />
-
-                  Tarifs de Location : Cliquer Ici pour obtenir les tarifs (pdf)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+          <?php
+        }
+        ?>
       </div>
     </div>
   </main>

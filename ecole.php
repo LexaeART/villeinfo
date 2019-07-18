@@ -17,6 +17,11 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/ecoleModel.php';
+include_once 'controlers/ecolesController.php';
+?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,98 +91,51 @@
                 CM1 - CM2 : Passel
               </li>
             </ul></strong><p>
-            Une cantine et un accueil périscolaire sont ouverts le  matin, le midi et le soir après la classe à Suzoy
+              Une cantine et un accueil périscolaire sont ouverts le  matin, le midi et le soir après la classe à Suzoy
 
-            Un car scolaire transporte les enfants entre les trois communes.
+              Un car scolaire transporte les enfants entre les trois communes.
 
-            Les enfants sont accueillis en maternelle à partir de l'âge de 2 ans révolus et dans la limite des places disponibles.
+              Les enfants sont accueillis en maternelle à partir de l'âge de 2 ans révolus et dans la limite des places disponibles.
 
-            Pour les inscriptions, s'adresser au directeur ou à la directrice de l'école concernée.
-          </p>
-        </div>
-      </div>
-      <div id="groupAssoc">
-        <div class="row">
-          <div id="change" class="col-12">
-            <div class="row  second">
-              <div class="col-3 imgAssoc">
-                <img src="assets/images/ecoleville.jpg" />
-              </div>
-              <div class="offset-1 col-8">
-                <h2>école de Ville</h2>
-                <p>
-                  <strong>Directrice :</strong> <br />
-                  Christine Meersseman<br />
-                  <strong>Institutrices :</strong>
-                  <ul>
-                    <li>
-                      Christine Meersseman
-                    </li>
-                    <li>
-                      Sylvie Henry
-                    </li>
-                    <li>
-                      Sarah Da Peixao
-                    </li>
-                    <li>
-                      Céline Hericher
-                    </li>
-                  </ul>
-                </p>
-              </div>
-            </div>
+              Pour les inscriptions, s'adresser au directeur ou à la directrice de l'école concernée.
+            </p>
           </div>
         </div>
-        <div class="row">
-          <div id="change" class="col-12">
+        <div id="groupAssoc">
+          <?php
+          foreach ($allEcolesQuery as $allEcolesQuery) {
+              $ecoleInfos->id = $allEcolesQuery->id;
+              $ecoleProf = $ecoleInfos->allProfs();
+              $ecoleDirectrice = $ecoleInfos->allDirectrice();
+            ?>
             <div class="row">
-              <div class="col-3 imgAssoc">
-                <img src="assets/images/ecolesuzoy.jpg" />
-              </div>
-              <div class="offset-1 col-8">
-                <h2>Ecole de Suzoy </h2>
-                <p>
-                  <strong>Directrice :</strong> <br />
-                  Marie-Pierre Desseaux<br />
-                  <strong>Institutrices :</strong>
-                  <ul>
-                    <li>
-                      Marie-Pierre Desseaux
-                    </li>
-                    <li>
-                      Nathalie Sobusiak
-                    </li>
-                  </ul>
-                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div id="change" class="col-12">
-              <div class="row  second">
-                <div class="col-3 imgAssoc">
-                  <img src="assets/images/ecolepassel.jpg" />
-                </div>
-                <div class="offset-1 col-8">
-                  <h2>Ecole de Passel</h2>
-                  <p>
-                    <strong>Directrice :</strong> <br />
-                    Elisabeth Chevalier<br />
-                    <strong>Institutrices :</strong>
-                    <ul>
-                      <li>
-                        Elisabeth Chevalier
-                      </li>
-                      <li>
-                        Corentine Querrec
-                      </li>
+              <div id="change" class="col-12">
+                <div class="row  second">
+                  <div class="col-3 imgAssoc">
+                    <img src="assets/images/<?=$allEcolesQuery->picture?>" />
+                  </div>
+                  <div class="offset-1 col-8">
+                    <h2><?=$allEcolesQuery->name?></h2>
+                    <p>
+                      <strong>Directrice :</strong> <br />
+                      <?=$ecoleDirectrice->name?><br />
+                      <strong>Institutrices :</strong>
+                      <ul>
+                      <?php foreach ($ecoleProf as $ecoleProf){ ?>
+                          <li>
+                            <?= $ecoleProf->name ?>
+                          </li>
+                      <?php } ?>
                     </ul>
-                  </p>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+
+            <?php
+          }
+          ?>
         </div>
       </div>
     </main>

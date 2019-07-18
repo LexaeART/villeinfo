@@ -17,6 +17,11 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/associationsModel.php';
+include_once 'controlers/associationsController.php';
+?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +40,7 @@
           <a class="nav-link" href="ecole.php">école</a>
         </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
+      <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="patrimoine.php">Patrimoine</a>
@@ -68,132 +73,41 @@
         </div>
       </div>
     </div>
-        <div class="container">
+    <div class="container">
       <div id="groupAssoc">
-        <div class="row">
-          <div id="change" class="col-12">
-            <div class="row  second">
-              <div class="col-3 imgAssoc">
-                <img src="assets/images/fondUne.jpg" />
-              </div>
-              <div class="offset-1 col-8">
-                <h2>Les Galopins</h2>
-                <p>
-                  L'association des parents d'élèves "Les Galopins" est une assocation de "loi 1901".<br />
-
-  Tous les fond récoltés reviennent aux classes du regroupement scolaire.<br />
-
-  Rien ne peut se faire sans l'aide des enseignantes, des parents, des enfants et des bénévoles.
-                </p>
+        <?php
+        foreach ($assocInfos as $assocInfos) {
+          ?>
+          <div class="row">
+            <div id="change" class="col-12">
+              <div class="row  second">
+                <div class="col-3 imgAssoc">
+                  <img src="assets/images/<?= $assocInfos->picture ?>" />
+                </div>
+                <div class="offset-1 col-8">
+                  <h2><?=$assocInfos->name?></h2>
+                  <?php
+                    if(!empty($assocInfos->president)){
+                      ?>
+                      <p>Président.e : <?=$assocInfos->president?></p>
+                      <?php
+                    }
+                   ?>
+                  <p>
+                    <?=$assocInfos->description?>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-  </div>
-  <div class="row">
-    <div id="change" class="col-12">
-      <div class="row">
-        <div class="col-3 imgAssoc">
-          <img src="assets/images/fondUne.jpg" />
-        </div>
-        <div class="offset-1 col-8">
-          <h2>La Compagnie des Archers</h2>
-          <p>
-             La Compagnie d'Arc de VILLE rassemble les archers de VILLE et de PASSEL depuis de nombreuses générations.<br />
-             Elle est nommée dans les archives de la Mairie en date de 1791, mais sa création est certainement antérieure à cette date.  </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div id="change" class="col-12">
-      <div class="row  second">
-        <div class="col-3 imgAssoc">
-          <img src="assets/images/fondUne.jpg" />
-        </div>
-        <div class="offset-1 col-8">
-          <h2>Le Comité des Fêtes</h2>
-          <p>
-            Président : Stéphane DUDOMAINE<br /><br />
-
-  Le comité des Fêtes souhaite, à travers les diverses manifestations qu'il propose, animer la commune bien sûr, mais surtout favoriser les rencontres et les échanges entre les habitants
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div id="change" class="col-12">
-      <div class="row">
-        <div class="col-3 imgAssoc">
-          <img src="assets/images/fondUne.jpg" />
-        </div>
-        <div class="offset-1 col-8">
-          <h2>Le Foyer Rural </h2>
-          <p>
-            Président : Vincent BONENFANT.<br /><br />
-            Le Foyer Rural propose plusieurs activités dont  le Badminton, l'Atelier Danse Folk, la Bibliothèque et le Tennis de Table.<br />
-
-   Pour toutes ses activités, le foyer rural utilise la salle polyvalente mise à disposition par la commune.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div id="change" class="col-12">
-      <div class="row  second">
-        <div class="col-3 imgAssoc">
-          <img src="assets/images/fondUne.jpg" />
-        </div>
-        <div class="offset-1 col-8">
-          <h2>Les Gais Ville à Joie </h2>
-          <p>
-            Association du "3ième âge" de la commune qui compte environ 25 adhérents. <br />
-            Ils se réunissent un jeudi après-midi par mois à la salle polyvalente pour discuter et jouer aux cartes ou d'autres jeux de société.<br />
-            C'est l'occasion de se divertir, de sortir de la solitude pour quelques uns et d'échanger nouvelles et souvenirs.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div id="change" class="col-12">
-      <div class="row">
-        <div class="col-3 imgAssoc">
-          <img src="assets/images/fondUne.jpg" />
-        </div>
-        <div class="offset-1 col-8">
-          <h2>L'Association des Anciens Combattants </h2>
-          <p>
-            Présidente : Pierrette CARON<br /><br />
-            Cette association organise toutes les cérémonies du souvenir, en partenariat avec le conseil municipal. <br />
-            Son obljectif est de continuer d'une part, à perpétuer le souvenir des soldats morts pour la France et d'autre part, à transmettre aux plus jeunes l'histoire de notre pays.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div id="change" class="col-12">
-      <div class="row  second">
-        <div class="col-3 imgAssoc">
-          <img src="assets/images/fondUne.jpg" />
-        </div>
-        <div class="offset-1 col-8">
-          <h2>Société de Chasse de Ville </h2>
-          <p>
-            Président : PICARD Sébastien<br /><br />
-            Elle réunie les chasseurs désirant chasser sur le territoire de Ville.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+          <?php
+        }
+        ?>
       </div>
     </div>
   </main>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
-  </body>
-  </html>
+</body>
+</html>
