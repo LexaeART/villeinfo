@@ -1,5 +1,5 @@
 body{
-  background-color: #455A70;
+  background-color: #a9ad9b;
 }
 
 .nav-item .nav-link{
@@ -19,7 +19,7 @@ body{
 }
 
 .navbar-light{
-  background-color: #003D6C;
+  background-color: #434933;
 }
 
 .navbar-brand img{
@@ -65,22 +65,11 @@ body{
   color: white;
 }
 
-.intro{
-  text-align: center;
-}
-
-.intro p{
-  color: white;
-  font-family: 'Raleway';
-font-size: 20px;
-}
-
 
 #change {
 min-height:200px;
-background-color:#003D6C;
+background-color:#434933;
 margin-bottom: 20px;
-margin-top: 30px;
 }
 
 .imgAssoc{
@@ -103,54 +92,15 @@ object-fit: cover;
   color: white;
 }
 
-.card-header{
-  background-color: #003D6C;
-    border-radius: 0px;
+#change .second{
+  background-color: #626b49;
 }
 
-.card-header:first-child{
-  border-radius: 0px;
-}
-
-.card{
-  border-radius: 0px;
-  border: transparent;
-}
-
-.btn-link{
+#corpsArticle{
+  padding-top: 30px;
   color: white;
-}
-
-.card-body a{
-  color: black;
-  transition: 200ms;
-}
-
-.card-body a:hover{
-  color: #4B8AFF;
-}
-
-.subCat{
-  background-color: #003D6C;
-  text-align: center;
-  color: white;
-  font-family: 'LemonMilk';
-  height: 50px;
-  line-height: 50px;
   font-size: 20px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
-.table{
-  background-color: #b3c9f2;
-  font-family: 'Raleway';
-}
-
-thead{
-  background-color: #4B8AFF;
-  color: white;
-  border: transparent;
+  line-height: 22px;
 }
 
 
