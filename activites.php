@@ -14,6 +14,7 @@
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/activites.css" rel="stylesheet" type="text/css"/>
+  <link href="assets/css/footer.css" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
@@ -108,6 +109,9 @@ include_once 'controlers/activitesController.php';
       </div>
     </div>
   </main>
+  <?php
+    include 'vues/footer.php';
+  ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
