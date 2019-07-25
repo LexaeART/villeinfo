@@ -30,52 +30,44 @@
         </div>
       </div>
     </div>
-    <div class="row lineAdmin1">
-      <div class="offset-1 col-11">
-        <div class="row">
-          <div class="col-2 btnAdmin">
-            <h2>Articles</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Associations</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Activités</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Écoles</h2>
-          </div>
-        </div>
-        <div class="row lineAdmin">
-          <div class="col-2 btnAdmin">
-            <h2>Patrimoines</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Démarches</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Conseil</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Villinfos</h2>
-          </div>
-        </div>
-        <div class="row lineAdmin">
-          <div class="col-2 btnAdmin">
-            <h2>Réunions</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Documents</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Article</h2>
-          </div>
-          <div class="offset-1 col-2 btnAdmin">
-            <h2>Article</h2>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+  <div class="container">
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Libélé</th>
+      <th scope="col">Supprimer</th>
+      <th scope="col">Modifier</th>
+      <th scope="col">Dernière modification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+      <tr>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+        </tr>
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+          </tr>
+  </tbody>
+</table>
   </div>
   <script src="assets/js/main.js" type="text/javascript"></script>
 </body>

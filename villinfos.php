@@ -98,6 +98,9 @@
       </div>
     </div>
   </main>
+  <?php
+    include 'vues/footer.php';
+  ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
