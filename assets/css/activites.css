@@ -26,13 +26,13 @@ body{
   width: 10vw;
   position: absolute;
   top: -20px;
-  left: 42vw;
+  left: 44vw;
   z-index: 20000;
 }
 
 #frontImage{
   background-color: red;
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/activites.png');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/activites.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

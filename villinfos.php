@@ -61,7 +61,7 @@
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="#">Vill'infos</a>
+                <a href="index.php">Accueil</a> \ Vill'infos
               </p>
             </div>
           </div>

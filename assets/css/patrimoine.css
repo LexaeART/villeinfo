@@ -26,8 +26,8 @@ body{
   width: 10vw;
   position: absolute;
   top: -20px;
-  left: 42vw;
-  z-index: 20000;
+  left: 44vw;
+  z-index: 1;
 }
 
 .intro{

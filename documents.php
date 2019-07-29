@@ -56,7 +56,7 @@
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="villinfos.php">Accueil</a> \ Documents
+                <a href="index.php">Accueil</a> \ <a href="villinfos.php">Vill'infos</a> \ Documents
               </p>
             </div>
           </div>

@@ -32,7 +32,7 @@
           <a class="nav-link" href="activites.php">Activités</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ecole.php">école</a>
+          <a class="nav-link" href="ecole.php">Écoles</a>
         </li>
       </ul>
       <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
@@ -61,7 +61,7 @@
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                Accueil \ Contact
+                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Contact
               </p>
             </div>
           </div>
@@ -71,19 +71,32 @@
         <div class="row">
           <div id="change" class="col-12">
             <div class="row  second">
-              <div class="col-3 imgAssoc">
-              </div>
-              <div class="offset-1 col-8">
-                <h2>Nous contacter</h2>
+              <div class="col-12">
+                <h2>Contacter la Mairie de Ville</h2>
+                <h3>En ligne :</h3>
                 <p>
-                  Vous pouvez nous contacter en envoyant un mail à <a HREF="mailto:mairie.ville@wanadoo.fr">mairie.ville@wanadoo.fr</a><br />
-                  Vous pouvez aussi nous contacter en nous appellant au <a href="tel:+33344092404">03.44.09.24.04</a>
+                  Pour demander une information, faire une suggestion, signaler un problème en ligne, envoyer un e-mail à l'adresse ci-dessous : <a HREF="mailto:mairie.ville@wanadoo.fr">mairie.ville@wanadoo.fr</a>
                 </p>
-              </div>
+                <h3>Par courrier postal :</h3>
+                <p>
+                  5 rue de la Mairie<br />
+                  VILLE<br />
+                  60400
+                </p>
+                <h3>Par téléphone :</h3>
+                <p>
+                  Ville en direct <a href="tel:+33344092404">03.44.09.24.04</a>
+                </p>
+                <p>
+                  Les réponses à toutes vos questions  :
+                  Sport, culture, loisirs, événements, formalités et démarches, vie quotidienne ... Et tous autres sujets qui vous concernent.
+                </p>
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </main>
     <?php
       include 'vues/footer.php';

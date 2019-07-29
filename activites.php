@@ -38,7 +38,7 @@ include_once 'controlers/activitesController.php';
           <a class="nav-link" href="activites.php">Activités</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ecole.php">école</a>
+          <a class="nav-link" href="ecole.php">Écoles</a>
         </li>
       </ul>
       <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
@@ -67,7 +67,7 @@ include_once 'controlers/activitesController.php';
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                Accueil \ Accueil Vie communale \ Activités
+                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Activités
               </p>
             </div>
           </div>
