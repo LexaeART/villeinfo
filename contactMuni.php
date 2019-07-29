@@ -1,9 +1,4 @@
 <!doctype html>
-<?php
-    include_once 'models/dataBase.php';
-    include_once 'models/villinfos.php';
-    include_once 'controlers/villinfosController.php';
-?>
 <html lang="fr">
 <head>
   <!--        <base href="https://www.villeinfo.fr" />-->
@@ -14,13 +9,12 @@
   <meta name="publisher" content="Kaiartsu">
   <meta name="author" content="Kaiartsu" />
   <meta name="reply-to" content="contact@kaiartsu.fr">
-  <title>Vill'infos | Vie Municipale | Mairie de la commune de Ville | Hauts-de-France</title>
+  <title>Accueil | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
-  <link href="assets/css/villinfos.css" rel="stylesheet" type="text/css"/>
+  <link href="assets/css/contactMuni.css" rel="stylesheet" type="text/css"/>
   <link href="assets/css/footerMuni.css" rel="stylesheet" type="text/css"/>
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
@@ -38,7 +32,7 @@
             <a class="nav-link" href="reunions.php">Réunions</a>
           </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
+        <a class="navbar-brand" href="villeinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="documents.php">Documents</a>
@@ -53,7 +47,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="frontImage">
-          <h1>Vill'infos</h1>
+          <h1>Contact</h1>
         </div>
       </div>
       <div class="row">
@@ -61,46 +55,53 @@
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="#">Vill'infos</a>
+                Accueil \ Contact
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-        <div class="container">
-      <div id="groupAssoc">
-        <a href="#">
-          <div class="row">
-            <?php
-            foreach ($infos as $info) {
-              ?>
+      <div class="container">
+        <div class="row">
+          <div id="change" class="col-12">
+            <div class="row  second">
+              <div class="col-12">
+                <h2>Contacter la Mairie de Ville</h2>
 
-                <div id="change" class="mr-auto col-xs-12 col-sm-12 col-md-12 col-lg-5">
-                  <div class="row">
-                    <div class="col-2 imgAssoc">
-                    </div>
-                    <div class="offset-1 col-8">
-                      <h2><?= $info->name ?></h2>
-                      <p><?= $info->date ?></p>
-                    </div>
-                  </div>
-                </div>
 
-              <?php
-            }
+                  <h3>En ligne :</h3>
 
-            ?>
-    </div>
-        </a>
+<p>
+  Pour demander une information, faire une suggestion, signaler un problème en ligne, envoyer un e-mail à l'adresse ci-dessous : <a HREF="mailto:mairie.ville@wanadoo.fr">mairie.ville@wanadoo.fr</a></p>
+
+<h3>Par courrier postal :</h3>
+<p>
+  5 rue de la Mairie<br />
+  VILLE<br />
+  60400
+</p>
+<h3>Par téléphone :</h3>
+<p>
+  Ville en direct <a href="tel:+33344092404">03.44.09.24.04</a>
+</p>
+
+
+Les réponses à toutes vos questions  :
+
+Sport, culture, loisirs, événements, formalités et démarches, vie quotidienne ... Et tous autres sujets qui vous concernent.
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </main>
-  <?php
-    include 'vues/footer.php';
-  ?>
-  <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
-  <script src="assets/js/associations.js" type="text/javascript"></script>
+    </main>
+    <?php
+      include 'vues/footer.php';
+    ?>
+    <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="assets/js/associations.js" type="text/javascript"></script>
 
   </body>
   </html>

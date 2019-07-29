@@ -50,7 +50,7 @@ body{
 #breadcrumbs{
   padding-top: 20px;
   min-height: 60px;
-  background-color: #9cbd57;
+  background-color: #3887c4;
 }
 
 #breadcrumbs p{
@@ -93,6 +93,7 @@ object-fit: cover;
 #change h2{
   color: white;
   font-family: 'LemonMilk';
+  font-size: calc(1em + 1vw);
   padding-top: 20px;
   margin-bottom: 15px;
 }
