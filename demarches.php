@@ -18,6 +18,11 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/demarcheModel.php';
+include_once 'controlers/demarcheController.php';
+?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,177 +87,33 @@
           </p>
         </div>
       </div>
+      <select id="demarcheName" name="demarcheName">
+        <?php foreach ($demarcheQuery as $demarcheQuery){ ?>
+          <option value="<?= $demarcheQuery->id ?>"><?= $demarcheQuery->name ?></option>
+        <?php } ?>
+      </select>
       <div class="row">
         <div class="col-12 blocDemarche">
           <div class="row">
-            <div class="col-3 blocList">
-              <div class="row demarche">
-                <div class="col-12 active">
-                    <p>
-                      Acte de Naissance
-                    </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    	Copie d'Acte de décès
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Acte de Mariage
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Livret de Famille
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Déclaration de Naissance
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Reconnaissance
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Mariage
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Déclaration de décès
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                    <p>
-                      Certficat d'hérédité ou de notoriété
-                    </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Carte Nationale d'Identité
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Passeport
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Autorisation de Sortie du Territoire
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Documents Cadastraux
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Carte d'Electeur
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Ext. casier judiciaire Bull.N°3
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Légalisation de Signature
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                    <p>
-                      Certificat de Nationalité Française
-                    </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Permis de Chasser et Valid.
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Recensement Service Militaire
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Changement de Domicile
-                  </p>
-                </div>
-              </div>
-              <div class="row demarche">
-                <div class="col-12">
-                  <p>
-                    Certificat de Concubinage
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-9 blocShow">
+            <div class="col-12 blocShow table-responsive">
               <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Où s'adresser</th>
-      <th scope="col">Pièces à fournir ou <br />Renseignements à donner</th>
-      <th scope="col">Coût</th>
-      <th scope="col">Observations</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Mairie du Lieu de Naissance</th>
-      <td>Indiquer la date de naissance et nom, prénom des parents</td>
-      <td>Gratuit</td>
-      <td>Joindre une enveloppe timbrée à votre adresse</td>
-    </tr>
-  </tbody>
-</table>
+                <thead>
+                  <tr>
+                    <th scope="col">Où s'adresser</th>
+                    <th scope="col">Pièces à fournir ou <br />Renseignements à donner</th>
+                    <th scope="col">Coût</th>
+                    <th scope="col">Observations</th>
+                  </tr>
+                </thead>
+                <tbody id="bodyTable">
+                  <tr>
+                    <th>Mairie du Lieu de Naissance</th>
+                    <td>Indiquer la date de naissance et nom, prénom des parents</td>
+                    <td>Gratuit</td>
+                    <td>Joindre une enveloppe timbrée à votre adresse</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -260,10 +121,11 @@
     </div>
   </main>
   <?php
-    include 'vues/footer.php';
+  include 'vues/footer.php';
   ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
+  <script src="assets/js/demarches.js" type="text/javascript"></script>
 
 </body>
 </html>
