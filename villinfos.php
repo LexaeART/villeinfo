@@ -1,8 +1,8 @@
 <!doctype html>
 <?php
-    include_once 'models/dataBase.php';
-    include_once 'models/villinfos.php';
-    include_once 'controlers/villinfosController.php';
+include_once 'models/dataBase.php';
+include_once 'models/villinfos.php';
+include_once 'controlers/villinfosController.php';
 ?>
 <html lang="fr">
 <head>
@@ -34,11 +34,11 @@
         <li class="nav-item">
           <a class="nav-link" href="conseil.php">Conseil</a>
         </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reunions.php">Réunions</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reunions.php">Réunions</a>
+        </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
+      <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="documents.php">Documents</a>
@@ -68,39 +68,24 @@
         </div>
       </div>
     </div>
-        <div class="container">
+    <div class="container">
+      <select id="demarcheName" name="demarcheName">
+        <?php foreach ($years as $years){ ?>
+          <option value="<?= $years->year ?>"><?= $years->year ?></option>
+        <?php } ?>
+      </select>
       <div id="groupAssoc">
-        <a href="#">
-          <div class="row">
-            <?php
-            foreach ($infos as $info) {
-              ?>
-
-                <div id="change" class="mr-auto col-xs-12 col-sm-12 col-md-12 col-lg-5">
-                  <div class="row">
-                    <div class="col-2 imgAssoc">
-                    </div>
-                    <div class="offset-1 col-8">
-                      <h2><?= $info->name ?></h2>
-                      <p><?= $info->date ?></p>
-                    </div>
-                  </div>
-                </div>
-
-              <?php
-            }
-
-            ?>
-    </div>
-        </a>
+          <div class="row" id="rowInfos">
+          </div>
       </div>
     </div>
   </main>
   <?php
-    include 'vues/footer.php';
+  include 'vues/footer.php';
   ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
+  <script src="assets/js/villinfos.js" type="text/javascript"></script>
 
-  </body>
-  </html>
+</body>
+</html>
