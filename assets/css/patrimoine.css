@@ -58,11 +58,9 @@ ul li{
 #frontImage h1{
   font-family: 'LemonMilk';
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 39%;
   font-size: 50px;
   color: white;
+  margin-top: 140px;
 }
 
 #breadcrumbs{
@@ -119,13 +117,11 @@ h3{
 
 @media screen and (max-width: 800px) {
   #frontImage h1{
-    left: 29%;
   }
 }
 
 @media screen and (max-width: 500px) {
   #frontImage h1{
-    left: 19%;
     font-size: 40px;
   }
 }
