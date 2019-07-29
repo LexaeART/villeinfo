@@ -28,11 +28,11 @@
         <li class="nav-item">
           <a class="nav-link" href="conseil.php">Conseil</a>
         </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reunions.php">Réunions</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reunions.php">Réunions</a>
+        </li>
       </ul>
-        <a class="navbar-brand" href="villeinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
+      <a class="navbar-brand" href="villinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="documents.php">Documents</a>
@@ -67,41 +67,36 @@
             <div class="row  second">
               <div class="col-12">
                 <h2>Contacter la Mairie de Ville</h2>
-
-
-                  <h3>En ligne :</h3>
-
-<p>
-  Pour demander une information, faire une suggestion, signaler un problème en ligne, envoyer un e-mail à l'adresse ci-dessous : <a HREF="mailto:mairie.ville@wanadoo.fr">mairie.ville@wanadoo.fr</a></p>
-
-<h3>Par courrier postal :</h3>
-<p>
-  5 rue de la Mairie<br />
-  VILLE<br />
-  60400
-</p>
-<h3>Par téléphone :</h3>
-<p>
-  Ville en direct <a href="tel:+33344092404">03.44.09.24.04</a>
-</p>
-
-
-Les réponses à toutes vos questions  :
-
-Sport, culture, loisirs, événements, formalités et démarches, vie quotidienne ... Et tous autres sujets qui vous concernent.
+                <h3>En ligne :</h3>
+                <p>
+                  Pour demander une information, faire une suggestion, signaler un problème en ligne, envoyer un e-mail à l'adresse ci-dessous : <a HREF="mailto:mairie.ville@wanadoo.fr">mairie.ville@wanadoo.fr</a>
                 </p>
-
-              </div>
+                <h3>Par courrier postal :</h3>
+                <p>
+                  5 rue de la Mairie<br />
+                  VILLE<br />
+                  60400
+                </p>
+                <h3>Par téléphone :</h3>
+                <p>
+                  Ville en direct <a href="tel:+33344092404">03.44.09.24.04</a>
+                </p>
+                <p>
+                  Les réponses à toutes vos questions  :
+                  Sport, culture, loisirs, événements, formalités et démarches, vie quotidienne ... Et tous autres sujets qui vous concernent.
+                </p>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <?php
-      include 'vues/footer.php';
-    ?>
-    <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
-    <script src="assets/js/associations.js" type="text/javascript"></script>
+    </div>
+  </main>
+  <?php
+  include 'vues/footer.php';
+  ?>
+  <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  <script src="assets/js/associations.js" type="text/javascript"></script>
 
-  </body>
-  </html>
+</body>
+</html>

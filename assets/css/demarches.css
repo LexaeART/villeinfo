@@ -26,7 +26,7 @@ body{
   width: 10vw;
   position: absolute;
   top: -20px;
-  left: 42vw;
+  left: 44vw;
   z-index: 20000;
 }
 
@@ -154,6 +154,52 @@ tr {
   font-family: 'Raleway';
 font-size: 20px;
 }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+  padding: 1em 0 1em 1em;
+  /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding.
+  via: https://cssdeck.com/labs/styling-select-box-with-css3 */
+  border: 3px solid #7b993d;
+  border-radius: 0;
+  position: relative;
+  border-right-width: 20px;
+  background-color: #434933;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    padding-right: 1em;
+  }
+}
+select:focus {
+  outline: none;
+  border-color: #7b993d;
+}
+
+label {
+  position: relative;
+  display: inline-block;
+}
+label:after {
+  display: block;
+  content: "▾";
+  font-size: 20px;
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  top: 50%;
+  margin-top: -14px;
+  right: 0;
+  color: #fff;
+  pointer-events: none;
+}
+
 
 
 @media screen and (max-width: 800px) {

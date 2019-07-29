@@ -26,13 +26,13 @@ body{
   width: 10vw;
   position: absolute;
   top: -20px;
-  left: 42vw;
+  left: 44vw;
   z-index: 20000;
 }
 
 #frontImage{
   background-color: red;
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/associations.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/reunions.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,6 +104,7 @@ object-fit: cover;
 .card-header{
   background-color: #003D6C;
     border-radius: 0px;
+    min-height: inherit;
 }
 
 .card-header:first-child{
@@ -119,9 +120,14 @@ object-fit: cover;
   color: white;
 }
 
+.btnReu{
+font-size: calc(0.5em + 1vw);
+font-family: 'Raleway';
+}
 .card-body a{
   color: black;
   transition: 200ms;
+  font-family: 'Raleway';
 }
 
 .card-body a:hover{

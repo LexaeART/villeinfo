@@ -79,7 +79,11 @@ include_once 'controlers/reunionsControlers.php';
             <div class="card-header" id="headingOne">
               <h5 class="mb-0">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#<?= $reunionQuery->id ?>" aria-expanded="true" aria-controls="collapseOne">
-                  <?= $reunionQuery->name ?>
+                  <div class="row">
+                    <div class="col-12 btnReu">
+                        <?= $reunionQuery->name ?>
+                    </div>
+                  </div>
                 </button>
               </h5>
             </div>

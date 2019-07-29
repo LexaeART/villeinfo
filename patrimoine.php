@@ -13,6 +13,7 @@
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/lib/lightbox/css/lightbox.css" rel="stylesheet" />
   <link href="assets/css/patrimoine.css" rel="stylesheet" type="text/css"/>
   <link href="assets/css/footer.css" rel="stylesheet" type="text/css"/>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -37,7 +38,7 @@ include_once 'controlers/patrimoineController.php';
           <a class="nav-link" href="activites.php">Activités</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ecole.php">école</a>
+          <a class="nav-link" href="ecole.php">Écoles</a>
         </li>
       </ul>
       <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
@@ -66,7 +67,7 @@ include_once 'controlers/patrimoineController.php';
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                Accueil \ Accueil Vie communale \ Activités
+                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Patrimoine
               </p>
             </div>
           </div>
@@ -110,7 +111,7 @@ include_once 'controlers/patrimoineController.php';
           <div id="change" class="col-12">
             <div class="row  second">
               <div class="col-3 imgAssoc">
-                <img src="assets/images/<?=$allPatrimoineQuery->picture?>" />
+                <a href="assets/images/<?=$allPatrimoineQuery->picture?>" data-lightbox="image-<?=$allPatrimoineQuery->id?>" data-title="<?=$allPatrimoineQuery->name?>"><img src="assets/images/<?=$allPatrimoineQuery->picture?>" /></a>
               </div>
               <div class="offset-1 col-8">
                 <h2><?=$allPatrimoineQuery->name?></h2>
@@ -129,6 +130,7 @@ include_once 'controlers/patrimoineController.php';
     include 'vues/footer.php';
   ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  <script src="assets/lib/lightbox/js/lightbox.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
 </body>
