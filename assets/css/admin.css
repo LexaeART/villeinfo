@@ -36,3 +36,125 @@ body{
 .lineAdmin1{
   margin-top: 30px;
 }
+
+.btnAdd button {
+  position: relative;
+  //display:block;
+  height: 45px;
+  width: 150px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: #9cbd57;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-left: 50vw;
+}
+
+.fill:hover {
+  color: whitesmoke;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+.fill:hover:before {
+  top: 0;
+}
+
+.delete{
+  background-color: red;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.modify{
+  background-color: green;
+  text-align: center;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.modify a{
+  color: white;
+  font-weight: 600;
+}
+
+.delete:hover{
+  background-color: darkred;
+}
+
+.modify:hover{
+  background-color: darkgreen;
+}
+
+th{
+  text-align: center;
+}
+
+table th,td{
+  font-family: 'Raleway';
+}
+
+.modal-content{
+  border-radius: 0px;
+  background-color: #a9ad9b;
+}
+
+.modal-header{
+  border-bottom: transparent;
+}
+.modal-footer{
+  border-top: transparent;
+}
+
+table .modal-body{
+  text-align: center;
+  font-size: 30px;
+}
+
+.btn-secondary{
+  background-color: red;
+  border: 2px #383736 solid;
+  transition: 200ms;
+}
+
+.btn-secondary:hover{
+  background-color: darkred;
+}
+
+.btn-primary{
+    background-color: #9cbd57;
+    border: 2px #383736 solid;
+    transition: 200ms;
+}
+.btn-primary:hover{
+  background-color: darkgreen;
+  border: 2px #545b62 solid;
+}
