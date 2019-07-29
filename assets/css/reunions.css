@@ -129,7 +129,7 @@ object-fit: cover;
 }
 
 .lastCR > li:nth-child(1)::before{
-  content: "‼";
+  content: "‼ ";
 }
 
 .lastCR > li:nth-child(1) a{
@@ -141,7 +141,10 @@ object-fit: cover;
   color: #4B8AFF;
   font-weight: bold;
 }
-
+#accordionExample{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 
 @media screen and (max-width: 800px) {
   #frontImage h1{
