@@ -14,7 +14,7 @@
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/documents.css" rel="stylesheet" type="text/css"/>
-  <link href="assets/css/footer.css" rel="stylesheet" type="text/css"/>
+  <link href="assets/css/footerMuni.css" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
@@ -29,20 +29,17 @@
         <li class="nav-item">
           <a class="nav-link" href="conseil.php">Conseil</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="villinfos.php">Vill'Infos</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reunions.php">Réunions</a>
+          </li>
       </ul>
-        <a class="navbar-brand" href="vieMunicipale.php"><img src="assets/images/logovilleMuni.png" /></a>
+        <a class="navbar-brand" href="villinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="reunions.php">Réunions</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="documents.php">Documents</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact</a>
+          <a class="nav-link" href="contactMuni.php">Contact</a>
         </li>
       </ul>
     </div>
@@ -59,7 +56,7 @@
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                Accueil \ Documents
+                <a href="villinfos.php">Accueil</a> \ Documents
               </p>
             </div>
           </div>

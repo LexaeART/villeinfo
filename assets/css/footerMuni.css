@@ -1,0 +1,90 @@
+footer{
+  min-height: 200px;
+  background: #003D6C;
+  padding-bottom: 50px;
+}
+
+footer h3,h4{
+  color: white;
+  font-family: 'LemonMilk';
+}
+
+footer h3{
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+
+footer h4{
+  font-size: 20px;
+}
+
+footer hr{
+  margin-top: 0rem;
+  border-top: 2px solid white;
+}
+
+
+footer button {
+  position: relative;
+  //display:block;
+  height: 45px;
+  width: 150px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: white;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: #455A70;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  margin-bottom: 30px;
+}
+
+.fill:hover {
+  color: whitesmoke;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+.fill:hover:before {
+  top: 0;
+}
+
+
+footer p{
+  color: white;
+  font-family: 'raleway';
+}
+
+footer ul li{
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+footer ul li a{
+  color: white;
+}
+
+footer ul{
+  padding-left: 0px;
+}

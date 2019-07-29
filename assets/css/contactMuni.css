@@ -26,18 +26,19 @@ body{
   width: 10vw;
   position: absolute;
   top: -20px;
-  left: 42vw;
+  left: 44vw;
   z-index: 20000;
 }
 
 #frontImage{
   background-color: red;
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/associations.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/contact.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
 }
+
 
 #frontImage h1{
   font-family: 'LemonMilk';
@@ -65,13 +66,10 @@ body{
 
 #change {
 min-height:200px;
-background-color:#003D6C;
-margin-bottom: 20px;
-margin-top: 30px;
 }
 
 .imgAssoc{
-  min-height: 200px;
+  height: 200px;
 }
 
 .imgAssoc img{
@@ -84,12 +82,18 @@ object-fit: cover;
   font-family: 'LemonMilk';
   padding-top: 20px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 #change p{
   color: white;
 }
 
+h3{
+  font-family: 'LemonMilk';
+  text-decoration: underline;
+  color: #3887C4;
+}
 
 @media screen and (max-width: 800px) {
   #frontImage h1{
