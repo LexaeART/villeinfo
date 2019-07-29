@@ -89,7 +89,7 @@ include_once 'controlers/reunionsControlers.php';
                 <ol class="lastCR">
                   <?php foreach ($crQuery as $crQuery){ ?>
                   <li>
-                    <a target="_blank" href="media/pdf/<?=$crQuery->pdf?>.pdf" title="<?= $crQuery->pdf ?> "><?= $crQuery->name ?></a>
+                    <a target="_blank" href="media/cr/<?=$crQuery->pdf?>.pdf" title="<?= $crQuery->pdf ?> "><?= $crQuery->name ?></a>
                   </li>
                   <?php } ?>
                 </ol>
