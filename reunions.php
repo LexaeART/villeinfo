@@ -18,6 +18,11 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/reunionsModel.php';
+include_once 'controlers/reunionsControlers.php';
+?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +38,7 @@
           <a class="nav-link" href="villinfos.php">Vill'Infos</a>
         </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
+      <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="reunions.php">Réunions</a>
@@ -66,81 +71,46 @@
         </div>
       </div>
     </div>
-      <div class="container">
-        <div class="accordion" id="accordionExample">
-<div class="card">
-  <div class="card-header" id="headingOne">
-    <h5 class="mb-0">
-      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Comptes rendus des réunions de 2019
-      </button>
-    </h5>
-  </div>
+    <div class="container">
+      <div class="accordion" id="accordionExample">
+        <?php
+        foreach ($reunionQuery as $reunionQuery){
+          $reunionsInfos->id = $reunionQuery->id;
+          $crQuery = $reunionsInfos->allcr();
+          ?>
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#<?= $reunionQuery->id ?>" aria-expanded="true" aria-controls="collapseOne">
+                  <?= $reunionQuery->name ?>
+                </button>
+              </h5>
+            </div>
 
-  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-    <div class="card-body">
-      <ol class="lastCR">
-        <li>
-          <a href="#">CR du 23 Novembre 2018</a>
-        </li>
-        <li>
-          <a href="#">CR du 28 Septembre 2018</a>
-        </li>
-        <li>
-          <a href="#">CR du 7 Septembre 2018</a>
-        </li>
-        <li>
-          <a href="#">CR du 22 Juin 2018</a>
-        </li>
-        <li>
-          <a href="#">CR du 16 Avril 2018</a>
-        </li>
-        <li>
-          <a href="#">CR du 23 Mars 2018</a>
-        </li>
-        <li>
-          <a href="#">CR du 23 Février 2018</a>
-        </li>
-      </ol>
-    </div>
-  </div>
-</div>
-<div class="card">
-  <div class="card-header" id="headingTwo">
-    <h5 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Comptes rendus des réunions de 2018
-      </button>
-    </h5>
-  </div>
-  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-    <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-</div>
-<div class="card">
-  <div class="card-header" id="headingThree">
-    <h5 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Comptes rendus des réunions de 2017
-      </button>
-    </h5>
-  </div>
-  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-    <div class="card-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-</div>
-</div>
+            <div id="<?= $reunionQuery->id ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <ol class="lastCR">
+                  <?php foreach ($crQuery as $crQuery){ ?>
+                  <li>
+                    <a target="_blank" href="media/pdf/<?=$crQuery->pdf?>.pdf" title="<?= $crQuery->pdf ?> "><?= $crQuery->name ?></a>
+                  </li>
+                  <?php } ?>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <?php
+        }
+        ?>
       </div>
+    </div>
   </main>
   <?php
-    include 'vues/footer.php';
+  include 'vues/footer.php';
   ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
-  </body>
-  </html>
+</body>
+</html>
