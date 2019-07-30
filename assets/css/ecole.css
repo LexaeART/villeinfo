@@ -27,7 +27,7 @@ body{
   position: absolute;
   top: -20px;
   left: 44vw;
-  z-index: 20000;
+  z-index: 1;
 }
 
 .intro{
@@ -86,7 +86,7 @@ margin-bottom: 20px;
 }
 
 .imgAssoc{
-  min-height: 200px;
+  height: 250px;
 }
 
 .imgAssoc img{

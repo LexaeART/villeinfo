@@ -18,6 +18,7 @@
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/lib/lightbox/css/lightbox.css" rel="stylesheet" />
   <link href="assets/css/conseil.css" rel="stylesheet" type="text/css"/>
   <link href="assets/css/footerMuni.css" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -90,7 +91,7 @@ Le C.C.A.S. est chargé d'étudier les dossiers des personnes en difficulté.
               <div id="change" class="offset-2 col-8">
                 <div class="row">
                   <div class="col-12 col-lg-4 imgAssoc">
-                    <img src="assets/images/conseil/<?= $conseiller->id?>" />
+                    <a href="assets/images/conseil/<?=$conseiller->img?>" data-lightbox="image-<?=$conseiller->id?>" data-title="<?=$conseiller->name?>"><img src="assets/images/conseil/<?=$conseiller->img?>" /></a>
                   </div>
                   <div class="col-12 offset-lg-1 col-lg-7">
                     <h2> <?= $conseiller->name ?> </h2>
@@ -111,6 +112,7 @@ Le C.C.A.S. est chargé d'étudier les dossiers des personnes en difficulté.
     include 'vues/footer.php';
   ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  <script src="assets/lib/lightbox/js/lightbox.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
   </body>

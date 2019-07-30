@@ -27,7 +27,7 @@ body{
   position: absolute;
   top: -20px;
   left: 44vw;
-  z-index: 20000;
+  z-index: 1;
 }
 
 #frontImage{
@@ -64,10 +64,15 @@ body{
 }
 
 #change {
-min-height:200px;
+min-height:100px;
 background-color:#003D6C;
 margin-bottom: 20px;
 margin-top: 30px;
+float: left;
+}
+
+#separator{
+  clear: both;
 }
 
 .imgAssoc{
@@ -84,10 +89,12 @@ object-fit: cover;
   font-family: 'LemonMilk';
   padding-top: 20px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 #change p{
   color: white;
+  text-align: center;
 }
 
 
