@@ -18,6 +18,11 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/commissionModel.php';
+include_once 'controlers/commissionsControlers.php';
+?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,11 +34,11 @@
         <li class="nav-item">
           <a class="nav-link" href="conseil.php">Conseil</a>
         </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reunions.php">Réunions</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reunions.php">Réunions</a>
+        </li>
       </ul>
-        <a class="navbar-brand" href="villinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
+      <a class="navbar-brand" href="villinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="documents.php">Documents</a>
@@ -63,65 +68,58 @@
         </div>
       </div>
     </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 subCat">
-              <p>
-                Les Commissions municipales
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <table class="table table-sm">
-  <thead>
-    <tr>
-      <th scope="col">COMMISSIONS</th>
-      <th scope="col">OBJET </th>
-      <th scope="col">MEMBRES TITULAIRES</th>
-      <th scope="col">MEMBRES SUPPLEANTS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Syndicat des Eaux Ville - Passel - Chiry</th>
-      <td>Réseau d'eau potable</td>
-      <td>Mr TROUILLET - Mr LOIR - Mr LEJOP</td>
-      <td>Mr CRESSON - Mr BRUNEL - Mr CARTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Syndicat du Captage de Passel</th>
-      <td>Prod. d'eau Potable</td>
-      <td>Mr TROUILLET</td>
-      <td>Mr CRESSON</td>
-    </tr>
-    <tr>
-      <th scope="row">Syndicat Interscolaire Ville - Suzoy - Passel</th>
-      <td>Regroupement Scolaire</td>
-      <td>Mme HALLU - Mr CRESSON - Mr ILLOUL</td>
-      <td>Mme GIMARET-Mme PONT-Mr VALCK</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 subCat">
+          <p>
+            Les Commissions municipales
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">COMMISSIONS</th>
+                  <th scope="col">OBJET </th>
+                  <th scope="col">MEMBRES TITULAIRES</th>
+                  <th scope="col">MEMBRES SUPPLEANTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($commissionsInfos as $commissionsInfos){ ?>
+                <tr>
+                  <th scope="row"><?= $commissionsInfos->commission ?></th>
+                  <td><?= $commissionsInfos->objet ?></td>
+                  <td><?= $commissionsInfos->titulaire ?></td>
+                  <td><?= $commissionsInfos->suppleant ?></td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
 
-          <div class="row">
-            <div class="col-12 subCat">
-              <p>
-                Document d'urbanisation
-                <a href="http://villinfos.fr/images/pdf/urbanisme/urbanisme.pdf" target="_blank"> cliquez ici</a>
-              </p>
-            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 subCat">
+          <p>
+            Document d'urbanisation
+            <a href="http://villinfos.fr/images/pdf/urbanisme/urbanisme.pdf" target="_blank"> cliquez ici</a>
+          </p>
+        </div>
+      </div>
 
     </div>
   </main>
   <?php
-    include 'vues/footer.php';
+  include 'vues/footer.php';
   ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
-  </body>
-  </html>
+</body>
+</html>
