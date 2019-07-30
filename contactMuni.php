@@ -55,7 +55,7 @@
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                Accueil \ Contact
+                <a href="index.php">Accueil</a> \ <a href="villinfos.php">Vill'Infos</a> \ Contact
               </p>
             </div>
           </div>

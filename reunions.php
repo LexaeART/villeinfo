@@ -38,7 +38,7 @@ include_once 'controlers/reunionsControlers.php';
             <a class="nav-link" href="reunions.php">Réunions</a>
           </li>
       </ul>
-        <a class="navbar-brand" href="villeinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
+        <a class="navbar-brand" href="villinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="documents.php">Documents</a>
@@ -61,7 +61,7 @@ include_once 'controlers/reunionsControlers.php';
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="villinfos.php">Accueil</a> \ <a href="">Réunions</a>
+                <a href="index.php">Accueil</a> \ <a href="villinfos.php">Vill'Infos</a> \ Réunions
               </p>
             </div>
           </div>

@@ -15,6 +15,7 @@
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/associations.css" rel="stylesheet" type="text/css"/>
   <link href="assets/css/footer.css" rel="stylesheet" type="text/css"/>
+  <link href="assets/lib/lightbox/css/lightbox.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
@@ -83,7 +84,7 @@ include_once 'controlers/associationsController.php';
             <div id="change" class="col-12">
               <div class="row  second">
                 <div class="col-3 imgAssoc">
-                  <img src="assets/images/<?= $assocInfos->picture ?>" />
+                  <a href="assets/images/<?=$assocInfos->picture?>" data-lightbox="image-<?=$assocInfos->name?>" data-title="<?=$assocInfos->name?>"><img src="assets/images/<?=$assocInfos->picture?>" /></a>
                 </div>
                 <div class="offset-1 col-8">
                   <h2><?=$assocInfos->name?></h2>
@@ -111,6 +112,7 @@ include_once 'controlers/associationsController.php';
     include 'vues/footer.php';
   ?>
   <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  <script src="assets/lib/lightbox/js/lightbox.js" type="text/javascript"></script>
   <script src="assets/js/associations.js" type="text/javascript"></script>
 
 </body>

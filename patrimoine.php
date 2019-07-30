@@ -110,10 +110,10 @@ include_once 'controlers/patrimoineController.php';
         <div class="row">
           <div id="change" class="col-12">
             <div class="row  second">
-              <div class="col-3 imgAssoc">
+              <div class="col-12 col-lg-3 imgAssoc">
                 <a href="assets/images/<?=$allPatrimoineQuery->picture?>" data-lightbox="image-<?=$allPatrimoineQuery->id?>" data-title="<?=$allPatrimoineQuery->name?>"><img src="assets/images/<?=$allPatrimoineQuery->picture?>" /></a>
               </div>
-              <div class="offset-1 col-8">
+              <div class="col-12 offset-lg-1 col-lg-8">
                 <h2><?=$allPatrimoineQuery->name?></h2>
                 <p>
                   <?=$allPatrimoineQuery->description?>

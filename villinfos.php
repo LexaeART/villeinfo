@@ -38,7 +38,7 @@ include_once 'controlers/villinfosController.php';
           <a class="nav-link" href="reunions.php">Réunions</a>
         </li>
       </ul>
-      <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
+      <a class="navbar-brand" href="villinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="documents.php">Documents</a>
@@ -75,9 +75,10 @@ include_once 'controlers/villinfosController.php';
         <?php } ?>
       </select>
       <div id="groupAssoc">
-          <div class="row" id="rowInfos">
+          <div id="rowInfos">
           </div>
       </div>
+      <div id="separator"></div>
     </div>
   </main>
   <?php
