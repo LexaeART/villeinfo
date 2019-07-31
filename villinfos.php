@@ -69,13 +69,19 @@ include_once 'controlers/villinfosController.php';
       </div>
     </div>
     <div class="container">
-      <select id="demarcheName" name="demarcheName">
-        <?php foreach ($years as $years){ ?>
-          <option value="<?= $years->year ?>"><?= $years->year ?></option>
-        <?php } ?>
-      </select>
+      <div id="select">
+        <select id="demarcheName" name="demarcheName">
+          <option selected disabled>Choisir une année</option>
+          <?php foreach ($years as $years){ ?>
+            <option value="<?= $years->year ?>"><?= $years->year ?></option>
+          <?php } ?>
+        </select>
+      </div>
       <div id="groupAssoc">
           <div id="rowInfos">
+            <p class="chooseYear">
+              Veuillez choisir une année
+            </p>
           </div>
       </div>
       <div id="separator"></div>

@@ -63,11 +63,11 @@
           </div>
           <div class="col-5 col-lg-5" id="title">
             <p>
-              Titre de l'article
+              Refonte du site de la Mairie
             </p>
           </div>
           <div class="col-4 col-lg-2" id="read">
-            <a href="#">
+            <a href="article.php">
               Lire l'article
             </a>
             <hr />
@@ -154,6 +154,82 @@
               <h2>Titre de l'article</h2>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row" id="filActu">
+        <div class="col-12 col-md-6 offset-lg-1 col-lg-2">
+          <a href="#">
+            <div class="imgActu" style="background-image:url('assets/images/commune.jpg');">
+
+            </div>
+          </a>
+          <div class="row" id="infoNews">
+            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
+              <hr />
+            </div>
+            <div class="col-4 col-lg-6">
+              <h3>Catégorie</h3>
+            </div>
+            <div class="col-3">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 titleNews">
+              <h2>Titre de l'article</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
+          <a href="#">
+            <div class="imgActu" style="background-image:url('assets/images/fondUne.jpg');">
+
+            </div>
+          </a>
+          <div class="row" id="infoNews">
+            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
+              <hr />
+            </div>
+            <div class="col-4 col-lg-6">
+              <h3>Catégorie</h3>
+            </div>
+            <div class="col-3">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 titleNews">
+              <h2>Titre de l'article</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
+          <a href="#">
+            <div class="imgActu" style="background-image:url('assets/images/mairie.jpg');">
+
+            </div>
+          </a>
+          <div class="row" id="infoNews">
+            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
+              <hr />
+            </div>
+            <div class="col-4 col-lg-6">
+              <h3>Catégorie</h3>
+            </div>
+            <div class="col-3">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 titleNews">
+              <h2>Titre de l'article</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-10">
+          <button class="fill" onclick="window.location.href='allArticles.php'">Afficher plus</button>
         </div>
       </div>
     </div>
