@@ -42,7 +42,7 @@ body{
 #frontImage h1{
   font-family: 'LemonMilk';
   text-align: center;
-  font-size: calc(1.5em + 1vw);
+  font-size: calc(1em + 1vw);
   color: white;
   margin-top: 140px;
 }
@@ -235,9 +235,7 @@ label:after {
 }
 
 @media screen and (max-width: 500px) {
-  #frontImage h1{
-    font-size: 40px;
-  }
+
 }
 
 @media screen and (max-width: 600px) {
