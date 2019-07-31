@@ -33,11 +33,11 @@ if (isset($_POST['logInSubmit'])) {
             if (!password_verify($passwordLog, $login->password)) {
                 $formError['passwordLog'] = 'Identifiant incorrect';
             } else {
-                $_SESSION['id'] = $login->id;
-                $_SESSION['pseudo'] = $login->pseudo;
-                $_SESSION['connected'] = 1;
+            session_start();
+            $_SESSION['id']=$login->id;
+            $_SESSION['connected']=1;
                 ?>
-                <meta http-equiv="refresh" content="0.1;URL=/mon_profil/<?= $_SESSION['pseudo'] ?>">
+                <meta http-equiv="refresh" content="0.1;URL=/admin?id=<?= $login->id ?>">
                 <?php
             }
         } else {
