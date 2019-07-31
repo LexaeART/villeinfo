@@ -228,7 +228,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="offset-10">
+        <div class="offset-lg-10 offset-md-9 offset-sm-9 offset-7">
           <button class="fill" onclick="window.location.href='allArticles.php'">Afficher plus</button>
         </div>
       </div>

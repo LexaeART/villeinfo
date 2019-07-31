@@ -30,66 +30,69 @@ body{
 }
 
 .lineAdmin{
-  display: block;
-  margin: auto;
   background-color: #434933;
   text-align: center;
   color: white;
   font-family: "LemonMilk";
-  margin-top: 25px;
   margin-bottom: 25px;
-  min-height: 10vh;
+  min-height: 8vh;
+  box-shadow: 10px 10px 20px 0px #656565;
+  transition: 300ms;
 }
 .lineAdmin h3{
-line-height: 10vh;
+line-height: 8vh;
 }
 
-.btnAdd button {
+#profil{
+  height: 300px;
+  background-color: #a9ad9b;
+  border-radius: 10px;
   position: relative;
-  //display:block;
-  height: 45px;
-  width: 150px;
-  padding: 5px 5px;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #383736;
-  border: 2px #383736 solid;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  overflow:hidden;
-  background: #9cbd57;
-  z-index: 1;
-  cursor: pointer;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
-  margin-bottom: 10px;
-  margin-top: 40px;
-  margin-left: 50vw;
 }
 
-.fill:hover {
+#nameProfil{
+  font-family: 'Raleway';
+  border-bottom: solid 3px #434933;
+  padding-top: 15px;
+  text-align: center;
+  font-family: 'LemonMilk';
   color: whitesmoke;
 }
 
-.fill:before {
-  content: "";
-  position: absolute;
-  background: #383736;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: -1;
-  -webkit-transition: top 0.09s ease-in;
+#nameProfil h3{
+  font-size: calc(0.5em + 1vw);
 }
 
-.fill:hover:before {
-  top: 0;
+#decoProfil{
+  bottom: 0;
+  position: absolute;
+  padding-top: 10px;
+  font-size: 20px;
+  background-color: #9CBD57;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  transition: 300ms;
+}
+
+#decoProfil a{
+  font-size: calc(0.5em + 1vw);
+}
+
+#decoProfil:hover{
+  background-color: #de1c1c;
+}
+
+.lineAdmin:hover{
+  background-color: #292d1e;
+}
+
+.lineAdmin:hover + .lineAdmin a{
+  text-decoration: none;
+}
+
+#navAdmin{
+  margin-top: 60px;
 }
 
 .delete{
@@ -121,54 +124,52 @@ line-height: 10vh;
   background-color: darkgreen;
 }
 
-th{
-  text-align: center;
-}
-
-table th,td{
-  font-family: 'Raleway';
-}
-
-.modal-content{
-  border-radius: 0px;
-  background-color: #a9ad9b;
-}
-
-.modal-header{
-  border-bottom: transparent;
-}
-.modal-footer{
-  border-top: transparent;
-}
-
-table .modal-body{
-  text-align: center;
-  font-size: 30px;
-}
-
-.btn-secondary{
-  background-color: red;
-  border: 2px #383736 solid;
-  transition: 200ms;
-}
-
-.btn-secondary:hover{
-  background-color: darkred;
-}
-
-.btn-primary{
-    background-color: #9cbd57;
-    border: 2px #383736 solid;
-    transition: 200ms;
-}
-.btn-primary:hover{
-  background-color: darkgreen;
-  border: 2px #545b62 solid;
-}
 h2{
   color: white;
   text-align: center;
 }
 a{
   width: 100%;
+}
+
+#navAdmin{
+  min-height: 100vh;
+}
+
+#profilAdmin{
+  min-height: 100vh;
+  background-color: #434933;
+}
+
+
+#profilAdminMobile{
+  min-height: 80px;
+  background-color: #434933;
+}
+
+#nameProfilMobile{
+  color: whitesmoke;
+  font-family: 'LemonMilk';
+}
+#decoProfilMobile{
+  background-color: #9CBD57;
+  color: white;
+  transition: 300ms;
+  text-align: center;
+  font-size: calc(0.5em + 1vw);
+}
+
+#decoProfilMobile:hover{
+    background-color: #de1c1c;
+}
+
+#decoProfilMobile i{
+  margin-right: 10px;
+}
+
+#imgProfilAdmin{
+  background-image: url('../images/logovillet.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
 }

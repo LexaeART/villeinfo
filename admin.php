@@ -25,6 +25,7 @@ if($_SESSION['connected'] == 0){
     <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/admin.css" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/9d0dc13277.js"></script>
   </head>
   <?php
   include_once 'models/dataBase.php';
@@ -36,57 +37,107 @@ if($_SESSION['connected'] == 0){
       <div class="row">
         <div class="col-12 titlePage">
           <div class="row">
-            <div class="col-1">
-              <img src="assets/images/logovillet.png" />
+            <div class="col-lg-1 col-md-2 col-sm-3 col-3">
             </div>
-            <div class="col-10 title">
+            <div class="col-lg-10 col-md-9 col-sm-8 col-8 title">
               <h1>Page d'administration de Ville</h1>
             </div>
-            <div class="col-1 title">
-              <a href="controlers/logout.php">Déconnexion</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12 col-sm-12 col-12" id="navAdmin">
+            <div class="row">
+              <div class="col-12">
+                <h2>Bonjour <?= $connectedInfos->firstName ?>, sélectionnez ce que vous souhaitez faire.</h2>
+              </div>
+            </div>
+            <div class="row">
+              <a href="profilAdmin.php">
+                <div class="col-12 lineAdmin">
+                  <h3>Gérer les profils administrateurs</h3>
+                </div>
+              </a>
+            </div>
+            <div class="row">
+              <a href="#">
+                <div class="col-12 lineAdmin">
+                  <h3>Gérer les articles du site</h3>
+                </div>
+              </a>
+            </div>
+            <div class="row">
+              <a href="#">
+                <div class="col-12 lineAdmin">
+                  <h3>Ajouter du contenu sur le site</h3>
+                </div>
+              </a>
+            </div>
+            <div class="row">
+              <a href="#">
+                <div class="col-12 lineAdmin">
+                  <h3>Modifier du contenu sur le site</h3>
+                </div>
+              </a>
+            </div>
+            <div class="row">
+              <a href="#">
+                <div class="col-12 lineAdmin">
+                  <h3>Supprimer du contenu sur le site</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 offset-lg-1 col-md-12 col-sm-12 col-12 d-none d-lg-block d-xl-block" id="profilAdmin">
+            <div class="row">
+              <div class="col-10 offset-1" id="imgProfilAdmin">
+              </div>
+
+              <div class="col-10 offset-1" id="profil">
+                <div class="row">
+                  <div class="col-12" id="nameProfil">
+                    <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
+                  </div>
+                  <a href="controlers/logout.php">
+                    <div class="col-12" id="decoProfil">
+                      <div class="row">
+                        <div class="col-3">
+                          <i class="fas fa-power-off"></i>
+                        </div>
+                        <div class="col-6">
+                          <p>Déconnexion</p>
+                        </div>
+                      </div>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Version mobile -->
+          <div class="col-md-12 col-sm-12 col-12 d-lg-none d-xl-none" id="profilAdminMobile">
+            <div class="row">
+              <div class="col-10 offset-1" id="profilMobile">
+                <div class="row">
+                  <div class="col-7" id="nameProfilMobile">
+                    <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
+                    <a href="controlers/logout.php">
+                      <div class="col-12" id="decoProfilMobile">
+                        <div class="row">
+                          <div class="col-12">
+                            <i class="fas fa-power-off"></i>Déconnexion
+                          </div>
+                        </div>
+                    </div></a>
+                  </div>
+                  <div class="col-5" id="menuProfilMobi">
+
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h2>Bonjour <?= $connectedInfos->firstName ?>, sélectionnez ce que vous souhaitez faire.</h2>
-        </div>
-      </div>
-      <div class="row">
-        <a href="profilAdmin.php">
-        <div class="col-6 lineAdmin">
-          <h3>Gérer les profils administrateurs</h3>
-        </div>
-        </a>
-      </div>
-      <div class="row">
-        <a href="#">
-        <div class="col-6 lineAdmin">
-          <h3>Gérer les articles du site</h3>
-        </div>
-        </a>
-      </div>
-      <div class="row">
-        <a href="#">
-        <div class="col-6 lineAdmin">
-          <h3>Ajouter du contenu sur le site</h3>
-        </div>
-        </a>
-      </div>
-      <div class="row">
-        <a href="#">
-          <div class="col-6 lineAdmin">
-          <h3>Modifier du contenu sur le site</h3>
-        </div>
-      </a>
-      </div>
-      <div class="row">
-        <a href="#">
-          <div class="col-6 lineAdmin">
-            <h3>Supprimer du contenu sur le site</h3>
-          </div>
-        </a>
       </div>
     </div>
     <script src="assets/js/main.js" type="text/javascript"></script>
