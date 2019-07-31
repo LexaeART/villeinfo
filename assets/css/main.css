@@ -85,12 +85,6 @@ h1{
   z-index: 0;
 }
 
-
-
-
-
-
-
 #comGlobal{
   position:relative;
   display:flex;
@@ -107,6 +101,7 @@ h1{
     transform: scale(0.95);
   cursor:pointer;
 }
+
 #vieCom {
   position: absolute;
   color:white;
@@ -136,5 +131,22 @@ h1{
 @media screen and (max-width: 991px){
   body{
     overflow: visible;
+  }
+}
+
+@media screen and (max-width: 418px){
+  #vieCom{
+    font-size: 35px;
+  }
+  #vieMun{
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  #welcome{
+    left: 0;
+    top: 0;
+    width: 100vw;
   }
 }
