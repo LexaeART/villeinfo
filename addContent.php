@@ -30,7 +30,16 @@ if($_SESSION['connected'] == 0){
   <?php
   include_once 'models/dataBase.php';
   include_once 'models/users.php';
+  include_once 'models/activitesModel.php';
+  include_once 'models/associationsModel.php';
+  include_once 'models/commissionModel.php';
+  include_once 'models/conseil.php';
+  include_once 'models/demarcheModel.php';
+  include_once 'models/ecoleModel.php';
+  include_once 'models/patrimoinemodel.php';
+  include_once 'models/reunionsModel.php';
   include_once 'controlers/adminController.php';
+    include 'controlers/addContentControler.php';
   ?>
   <body>
     <div class="container-fluid">
@@ -45,49 +54,25 @@ if($_SESSION['connected'] == 0){
           </div>
         </div>
       </div>
-      <div class="container" id="containerAdmin">
+      <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-12 col-sm-12 col-12" id="navAdmin">
-            <div class="row">
-              <div class="col-12">
-                <h2>Bonjour <?= $connectedInfos->firstName ?>, sélectionnez ce que vous souhaitez faire.</h2>
-              </div>
-            </div>
-            <div class="row">
-              <a href="profilAdmin.php">
-                <div class="col-12 lineAdmin">
-                  <h3>Gérer les profils administrateurs</h3>
-                </div>
-              </a>
-            </div>
-            <div class="row">
-              <a href="#">
-                <div class="col-12 lineAdmin">
-                  <h3>Gérer les articles du site</h3>
-                </div>
-              </a>
-            </div>
-            <div class="row">
-              <a href="addContent.php">
-                <div class="col-12 lineAdmin">
-                  <h3>Ajouter du contenu sur le site</h3>
-                </div>
-              </a>
-            </div>
-            <div class="row">
-              <a href="#">
-                <div class="col-12 lineAdmin">
-                  <h3>Modifier du contenu sur le site</h3>
-                </div>
-              </a>
-            </div>
-            <div class="row">
-              <a href="#">
-                <div class="col-12 lineAdmin">
-                  <h3>Supprimer du contenu sur le site</h3>
-                </div>
-              </a>
-            </div>
+            <h2>Sélectionnez la page sur la quelle vous souhaitez travailler</h2>
+            <form id="page-changer" action="" method="post">
+              <select name="nav">
+                <option value="">Sélectionnez la page</option>
+                <option value="addContent.php?content=association">Associations</option>
+                <option value="addContent.php?content=activites">Activités</option>
+                <option value="addContent.php?content=ecole">École</option>
+                <option value="addContent.php?content=patrimoine">Patrimoine</option>
+                <option value="addContent.php?content=demarches">Démarches</option>
+                <option value="addContent.php?content=conseil">Conseil</option>
+                <option value="addContent.php?content=reunions">Réunions</option>
+                <option value="addContent.php?content=documents">Documents</option>
+              </select>
+              <input type="submit" value="Go" id="submit" />
+            </form>
+            <?php include_once 'vues/addContentVue.php'; ?>
           </div>
           <div class="col-lg-3 offset-lg-1 col-md-12 col-sm-12 col-12 d-none d-lg-block d-xl-block" id="profilAdmin">
             <div class="row">
@@ -109,41 +94,42 @@ if($_SESSION['connected'] == 0){
                           <p>Déconnexion</p>
                         </div>
                       </div>
-                  </div></a>
+                    </div></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Version mobile -->
-          <div class="col-md-12 col-sm-12 col-12 d-lg-none d-xl-none" id="profilAdminMobile">
-            <div class="row">
-              <div class="col-10 offset-1" id="profilMobile">
-                <div class="row">
-                  <div class="col-7" id="nameProfilMobile">
-                    <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
-                    <a href="controlers/logout.php">
-                      <div class="col-12" id="decoProfilMobile">
-                        <div class="row">
-                          <div class="col-12">
-                            <i class="fas fa-power-off"></i>Déconnexion
+            <!-- Version mobile -->
+            <div class="col-md-12 col-sm-12 col-12 d-lg-none d-xl-none" id="profilAdminMobile">
+              <div class="row">
+                <div class="col-10 offset-1" id="profilMobile">
+                  <div class="row">
+                    <div class="col-7" id="nameProfilMobile">
+                      <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
+                      <a href="controlers/logout.php">
+                        <div class="col-12" id="decoProfilMobile">
+                          <div class="row">
+                            <div class="col-12">
+                              <i class="fas fa-power-off"></i>Déconnexion
+                            </div>
                           </div>
-                        </div>
-                    </div></a>
-                  </div>
-                  <div class="col-5" id="menuProfilMobi">
+                        </div></a>
+                      </div>
+                      <div class="col-5" id="menuProfilMobi">
 
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <script src="assets/js/main.js" type="text/javascript"></script>
-  </body>
-  </html>
+        <script src="assets/js/main.js" type="text/javascript"></script>
+        <script src="assets/js/addContent.js" type="text/javascript"></script>
+      </body>
+      </html>
 
-  <?php
-}
-?>
+      <?php
+    }
+    ?>

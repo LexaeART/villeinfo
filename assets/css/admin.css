@@ -133,17 +133,18 @@ a{
 }
 
 #navAdmin{
-  min-height: 100vh;
+  max-height: 100vh;
+    min-height: 50vh;
 }
 
 #profilAdmin{
-  min-height: 100vh;
+  max-height: 100vh;
   background-color: #434933;
 }
 
 
 #profilAdminMobile{
-  min-height: 80px;
+  max-height: 100vh;
   background-color: #434933;
 }
 
