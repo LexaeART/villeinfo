@@ -177,11 +177,13 @@ body{
   transition: left .3s 0s, right .3s 0s, top .1s .3s;
 }
 
+
 #filActu h3{
   font-size: 15px;
   color: #444939;
   font-family: 'LemonMilk';
   padding: 0;
+  transition: 500ms;
 }
 
 #filActu .col-3{
@@ -203,6 +205,10 @@ body{
 .titleNews h2{
   color: white;
   font-size: 26px;
+}
+
+#article:hover h3{
+  color: white;
 }
 
 button {
