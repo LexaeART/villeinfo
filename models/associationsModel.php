@@ -13,7 +13,7 @@ class associations extends dataBase {
     }
 
     public function allAssoc() {
-        $showConseil = $this->db->query('SELECT `name`,`president`,`description`, `picture` FROM `associations`');
+        $showConseil = $this->db->query('SELECT `id`,`name`,`president`,`description`, `picture` FROM `associations`');
         $showConseil->execute();
         return $showConseil = $showConseil->fetchAll(PDO::FETCH_OBJ);
     }
@@ -29,6 +29,13 @@ class associations extends dataBase {
         return $addAssoc->execute();
     }
 
+    public function deleteAssoc() {
+        $query = 'DELETE FROM `associations` WHERE `id` = :id';
+        $savedHuntCount = $this->db->prepare($query);
+        $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $savedHuntCount->execute();
+        return $savedHuntCount;
+    }
 
 
     public function __destruct() {
