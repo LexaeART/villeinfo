@@ -37,6 +37,18 @@ class associations extends dataBase {
         return $savedHuntCount;
     }
 
+    public function updateAssoc() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE associations SET name = :name, president = :president, description = :description, picture = :picture WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':president', $this->president, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':description', $this->description, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':picture', $this->picture, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
+    }
 
     public function __destruct() {
 
