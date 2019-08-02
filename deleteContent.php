@@ -1,6 +1,6 @@
 <?php session_start();?>
 <?php
-if($_SESSION['connected'] == 0){
+if(!isset($_SESSION['id'])){
   ?>
   <h2>Vous n'êtes pas autorisé à acceder à cette page veuillez vous connecter</h2>
   <?php
