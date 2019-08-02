@@ -86,7 +86,7 @@
         </div>
       </div>
       <div class="row" id="filActu">
-        <div class="col-12 col-md-6 offset-lg-1 col-lg-2">
+        <div id="article" class="col-12 col-md-6 offset-lg-1 col-lg-2">
           <a href="#">
             <div class="imgActu" style="background-image:url('assets/images/commune.jpg');">
 
@@ -109,7 +109,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
+        <div id="article" class="col-12 col-md-6 offset-lg-2 col-lg-2">
           <a href="#">
             <div class="imgActu" style="background-image:url('assets/images/fondUne.jpg');">
 
@@ -132,7 +132,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
+        <div id="article" class="col-12 col-md-6 offset-lg-2 col-lg-2">
           <a href="#">
             <div class="imgActu" style="background-image:url('assets/images/mairie.jpg');">
 
@@ -157,7 +157,7 @@
         </div>
       </div>
       <div class="row" id="filActu">
-        <div class="col-12 col-md-6 offset-lg-1 col-lg-2">
+        <div id="article" class="col-12 col-md-6 offset-lg-1 col-lg-2">
           <a href="#">
             <div class="imgActu" style="background-image:url('assets/images/commune.jpg');">
 
@@ -180,7 +180,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
+        <div id="article" class="col-12 col-md-6 offset-lg-2 col-lg-2">
           <a href="#">
             <div class="imgActu" style="background-image:url('assets/images/fondUne.jpg');">
 
@@ -203,7 +203,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 offset-lg-2 col-lg-2">
+        <div id="article" class="col-12 col-md-6 offset-lg-2 col-lg-2">
           <a href="#">
             <div class="imgActu" style="background-image:url('assets/images/mairie.jpg');">
 

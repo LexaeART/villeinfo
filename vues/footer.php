@@ -27,13 +27,13 @@
         <hr />
         <ul>
           <li>
-            <a href="">Mentions Légales</a>
+            <a href="mentionslegales.php">Mentions Légales</a>
           </li>
           <li>
-            <a href="">Charte de confidentialité</a>
+            <a href="chartedeconfidentialite.php">Charte de confidentialité</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="contact.php">Contact</a>
           </li>
         </ul>
       </div>
