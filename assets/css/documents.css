@@ -101,48 +101,30 @@ object-fit: cover;
   color: white;
 }
 
-.card-header{
-  background-color: #003D6C;
-    border-radius: 0px;
-}
-
-.card-header:first-child{
-  border-radius: 0px;
-}
-
-.card{
-  border-radius: 0px;
-  border: transparent;
-}
-
-.btn-link{
-  color: white;
-}
-
-.card-body a{
-  color: black;
-  transition: 200ms;
-}
-
-.card-body a:hover{
-  color: #4B8AFF;
-}
 
 .subCat{
   background-color: #003D6C;
   text-align: center;
   color: white;
   font-family: 'LemonMilk';
-  height: 50px;
-  line-height: 50px;
   font-size: 20px;
   margin-top: 50px;
   margin-bottom: 30px;
+    font-size: calc(0.8em + 1vw);
+}
+
+.subCat p{
 }
 
 .table{
-  background-color: #b3c9f2;
   font-family: 'Raleway';
+    color: #fff;
+      background-color: #003D6C;
+}
+
+
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 thead{

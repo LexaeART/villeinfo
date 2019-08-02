@@ -78,8 +78,8 @@ include_once 'controlers/commissionsControlers.php';
       </div>
       <div class="row">
         <div class="col-12">
-          <div class="">
-            <table class="table table-sm">
+          <div class="table-responsive">
+            <table class="table table-sm table-striped">
               <thead>
                 <tr>
                   <th scope="col">COMMISSIONS</th>

@@ -105,6 +105,11 @@ object-fit: cover;
   background-color: #003D6C;
     border-radius: 0px;
     min-height: inherit;
+    transition: 300ms;
+}
+
+.card-header:hover{
+  background-color: #05263f;
 }
 
 .card-header:first-child{
