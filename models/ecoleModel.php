@@ -11,7 +11,7 @@ class ecoles extends dataBase {
         parent::__construct();
     }
     public function allEcoles() {
-        $allEcoles = $this->db->query('SELECT `id`,`name`, `picture` FROM `ecoles`');
+        $allEcoles = $this->db->query('SELECT `id`,`name`,`nameBoss`, `picture` FROM `ecoles`');
         $allEcoles->execute();
         return $allEcoles = $allEcoles->fetchAll(PDO::FETCH_OBJ);
     }
@@ -23,15 +23,16 @@ class ecoles extends dataBase {
         $allProfs->execute();
         return $allProfs = $allProfs->fetchAll(PDO::FETCH_OBJ);
     }
-    public function allDirectrice() {
-        $query = 'SELECT `id`, `name` FROM `directrice` WHERE `idEcole` = :id';
-        $allDirectrice = $this->db->prepare($query);
-        $allDirectrice->bindValue(':id', $this->id, PDO::PARAM_INT);
+    public function addSchool() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'INSERT INTO `ecoles`(`name`, `nameBoss`, `picture`) VALUES(:name, :description, :picture)';
+        $addAssoc = $this->db->prepare($query);
+        $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $addAssoc->bindValue(':description', $this->description, PDO::PARAM_STR);
+        $addAssoc->bindValue(':picture', $this->picture, PDO::PARAM_STR);
         //Si l'insertion s'est correctement déroulée on retourne vrai
-        $allDirectrice->execute();
-        return $allDirectrice = $allDirectrice->fetch(PDO::FETCH_OBJ);
+        return $addAssoc->execute();
     }
-
 
     public function __destruct() {
 

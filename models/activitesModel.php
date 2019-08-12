@@ -4,8 +4,12 @@ class activites extends dataBase {
 
     public $id = 0;
     public $name = '';
-    public $fonction = '';
-    public $img = '';
+    public $description = '';
+    public $picture = '';
+    public $statut = '';
+    public $prix = '';
+    public $caution = '';
+    public $idActivite = '';
 
     public function __construct() {
         parent::__construct();
@@ -23,8 +27,27 @@ class activites extends dataBase {
         $allTarifs->execute();
         return $allTarifs = $allTarifs->fetchAll(PDO::FETCH_OBJ);
     }
-
-
+    public function addActivity() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'INSERT INTO `activites`(`name`, `description`, `picture`) VALUES(:name, :description, :picture)';
+        $addAssoc = $this->db->prepare($query);
+        $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $addAssoc->bindValue(':description', $this->description, PDO::PARAM_STR);
+        $addAssoc->bindValue(':picture', $this->picture, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $addAssoc->execute();
+    }
+    public function addPrice() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'INSERT INTO `tarifs`(`statut`, `prix`, `caution`, `idActivite`) VALUES(:statut, :prix, :caution, :idActivite)';
+        $addAssoc = $this->db->prepare($query);
+        $addAssoc->bindValue(':statut', $this->statut, PDO::PARAM_STR);
+        $addAssoc->bindValue(':prix', $this->prix, PDO::PARAM_STR);
+        $addAssoc->bindValue(':caution', $this->caution, PDO::PARAM_STR);
+        $addAssoc->bindValue(':idActivite', $this->idActivite, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $addAssoc->execute();
+    }
     public function __destruct() {
 
     }
