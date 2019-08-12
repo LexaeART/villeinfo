@@ -16,7 +16,16 @@ class conseil extends dataBase {
         $showConseil->execute();
         return $showConseil = $showConseil->fetchAll(PDO::FETCH_OBJ);
     }
-
+    public function addConseil() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'INSERT INTO `conseil`(`name`, `fonction`, `img`) VALUES(:name, :fonction, :img)';
+        $addAssoc = $this->db->prepare($query);
+        $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $addAssoc->bindValue(':fonction', $this->fonction, PDO::PARAM_STR);
+        $addAssoc->bindValue(':img', $this->img, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $addAssoc->execute();
+    }
 
     public function __destruct() {
 

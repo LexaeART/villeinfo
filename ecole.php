@@ -108,7 +108,6 @@ include_once 'controlers/ecolesController.php';
           foreach ($allEcolesQuery as $allEcolesQuery) {
               $ecoleInfos->id = $allEcolesQuery->id;
               $ecoleProf = $ecoleInfos->allProfs();
-              $ecoleDirectrice = $ecoleInfos->allDirectrice();
             ?>
             <div class="row">
               <div id="change" class="col-12">
@@ -120,7 +119,7 @@ include_once 'controlers/ecolesController.php';
                     <h2><?=$allEcolesQuery->name?></h2>
                     <p>
                       <strong>Directrice :</strong> <br />
-                      <?=$ecoleDirectrice->name?><br />
+                      <?=$allEcolesQuery->nameBoss?><br />
                       <strong>Institutrices :</strong>
                       <ul>
                       <?php foreach ($ecoleProf as $ecoleProf){ ?>
