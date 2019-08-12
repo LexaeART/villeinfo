@@ -174,3 +174,73 @@ a{
   background-repeat: no-repeat;
   height: 200px;
 }
+
+#backToWeb{
+    font-family: 'Raleway';
+    border-bottom: solid 3px #434933;
+    padding-top: 15px;
+    text-align: center;
+    font-family: 'LemonMilk';
+    color: whitesmoke;
+    transition: 300ms;
+}
+
+#backToWeb:hover{
+  background-color:#434933;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+  padding: 1em 0 1em 1em;
+  /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding.
+  via: https://cssdeck.com/labs/styling-select-box-with-css3 */
+  border: 3px solid #7b993d;
+  border-radius: 0;
+  position: relative;
+  border-right-width: 20px;
+  background-color: #434933;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    padding-right: 1em;
+  }
+}
+select:focus {
+  outline: none;
+  border-color: #7b993d;
+}
+
+
+.form-control{
+  border: 3px solid #7b993d;
+  background-color: #434933;
+  border-radius: 0px;
+}
+
+label{
+  background-color: #7b993d;
+  margin-bottom: 0px;
+  padding-right: 50px;
+  padding-left: 20px;
+  color: white;
+  border-top-right-radius: 30px;
+}
+
+#mainContainer h3{
+  text-align: center;
+  font-family: 'LemonMilk';
+  color: #434933;
+  font-size: 48px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

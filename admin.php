@@ -99,6 +99,15 @@ if(!isset($_SESSION['id'])){
                   <div class="col-12" id="nameProfil">
                     <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
                   </div>
+                  <a href="index.php">
+                    <div class="row">
+                      <div class="col-12" id="backToWeb">
+                        <p>
+                          Retournez sur le site
+                        </p>
+                      </div>
+                    </div>
+                  </a>
                   <a href="controlers/logout.php">
                     <div class="col-12" id="decoProfil">
                       <div class="row">

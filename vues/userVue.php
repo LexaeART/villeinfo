@@ -17,7 +17,7 @@ if (isset($_GET['updateUser'])){
       <input type="text" name="pseudo" class="form-control" value="<?= $user->pseudo; ?>" >
       <p id="errorAndValidAddSafary"><?= isset($formError['pseudo']) ? $formError['pseudo'] : ''; ?></p>
     </div>
-    <div class="form-group form-group col-lg-offset-8 col-lg-2">
+    <div class="form-group form-group col-lg-offset-8 col-lg-5">
       <button type="submit" class="form-control" name="updateInfos"> Valider modification du Pseudo</button>
     </div>
     <?php
