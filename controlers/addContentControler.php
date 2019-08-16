@@ -1,6 +1,10 @@
 <?php
   $allActivities = new activites();
   $allActivitiesQuery = $allActivities->allActivites();
+    $allSchool = new ecoles();
+    $allSchool = $allSchool->allEcoles();
+      $allReunions = new reunions();
+      $allReunions = $allReunions->allReunions();
 /* AJOUT ASSOCIATION */
 
 if(isset($_POST['addAssoc'])){
@@ -228,6 +232,149 @@ elseif(isset($_POST['addSchool'])){
   }
   if (count($formError) == 0) {
       $addActivity->addSchool();
+  }
+}
+
+/* AJOUT PROFS */
+
+elseif(isset($_POST['addTeacher'])){
+  $addActivity = new ecoles();
+  $formError = array();
+
+  if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
+      $addActivity->name = htmlspecialchars($_POST['nameAssoc']);
+  } else {
+      $formError['nameAssoc'] = 'Le champ est vide';
+  }
+  if (isset($_POST['concernActivity']) && !empty($_POST['concernActivity'])) {
+      $addActivity->id = htmlspecialchars($_POST['concernActivity']);
+  } else {
+      $formError['descriptionAssoc'] = 'Le champ est vide';
+  }
+  if (count($formError) == 0) {
+      $addActivity->addTeacher();
+  }
+}
+
+/* AJOUT REUNIONS */
+
+elseif(isset($_POST['addReunion'])){
+  $addActivity = new reunions();
+  $formError = array();
+
+  if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
+      $addActivity->name = htmlspecialchars($_POST['nameAssoc']);
+  } else {
+      $formError['nameAssoc'] = 'Le champ est vide';
+  }
+  if (count($formError) == 0) {
+      $addActivity->addReunion();
+  }
+}
+
+/* AJOUT COMPTE RENDU */
+
+elseif(isset($_POST['addCr'])){
+  $addActivity = new reunions();
+  $formError = array();
+
+  if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
+      $addActivity->name = htmlspecialchars($_POST['nameAssoc']);
+  } else {
+      $formError['nameAssoc'] = 'Le champ est vide';
+  }
+  if (isset($_POST['concernActivity']) && !empty($_POST['concernActivity'])) {
+      $addActivity->id = htmlspecialchars($_POST['concernActivity']);
+  } else {
+      $formError['concernActivity'] = 'Le champ est vide';
+  }
+  if (isset($_FILES['profilePicture']) && !empty($_FILES['profilePicture'])) {
+      $fichier = basename($_FILES['profilePicture']['name']);
+      $taille_maxi = 100000;
+      $taille = filesize($_FILES['profilePicture']['tmp_name']);
+      $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
+      $extension = strrchr($_FILES['profilePicture']['name'], '.');
+      $addActivity->pdf = htmlspecialchars($_FILES['profilePicture']['name']);
+      $dossier = 'media/cr/';
+      move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
+
+  }
+  if (count($formError) == 0) {
+      $addActivity->addCr();
+  }
+}
+
+/* AJOUT COMMISSION */
+
+
+elseif(isset($_POST['addCommissions'])){
+  $addActivity = new commission();
+  $formError = array();
+
+  if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
+      $addActivity->name = htmlspecialchars($_POST['nameAssoc']);
+  } else {
+      $formError['nameAssoc'] = 'Le champ est vide';
+  }
+
+  if (isset($_POST['namePresident']) && !empty($_POST['namePresident'])) {
+      $addActivity->objet = htmlspecialchars($_POST['namePresident']);
+  } else {
+      $formError['namePresident'] = 'Le champ est vide';
+  }
+
+  if (isset($_POST['nameTitu']) && !empty($_POST['nameTitu'])) {
+      $addActivity->titulaire = htmlspecialchars($_POST['nameTitu']);
+  } else {
+      $formError['nameTitu'] = 'Le champ est vide';
+  }
+
+  if (isset($_POST['nameSup']) && !empty($_POST['nameSup'])) {
+      $addActivity->suppleant = htmlspecialchars($_POST['nameSup']);
+  } else {
+      $formError['nameSup'] = 'Le champ est vide';
+  }
+
+  if (count($formError) == 0) {
+      $addActivity->addCommission();
+  }
+}
+
+/* AJOUT VILL'INFOS */
+
+
+elseif(isset($_POST['addVillinfo'])){
+  $addActivity = new infos();
+  $formError = array();
+
+  if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
+      $addActivity->name = htmlspecialchars($_POST['nameAssoc']);
+  } else {
+      $formError['nameAssoc'] = 'Le champ est vide';
+  }
+  if (isset($_POST['namePresident']) && !empty($_POST['namePresident'])) {
+      $addActivity->trimestre = htmlspecialchars($_POST['namePresident']);
+  } else {
+      $formError['namePresident'] = 'Le champ est vide';
+  }
+  if (isset($_POST['yearInfo']) && !empty($_POST['yearInfo'])) {
+      $addActivity->year = htmlspecialchars($_POST['yearInfo']);
+  } else {
+      $formError['yearInfo'] = 'Le champ est vide';
+  }
+  if (isset($_FILES['profilePicture']) && !empty($_FILES['profilePicture'])) {
+      $fichier = basename($_FILES['profilePicture']['name']);
+      $taille_maxi = 100000;
+      $taille = filesize($_FILES['profilePicture']['tmp_name']);
+      $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
+      $extension = strrchr($_FILES['profilePicture']['name'], '.');
+      $addActivity->corpus = htmlspecialchars($_FILES['profilePicture']['name']);
+      $dossier = 'media/vilinfo/';
+      move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
+
+  }
+  if (count($formError) == 0) {
+      $addActivity->addVillinfo();
   }
 }
 ?>

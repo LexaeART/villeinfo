@@ -33,6 +33,15 @@ class ecoles extends dataBase {
         //Si l'insertion s'est correctement déroulée on retourne vrai
         return $addAssoc->execute();
     }
+    public function addTeacher() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'INSERT INTO `profs`(`name`, `idEcole`) VALUES(:name, :id)';
+        $addAssoc = $this->db->prepare($query);
+        $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $addAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $addAssoc->execute();
+    }
 
     public function __destruct() {
 
