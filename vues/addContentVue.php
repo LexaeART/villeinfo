@@ -81,10 +81,11 @@
 <button type="submit" class="btn btn-primary" name="addPriceActivity">Ajouter une association</button>
 </form>
     <?php
+  }
 
 /* ECOLES */
 
-  }elseif(isset($_GET['content']) && $_GET['content']=='ecole') {
+  elseif(isset($_GET['content']) && $_GET['content']=='ecole') {
     ?>
     <h3>Ajout d'une école</h3>
     <form action="#" method="post" enctype="multipart/form-data">
@@ -104,11 +105,30 @@
   </div>
   <button type="submit" class="btn btn-primary" name="addSchool">Ajouter une école</button>
 </form>
+<h3>Ajout d'enseignants</h3>
+<form action="#" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+  <label for="concernActivity">Ecole concérnée</label>
+  <select class="" name="concernActivity">
+    <?php foreach ($allSchool as $allSchool){ ?>
+    <option value="<?= $allSchool->id ?>"><?= $allSchool->name ?></option>
+    <?php } ?>
+  </select>
+  <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+  </div>
+<div class="form-group">
+<label for="nameAssoc">Prenom et Nom de l'enseignant</label>
+<input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Prenom et Nom de l'enseignant">
+<?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+</div>
+<button type="submit" class="btn btn-primary" name="addTeacher">Ajouter l'enseignant</button>
+</form>
     <?php
+  }
 
 /* PATRIMOINE */
 
-  }elseif(isset($_GET['content']) && $_GET['content']=='patrimoine') {
+  elseif(isset($_GET['content']) && $_GET['content']=='patrimoine') {
     ?>
     <h3>Ajout d'un patrimoine</h3>
     <form action="#" method="post" enctype="multipart/form-data">
@@ -196,18 +216,98 @@
 
   }elseif(isset($_GET['content']) && $_GET['content']=='reunions') {
     ?>
-    <form class="" action="#" method="post">
-
-    </form>
+    <h3>Ajout d'une réunion</h3>
+    <form action="#" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="nameAssoc">Nom de la réunion</label>
+    <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom de la réunion">
+    <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+  </div>
+  <button type="submit" class="btn btn-primary" name="addReunion">Ajouter une réunion</button>
+</form>
+<h3>Ajout d'un Compte-Rendus</h3>
+<form action="#" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+  <label for="concernActivity">Réunion concérnée</label>
+  <select class="" name="concernActivity">
+    <?php foreach ($allReunions as $allReunions){ ?>
+    <option value="<?= $allReunions->id ?>"><?= $allReunions->name ?></option>
+    <?php } ?>
+  </select>
+  <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+  </div>
+<div class="form-group">
+<label for="nameAssoc">Nom du Compte-Rendus</label>
+<input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom du Compte-Rendus">
+<?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+</div>
+<div class="form-group">
+<label for="pictureAssoc">PDF du Compte-Rendus</label>
+<input type="file" class="form-control-file" id="exampleFormControlFile1" name="profilePicture">
+</div>
+<button type="submit" class="btn btn-primary" name="addCr">Ajouter le Compte-Rendus</button>
+</form>
+<?= isset($formError['errorFile']) ? $formError['errorFile'] : '' ?>
     <?php
 
 /* DOCUMENTS */
 
   }elseif(isset($_GET['content']) && $_GET['content']=='documents') {
     ?>
-    <form class="" action="#" method="post">
+    <h3>Ajout d'une commission</h3>
+    <form action="#" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="nameAssoc">Nom de la commission</label>
+    <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom de la commission">
+    <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+  </div>
+  <div class="form-group">
+    <label for="namePresident">Objet de la commission</label>
+    <input type="text" class="form-control" id="namePresident" name="namePresident" aria-describedby="namePresident" placeholder="Objet de la commission">
+    <?= isset($formError['namePresident']) ? $formError['namePresident'] : '' ?>
+  </div>
+  <div class="form-group">
+    <label for="nameTitu">Membres titulaires</label>
+    <input type="text" class="form-control" id="nameTitu" name="nameTitu" aria-describedby="nameTitu" placeholder="Nom des titulaires">
+    <?= isset($formError['nameTitu']) ? $formError['nameTitu'] : '' ?>
+  </div>
+  <div class="form-group">
+    <label for="nameSup">Membres suppleants</label>
+    <input type="text" class="form-control" id="nameSup" name="nameSup" aria-describedby="nameSup" placeholder="Nom des suppleants">
+    <?= isset($formError['nameSup']) ? $formError['nameSup'] : '' ?>
+  </div>
+  <button type="submit" class="btn btn-primary" name="addCommissions">Ajouter la commission</button>
+</form>
+    <?php
+  }
 
-    </form>
+/* VILLINFOS */
+
+  elseif(isset($_GET['content']) && $_GET['content']=='villinfo') {
+    ?>
+    <h3>Ajout d'un Vill'info</h3>
+    <form action="#" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="nameAssoc">Nom du Vill'Infos</label>
+    <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom du Vill'Infos">
+    <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+  </div>
+  <div class="form-group">
+    <label for="namePresident">Trimestre du Vill'Infos</label>
+    <input type="text" class="form-control" id="namePresident" name="namePresident" aria-describedby="namePresident" placeholder="Trimestre du Vill'Infos">
+    <?= isset($formError['namePresident']) ? $formError['namePresident'] : '' ?>
+  </div>
+  <div class="form-group">
+    <label for="yearInfo">Année du Vill'Infos</label>
+    <input type="number" class="form-control" id="yearInfo" name="yearInfo" aria-describedby="yearInfo" placeholder="Année du Vill'Infos">
+    <?= isset($formError['yearInfo']) ? $formError['yearInfo'] : '' ?>
+  </div>
+  <div class="form-group">
+  <label for="pictureAssoc">PDF du Vill'Infos</label>
+  <input type="file" class="form-control-file" id="exampleFormControlFile1" name="profilePicture">
+  </div>
+  <button type="submit" class="btn btn-primary" name="addVillinfo">Ajouter le Vill'Infos</button>
+</form>
     <?php
   }
  ?>

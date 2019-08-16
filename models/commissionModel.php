@@ -4,8 +4,9 @@ class commission extends dataBase {
 
     public $id = 0;
     public $name = '';
-    public $fonction = '';
-    public $img = '';
+    public $objet = '';
+    public $titulaire = '';
+    public $suppleant = '';
 
     public function __construct() {
         parent::__construct();
@@ -16,8 +17,17 @@ class commission extends dataBase {
         $showCommission->execute();
         return $showCommission = $showCommission->fetchAll(PDO::FETCH_OBJ);
     }
-
-
+    public function addCommission() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'INSERT INTO `commissions`(`commission`, `objet`, `titulaire`, `suppleant`) VALUES(:name, :objet, :titulaire, :suppleant)';
+        $addAssoc = $this->db->prepare($query);
+        $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $addAssoc->bindValue(':objet', $this->objet, PDO::PARAM_STR);
+        $addAssoc->bindValue(':titulaire', $this->titulaire, PDO::PARAM_STR);
+        $addAssoc->bindValue(':suppleant', $this->suppleant, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $addAssoc->execute();
+    }
     public function __destruct() {
 
     }
