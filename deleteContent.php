@@ -38,6 +38,7 @@ if(!isset($_SESSION['id'])){
   include_once 'models/ecoleModel.php';
   include_once 'models/patrimoinemodel.php';
   include_once 'models/reunionsModel.php';
+  include_once 'models/villinfos.php';
   include_once 'controlers/adminController.php';
   include 'controlers/deleteContentControler.php';
   ?>
@@ -69,6 +70,7 @@ if(!isset($_SESSION['id'])){
                 <option value="deleteContent.php?content=conseil">Conseil</option>
                 <option value="deleteContent.php?content=reunions">Réunions</option>
                 <option value="deleteContent.php?content=documents">Documents</option>
+                <option value="deleteContent.php?content=villinfo">Vill'Infos</option>
               </select>
               <input type="submit" value="Go" id="submit" />
             </form>

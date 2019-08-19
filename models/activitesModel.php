@@ -48,6 +48,20 @@ class activites extends dataBase {
         //Si l'insertion s'est correctement déroulée on retourne vrai
         return $addAssoc->execute();
     }
+    public function deleteActivities() {
+        $query = 'DELETE FROM `activites` WHERE `id` = :id';
+        $savedHuntCount = $this->db->prepare($query);
+        $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $savedHuntCount->execute();
+        return $savedHuntCount;
+    }
+    public function deletePrice() {
+        $query = 'DELETE FROM `tarifs` WHERE `idActivite` = :id';
+        $savedHuntCount = $this->db->prepare($query);
+        $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $savedHuntCount->execute();
+        return $savedHuntCount;
+    }
     public function __destruct() {
 
     }

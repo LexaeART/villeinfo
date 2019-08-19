@@ -27,7 +27,13 @@ class patrimoine extends dataBase {
         //Si l'insertion s'est correctement déroulée on retourne vrai
         return $addAssoc->execute();
     }
-
+    public function deletePatrimoine() {
+        $query = 'DELETE FROM `patrimoine` WHERE `id` = :id';
+        $savedHuntCount = $this->db->prepare($query);
+        $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $savedHuntCount->execute();
+        return $savedHuntCount;
+    }
     public function __destruct() {
 
     }
