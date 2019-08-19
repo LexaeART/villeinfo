@@ -24,6 +24,11 @@ class reunions extends dataBase {
         $allCr->execute();
         return $allCr = $allCr->fetchAll(PDO::FETCH_OBJ);
     }
+    public function allCrBis() {
+        $allReunions = $this->db->query('SELECT `id`,`name` FROM `compterendus`');
+        $allReunions->execute();
+        return $allReunions = $allReunions->fetchAll(PDO::FETCH_OBJ);
+    }
     public function addReunion() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
         $query = 'INSERT INTO `reunions`(`name`) VALUES(:name)';
@@ -42,7 +47,13 @@ class reunions extends dataBase {
         //Si l'insertion s'est correctement déroulée on retourne vrai
         return $addAssoc->execute();
     }
-
+    public function deleteCr() {
+        $query = 'DELETE FROM `compterendus` WHERE `id` = :id';
+        $savedHuntCount = $this->db->prepare($query);
+        $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $savedHuntCount->execute();
+        return $savedHuntCount;
+    }
     public function __destruct() {
 
     }
