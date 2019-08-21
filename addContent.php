@@ -40,8 +40,7 @@ if(!isset($_SESSION['id'])){
   include_once 'models/reunionsModel.php';
   include_once 'models/villinfos.php';
   include_once 'controlers/adminController.php';
-  include 'controlers/addContentControler.php';
-  ?>
+  include 'controlers/addContentControler.php';  ?>
   <body>
     <div class="container-fluid">
       <div class="row">

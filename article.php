@@ -19,6 +19,11 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://kit.fontawesome.com/9d0dc13277.js"></script>
 </head>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/newsModel.php';
+include_once 'controlers/newsControler.php';
+?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,49 +57,46 @@
     </div>
   </nav>
   <main id="">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12" id="frontImage">
-          <h1>Refonte du Site de la Mairie</h1>
+    <?php foreach ($activInfosQuery as $activInfosQuery){ ?>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12" id="frontImage">
+            <h1><?= $activInfosQuery->title ?></h1>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12" id="breadcrumbs">
+        <div class="row">
+          <div class="col-12" id="breadcrumbs">
+            <div class="row">
+              <div class="offset-1 col-lg-5 col-xs-11">
+                <p>
+                  <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Titre Article
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
           <div class="row">
-            <div class="offset-1 col-lg-5 col-xs-11">
-              <p>
-                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Titre Article
-              </p>
+            <div class="col-10 offset-1" id="titleArticle">
+              <p><?= htmlspecialchars_decode($activInfosQuery->title) ?></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1" id="titleArticle">
+              <p>Ecrit par <?= htmlspecialchars_decode($activInfosQuery->idUser) ?></p>
+            </div>
+            <div class="col-1" id="titleArticle">
+              <p>le <?= htmlspecialchars_decode($activInfosQuery->date) ?></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10 offset-1" id="corpsArticle">
+              <p><?= htmlspecialchars_decode($activInfosQuery->body) ?></p>
             </div>
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-10 offset-1" id="corpsArticle">
-            <p>
-Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est.<br />
-
-Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est.<br />
-
-Denique Antiochensis ordinis vertices sub uno elogio iussit occidi ideo efferatus, quod ei celebrari vilitatem intempestivam urgenti, cum inpenderet inopia, gravius rationabili responderunt; et perissent ad unum ni comes orientis tunc Honoratus fixa constantia restitisset.<br /><br />
-
-Nam sole orto magnitudine angusti gurgitis sed profundi a transitu arcebantur et dum piscatorios quaerunt lenunculos vel innare temere contextis cratibus parant, effusae legiones, quae hiemabant tunc apud Siden, isdem impetu occurrere veloci. et signis prope ripam locatis ad manus comminus conserendas denseta scutorum conpage semet scientissime praestruebant, ausos quoque aliquos fiducia nandi vel cavatis arborum truncis amnem permeare latenter facillime trucidarunt.<br />
-
-Ut enim quisque sibi plurimum confidit et ut quisque maxime virtute et sapientia sic munitus est, ut nullo egeat suaque omnia in se ipso posita iudicet, ita in amicitiis expetendis colendisque maxime excellit. Quid enim? Africanus indigens mei? Minime hercule! ac ne ego quidem illius; sed ego admiratione quadam virtutis eius, ille vicissim opinione fortasse non nulla, quam de meis moribus habebat, me dilexit; auxit benevolentiam consuetudo. Sed quamquam utilitates multae et magnae consecutae sunt, non sunt tamen ab earum spe causae diligendi profectae.<br />
-Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est.<br />
-
-Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est.<br />
-
-Denique Antiochensis ordinis vertices sub uno elogio iussit occidi ideo efferatus, quod ei celebrari vilitatem intempestivam urgenti, cum inpenderet inopia, gravius rationabili responderunt; et perissent ad unum ni comes orientis tunc Honoratus fixa constantia restitisset.<br /><br />
-
-Nam sole orto magnitudine angusti gurgitis sed profundi a transitu arcebantur et dum piscatorios quaerunt lenunculos vel innare temere contextis cratibus parant, effusae legiones, quae hiemabant tunc apud Siden, isdem impetu occurrere veloci. et signis prope ripam locatis ad manus comminus conserendas denseta scutorum conpage semet scientissime praestruebant, ausos quoque aliquos fiducia nandi vel cavatis arborum truncis amnem permeare latenter facillime trucidarunt.<br />
-
-Ut enim quisque sibi plurimum confidit et ut quisque maxime virtute et sapientia sic munitus est, ut nullo egeat suaque omnia in se ipso posita iudicet, ita in amicitiis expetendis colendisque maxime excellit. Quid enim? Africanus indigens mei? Minime hercule! ac ne ego quidem illius; sed ego admiratione quadam virtutis eius, ille vicissim opinione fortasse non nulla, quam de meis moribus habebat, me dilexit; auxit benevolentiam consuetudo. Sed quamquam utilitates multae et magnae consecutae sunt, non sunt tamen ab earum spe causae diligendi profectae.
-            </p>
-          </div>
-        </div>
-      </div>
+    <?php } ?>
     </main>
     <?php
       include 'vues/footer.php';
