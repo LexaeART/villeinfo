@@ -225,6 +225,7 @@ select:focus {
   border: 3px solid #7b993d;
   background-color: #434933;
   border-radius: 0px;
+  color: white;
 }
 
 label{
@@ -234,6 +235,10 @@ label{
   padding-left: 20px;
   color: white;
   border-top-right-radius: 30px;
+}
+
+input{
+  color: white;
 }
 
 #mainContainer h3{

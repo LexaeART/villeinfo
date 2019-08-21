@@ -10,7 +10,7 @@ if (isset($_GET['updateUser'])){
     </div>
   </div>
   <form action="#" method="post" enctype="multipart/form-data">
-    <div class="col-lg-offset-4 col-lg-4  topLog">
+    <div class="col-lg-offset-4 col-lg-4">
       <label>Pseudo* : </label>
     </div>
     <div class="form-group col-lg-offset-4 col-lg-4">
@@ -18,7 +18,7 @@ if (isset($_GET['updateUser'])){
       <p id="errorAndValidAddSafary"><?= isset($formError['pseudo']) ? $formError['pseudo'] : ''; ?></p>
     </div>
     <div class="form-group form-group col-lg-offset-8 col-lg-5">
-      <button type="submit" class="form-control" name="updateInfos"> Valider modification du Pseudo</button>
+      <button type="submit" name="updateInfos"> Valider modification du Pseudo</button>
     </div>
     <?php
     foreach ($formErrorPseudo as $formErrorPseudo) {
@@ -32,24 +32,24 @@ if (isset($_GET['updateUser'])){
     </div>
   </div>
   <form action="#" method="post" enctype="multipart/form-data">
-    <div class="row">
-      <div class="form-group col-lg-offset-3 col-lg-6">
+
+      <div class="col-lg-offset-4 col-lg-8  topLog">
         <label>Mot de passe actuel  : </label>
       </div>
-      <div class="form-group col-lg-offset-3 col-lg-4">
-        <input type="password" name="currentPassword" >
-      </div><div class="form-group col-lg-offset-3 col-lg-6">
+      <div class="form-group col-lg-offset-4 col-lg-8">
+        <input type="password" class="form-control" name="currentPassword" >
+      </div><div class="col-lg-offset-4 col-lg-8  topLog">
         <label>Nouveau mot de passe : </label>
       </div>
-      <div class="form-group col-lg-offset-3 col-lg-4">
-        <input type="password" name="newPassword" >
-      </div><div class="form-group col-lg-offset-3 col-lg-6">
+      <div class="form-group col-lg-offset-3 col-lg-8">
+        <input type="password" class="form-control" name="newPassword" >
+      </div><div class="col-lg-offset-4 col-lg-8  topLog">
         <label>Confirmation du nouveau mot de passe  : </label>
       </div>
-      <div class="form-group col-lg-offset-3 col-lg-4">
-        <input type="password" name="confirmNewPassword" >
+      <div class="form-group col-lg-offset-3 col-lg-8">
+        <input type="password" class="form-control" name="confirmNewPassword" >
       </div>
-    </div>
+
     <?php
     foreach ($formError as $formError) {
       ?>
@@ -58,8 +58,8 @@ if (isset($_GET['updateUser'])){
     }
     ?>
     <div class="row">
-      <div class="form-group col-lg-offset-4 col-lg-4">
-        <input type="submit" class="btn" name="updatePassword" value="Valider modification du mot de passe">
+      <div class="form-group col-lg-offset-4 col-lg-8">
+        <button type="submit" name="updatePassword">Valider modification du mot de passe</button>
       </div>
     </div>
   </form>
