@@ -58,7 +58,7 @@ include_once 'controlers/newsControler.php';
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="VIN">
-          <div class="innerBackground">
+          <div class="innerBackground" style="background-image:url('media/news/<?= $lastNews->mainPicture ?>')">
           </div>
           <div class="col-3 col-lg-1" id="important">
             <p>
@@ -68,11 +68,11 @@ include_once 'controlers/newsControler.php';
           </div>
           <div class="col-5 col-lg-5" id="title">
             <p>
-              Refonte du site de la Mairie
+              <?= $lastNews->title ?>
             </p>
           </div>
           <div class="col-4 col-lg-2" id="read">
-            <a href="article.php">
+            <a href="article.php?idArticle=<?= $lastNews->id ?>">
               Lire l'article
             </a>
             <hr />
@@ -91,146 +91,32 @@ include_once 'controlers/newsControler.php';
         </div>
       </div>
       <div class="row" id="filActu">
-        <div id="article" class="col-12 col-md-6 offset-lg-1 col-lg-2">
-          <a href="#">
-            <div class="imgActu" style="background-image:url('assets/images/commune.jpg');">
+        <?php foreach ($listNews as $listNews){ ?>
+        <div id="article" class="col-12 col-md-6 col-lg-4">
+          <a href="article.php?idArticle=<?= $listNews->id ?>">
+            <div class="imgActu" style="background-image:url('media/news/<?= $listNews->mainPicture ?>');">
 
             </div>
           </a>
           <div class="row" id="infoNews">
-            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
+            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-4">
               <hr />
             </div>
-            <div class="col-4 col-lg-6">
-              <h3>Catégorie</h3>
+            <div class="col-4 col-lg-4">
+              <h3><?= $listNews->categorie ?></h3>
             </div>
-            <div class="col-3">
+            <div class="col-4">
               <hr />
             </div>
           </div>
           <div class="row">
             <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
+              <h2><?= $listNews->title ?></h2>
             </div>
           </div>
         </div>
-        <div id="article" class="col-12 col-md-6 offset-lg-2 col-lg-2">
-          <a href="#">
-            <div class="imgActu" style="background-image:url('assets/images/fondUne.jpg');">
 
-            </div>
-          </a>
-          <div class="row" id="infoNews">
-            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
-              <hr />
-            </div>
-            <div class="col-4 col-lg-6">
-              <h3>Catégorie</h3>
-            </div>
-            <div class="col-3">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
-            </div>
-          </div>
-        </div>
-        <div id="article" class="col-12 col-md-6 offset-lg-2 col-lg-2">
-          <a href="#">
-            <div class="imgActu" style="background-image:url('assets/images/mairie.jpg');">
-
-            </div>
-          </a>
-          <div class="row" id="infoNews">
-            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
-              <hr />
-            </div>
-            <div class="col-4 col-lg-6">
-              <h3>Catégorie</h3>
-            </div>
-            <div class="col-3">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row" id="filActu">
-        <div id="article" class="col-12 col-md-6 offset-lg-1 col-lg-2">
-          <a href="#">
-            <div class="imgActu" style="background-image:url('assets/images/commune.jpg');">
-
-            </div>
-          </a>
-          <div class="row" id="infoNews">
-            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
-              <hr />
-            </div>
-            <div class="col-4 col-lg-6">
-              <h3>Catégorie</h3>
-            </div>
-            <div class="col-3">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
-            </div>
-          </div>
-        </div>
-        <div id="article" class="col-12 col-md-6 offset-lg-2 col-lg-2">
-          <a href="#">
-            <div class="imgActu" style="background-image:url('assets/images/fondUne.jpg');">
-
-            </div>
-          </a>
-          <div class="row" id="infoNews">
-            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
-              <hr />
-            </div>
-            <div class="col-4 col-lg-6">
-              <h3>Catégorie</h3>
-            </div>
-            <div class="col-3">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
-            </div>
-          </div>
-        </div>
-        <div id="article" class="col-12 col-md-6 offset-lg-2 col-lg-2">
-          <a href="#">
-            <div class="imgActu" style="background-image:url('assets/images/mairie.jpg');">
-
-            </div>
-          </a>
-          <div class="row" id="infoNews">
-            <div class="offset-1 offset-sm-1 offset-md-1 offset-lg-0 col-3 col-lg-3">
-              <hr />
-            </div>
-            <div class="col-4 col-lg-6">
-              <h3>Catégorie</h3>
-            </div>
-            <div class="col-3">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 titleNews">
-              <h2>Titre de l'article</h2>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
       </div>
       <div class="row">
         <div class="offset-lg-10 offset-md-9 offset-sm-9 offset-7">

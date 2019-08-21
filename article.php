@@ -57,11 +57,10 @@ include_once 'controlers/newsControler.php';
     </div>
   </nav>
   <main id="">
-    <?php foreach ($activInfosQuery as $activInfosQuery){ ?>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12" id="frontImage">
-            <h1><?= $activInfosQuery->title ?></h1>
+          <div class="col-12" id="frontImage"  style="background-image:url('media/news/<?= $oneNews->mainPicture ?>'");>
+            <h1><?= $oneNews->title ?></h1>
           </div>
         </div>
         <div class="row">
@@ -69,7 +68,7 @@ include_once 'controlers/newsControler.php';
             <div class="row">
               <div class="offset-1 col-lg-5 col-xs-11">
                 <p>
-                  <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Titre Article
+                  <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ <?= $oneNews->title ?>
                 </p>
               </div>
             </div>
@@ -78,25 +77,24 @@ include_once 'controlers/newsControler.php';
         <div class="container">
           <div class="row">
             <div class="col-10 offset-1" id="titleArticle">
-              <p><?= htmlspecialchars_decode($activInfosQuery->title) ?></p>
+              <p><?= htmlspecialchars_decode($oneNews->title) ?></p>
             </div>
           </div>
           <div class="row">
             <div class="col-1" id="titleArticle">
-              <p>Ecrit par <?= htmlspecialchars_decode($activInfosQuery->idUser) ?></p>
+              <p>Ecrit par <?= htmlspecialchars_decode($oneNews->idUser) ?></p>
             </div>
             <div class="col-1" id="titleArticle">
-              <p>le <?= htmlspecialchars_decode($activInfosQuery->date) ?></p>
+              <p>le <?= htmlspecialchars_decode($oneNews->date) ?></p>
             </div>
           </div>
           <div class="row">
             <div class="col-10 offset-1" id="corpsArticle">
-              <p><?= htmlspecialchars_decode($activInfosQuery->body) ?></p>
+              <p><?= htmlspecialchars_decode($oneNews->body) ?></p>
             </div>
           </div>
         </div>
       </div>
-    <?php } ?>
     </main>
     <?php
       include 'vues/footer.php';

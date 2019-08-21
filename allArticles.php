@@ -19,6 +19,11 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://kit.fontawesome.com/9d0dc13277.js"></script>
 </head>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/newsModel.php';
+include_once 'controlers/newsPaginationControler.php';
+?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,46 +75,52 @@
         </div>
       </div>
       <div class="container">
-        <select>
-          <option selected disabled>Trier par :</option>
-          <option>Plus ancien</option>
-          <option>Plus récent</option>
-          <option></option>
-        </select>
-        <div class="row" id="Article">
-          <div class="col-12 col-lg-3 imgAssoc">
-            <img src="assets/images/article.jpg" />
-          </div>
-          <div class="col-12 col-lg-8">
-            <h2>Refonte du Site de la Mairie</h2>
-            <p>Service de mairie - <em>31/07/2019</em></p>
-            <small>
-              Lenitatem nec mollius protectoribus vocis sonu nec ille commotus ad iniusta iniusta decere vita tunc perferens acer indigna obiurgatorio quod sonu nec ille commotus ad iniusta ...
-            </small>
-            <div class="row">
-              <div class="offset-lg-9 offset-sm-9 offset-6">
-                <button class="fill" onclick="window.location.href='article.php'">Lire l'article</button>
+        <form id="page-changer" action="" method="post">
+          <select name="nav">
+            <option value="">Trier par ..</option>
+            <option value="allArticles.php?page=1">Plus récent</option>
+            <option value="allArticles.php?page=1&order=asc">Plus ancient</option>
+          </select>
+        </form>
+        <?php foreach ($pokemonPagination as $pokemonPagination){ ?>
+          <div class="row" id="Article">
+            <div class="col-12 col-lg-3 imgAssoc">
+              <img src="media/news/<?= htmlspecialchars_decode($pokemonPagination->mainPicture) ?>" />
+            </div>
+            <div class="col-12 col-lg-8">
+              <h2><?= htmlspecialchars_decode($pokemonPagination->title) ?></h2>
+              <p><?= htmlspecialchars_decode($pokemonPagination->categorie) ?> - <em><?= htmlspecialchars_decode($pokemonPagination->date) ?></em></p>
+              <p>
+                <?= htmlspecialchars_decode($pokemonPagination->body) ?>  ...
+              </p>
+              <div class="row">
+                <div class="offset-lg-9 offset-sm-9 offset-6">
+                  <button class="fill" onclick="window.location.href='article.php?idArticle=<?= htmlspecialchars_decode($pokemonPagination->id) ?>'">Lire l'article</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row" id="Article">
-          <div class="col-12 col-lg-3 imgAssoc">
-            <img src="assets/images/article.jpg" />
+        <?php }
+        if(isset($_GET['order'])){
+          ?>
+          <div class="button">
+            <a href = "allArticles.php?page=<?= $page - 1 ?>&order=asc" class = "<?= $start <= 1 ? 'disabled' : '' ?> btn">Précédente</a>
           </div>
-          <div class="col-12 col-lg-8">
-            <h2>Refonte du Site de la Mairie</h2>
-            <p>Service de mairie - <em>31/07/2019</em></p>
-            <small>
-              Lenitatem nec mollius protectoribus vocis sonu nec ille commotus ad iniusta iniusta decere vita tunc perferens acer indigna obiurgatorio quod sonu nec ille commotus ad iniusta ...
-            </small>
-            <div class="row">
-              <div class="offset-lg-9 offset-sm-9 offset-6">
-                <button class="fill" onclick="window.location.href='article.php'">Lire l'article</button>
-              </div>
-            </div>
+          <div class="button">
+            <a href="allArticles.php?page=<?= $page + 1 ?>&order=asc" class="<?= $page >= $maxPagination ? 'disabled' : '' ?> btn">Suivante</a>
           </div>
-        </div>
+          <?php
+        }else{
+          ?>
+          <div class="button">
+            <a href = "allArticles.php?page=<?= $page - 1 ?>" class = "<?= $start <= 1 ? 'disabled' : '' ?> btn">Précédente</a>
+          </div>
+          <div class="button">
+            <a href="allArticles.php?page=<?= $page + 1 ?>" class="<?= $page >= $maxPagination ? 'disabled' : '' ?> btn">Suivante</a>
+          </div>
+          <?php
+        }
+        ?>
       </div>
     </main>
     <?php
@@ -117,6 +128,7 @@
     ?>
     <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
     <script src="assets/js/associations.js" type="text/javascript"></script>
+    <script src="assets/js/newsOrder.js" type="text/javascript"></script>
 
   </body>
   </html>

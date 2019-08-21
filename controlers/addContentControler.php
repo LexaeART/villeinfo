@@ -417,7 +417,7 @@ elseif(isset($_POST['addNews'])){
 
   }
   if (count($formError) == 0) {
-    $addActivity->dateDay = date("Y-n-j");
+    $addActivity->dateDay = date("Y-m-d");
     $addActivity->idUser = $_SESSION['id'];
     $addActivity->addNews();
     /*include_once 'models/newsletterModel.php';
