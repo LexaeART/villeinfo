@@ -1,10 +1,4 @@
 <?php
-$allActivities = new activites();
-$allActivitiesQuery = $allActivities->allActivites();
-$allSchool = new ecoles();
-$allSchool = $allSchool->allEcoles();
-$allReunions = new reunions();
-$allReunions = $allReunions->allReunions();
 /* AJOUT ASSOCIATION */
 
 if(isset($_POST['addAssoc'])){
@@ -146,6 +140,7 @@ elseif(isset($_POST['addConseil'])){
 
 elseif(isset($_POST['addActivity'])){
   $addActivity = new activites();
+  $allActivitiesQuery = $allActivities->allActivites();
   $formError = array();
 
   if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
@@ -207,6 +202,7 @@ elseif(isset($_POST['addPriceActivity'])){
 
 elseif(isset($_POST['addSchool'])){
   $addActivity = new ecoles();
+  $allSchool = $allSchool->allEcoles();
   $formError = array();
 
   if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
@@ -260,6 +256,7 @@ elseif(isset($_POST['addTeacher'])){
 
 elseif(isset($_POST['addReunion'])){
   $addActivity = new reunions();
+  $allReunions = $allReunions->allReunions();
   $formError = array();
 
   if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
@@ -375,6 +372,54 @@ elseif(isset($_POST['addVillinfo'])){
   }
   if (count($formError) == 0) {
     $addActivity->addVillinfo();
+    /*include_once 'models/newsletterModel.php';
+    $allNews = new newsletter();
+    $allNews->allNews();
+    foreach ($allNews as $allNews)
+    $destinataire = $allNews->mail;
+    $sujet ='Nouveau Vill\'Info disponible sur le site de la Commune de Ville !' ;
+    $body = '<p>Bonjour !</p><p>Venez acheter des stylo chez VendeurDeStylo, des réduction à plus de -20% pour vous !</p>';
+    $entetes = 'Content-Type: text/html; charset="UTF-8"'."n";
+    mail($destinataire, $sujet, $body, $entetes);*/
+  }
+}
+
+/* AJOUT ARTICLE */
+
+elseif(isset($_POST['addNews'])){
+  $addActivity = new news();
+  $formError = array();
+
+  if (isset($_POST['titleNews']) && !empty($_POST['titleNews'])) {
+    $addActivity->title = htmlspecialchars($_POST['titleNews']);
+  } else {
+    $formError['titleNews'] = 'Le champ est vide';
+  }
+  if (isset($_POST['bodyNews']) && !empty($_POST['bodyNews'])) {
+    $addActivity->body = htmlspecialchars($_POST['bodyNews']);
+  } else {
+    $formError['bodyNews'] = 'Le champ est vide';
+  }
+  if (isset($_POST['catNews']) && !empty($_POST['catNews'])) {
+    $addActivity->categorie = htmlspecialchars($_POST['catNews']);
+  } else {
+    $formError['catNews'] = 'Le champ est vide';
+  }
+  if (isset($_FILES['profilePicture']) && !empty($_FILES['profilePicture'])) {
+    $fichier = basename($_FILES['profilePicture']['name']);
+    $taille_maxi = 100000;
+    $taille = filesize($_FILES['profilePicture']['tmp_name']);
+    $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
+    $extension = strrchr($_FILES['profilePicture']['name'], '.');
+    $addActivity->mainPicture = htmlspecialchars($_FILES['profilePicture']['name']);
+    $dossier = 'media/news/';
+    move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
+
+  }
+  if (count($formError) == 0) {
+    $addActivity->dateDay = date("Y-n-j");
+    $addActivity->idUser = $_SESSION['id'];
+    $addActivity->addNews();
     /*include_once 'models/newsletterModel.php';
     $allNews = new newsletter();
     $allNews->allNews();

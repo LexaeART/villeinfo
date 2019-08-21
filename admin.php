@@ -61,7 +61,7 @@ if(!isset($_SESSION['id'])){
               </a>
             </div>
             <div class="row">
-              <a href="#">
+              <a href="addNews.php">
                 <div class="col-12 lineAdmin">
                   <h3>Gérer les articles du site</h3>
                 </div>
