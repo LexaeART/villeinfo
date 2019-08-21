@@ -5,13 +5,11 @@
   include_once 'controlers/newsletterControler.php';
   ?>
   <div class="container">
-    <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
+    <div class="modal fade bd-example-modal-lg" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <p>Valider la suppresion de l'utilisateur :</p>
-          </div>
           <div class="modal-body">
+            <h2>Inscription à la newsletter</h2>
             <form action="#" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="mail">Votre adresse Mail</label>
@@ -29,11 +27,16 @@
           </div>
           <?= isset($formError['firstName']) ? $formError['firstName'] : '' ?>
           <div class="form-group">
-            <input type="checkbox" name="accept" value="accept">
-              <label for="accept">Vos informations serrons conservées afin que vous puissiez recevoir les newsletters, il vous serra possible de vous désabonner sans frais supplémentaires et à tout moment sur le site de la commune de ville ou via chaque mail que vous recevrez.</label>
+            <div class="row">
+              <div class="col-12">
+                <input type="checkbox" name="accept" id="accept" value="accept" class="checkbox" tabindex="1">
+<label for="accept" class="checkbox__label"><span class="checkbox__text">Vos informations serrons conservées afin que vous puissiez recevoir les newsletters, il vous serra possible de vous désabonner sans frais supplémentaires et à tout moment sur le site de la commune de ville ou via chaque mail que vous recevrez.</span></label>
+              </div>
+                  <?= isset($formError['accept']) ? $formError['accept'] : '' ?>
+
+            </div>
           </div>
-          <?= isset($formError['accept']) ? $formError['accept'] : '' ?>
-          <button type="submit" class="btn btn-primary" name="confirmNews">S'inscrire</button>
+          <button type="submit" class="btn btn-primary btnAccept" name="confirmNews">S'inscrire</button>
         </form>
           </div>
             </div>
