@@ -210,6 +210,9 @@ select {
   font-weight: bold;
   text-transform: uppercase;
 }
+.tox-notification-container{
+  display: none;
+}
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select {
     padding-right: 1em;

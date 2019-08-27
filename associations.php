@@ -33,25 +33,25 @@ include_once 'controlers/associationsController.php';
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="associations.php">Associations</a>
+          <a class="nav-link" href="associations_ville">Associations</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="activites.php">Activités</a>
+          <a class="nav-link" href="activites_ville">Activités</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ecole.php">Écoles</a>
+          <a class="nav-link" href="ecoles_ville">Écoles</a>
         </li>
       </ul>
-      <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logoville.png" /></a>
+      <a class="navbar-brand" href="vie_communale"><img src="assets/images/logoville.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="patrimoine.php">Patrimoine</a>
+          <a class="nav-link" href="patrimoines_ville">Patrimoine</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="demarches.php">Démarches</a>
+          <a class="nav-link" href="demarches_ville">Démarches</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact</a>
+          <a class="nav-link" href="nous_contacter">Contact</a>
         </li>
       </ul>
     </div>
@@ -68,7 +68,7 @@ include_once 'controlers/associationsController.php';
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Associations
+                <a href="accueil_ville">Accueil</a> \ <a href="vie_communale">News</a> \ Associations
               </p>
             </div>
           </div>

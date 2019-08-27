@@ -7,7 +7,7 @@ if(isset($_GET['confirmDelete'])){
   $userInfos->id = $_GET['confirmDelete'];
   $userInfos->deleteUser();
   ?>
-  <meta http-equiv="refresh" content="0;URL=profilAdmin.php?deleteUser">
+  <meta http-equiv="refresh" content="0;URL=gestion_des_admins?deleteUser">
   <?php
 }
  ?>

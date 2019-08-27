@@ -59,21 +59,21 @@ if($_SESSION['connected'] == 0){
   }else{
     ?>
     <div class="row">
-      <a href="profilAdmin.php?updateUser">
+      <a href="modification_admins">
       <div class="col-12 lineAdmin">
         <h3>Modifier mes informations</h3>
       </div>
       </a>
     </div>
     <div class="row">
-      <a href="adminSub.php">
+      <a href="inscription">
       <div class="col-12 lineAdmin">
         <h3>Ajouter un utilisateur</h3>
       </div>
       </a>
     </div>
     <div class="row">
-      <a href="profilAdmin.php?deleteUser">
+      <a href="suppresion_admins">
       <div class="col-12 lineAdmin">
         <h3>Supprimer un utilisateur</h3>
       </div>
@@ -93,7 +93,7 @@ if($_SESSION['connected'] == 0){
                   <div class="col-12" id="nameProfil">
                     <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
                   </div>
-                  <a href="admin.php">
+                  <a href="menu_admin">
                     <div class="row">
                       <div class="col-12" id="backToWeb">
                         <p>
@@ -102,7 +102,7 @@ if($_SESSION['connected'] == 0){
                       </div>
                     </div>
                   </a>
-                  <a href="index.php">
+                  <a href="accueil_ville">
                     <div class="row">
                       <div class="col-12" id="backToWeb">
                         <p>
@@ -153,6 +153,7 @@ if($_SESSION['connected'] == 0){
       </div>
     </div>
     <script src="assets/js/main.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
   </body>
   </html>
 
