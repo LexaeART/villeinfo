@@ -7,7 +7,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->id = $_GET['confirmDelete'];
     $assocInfos->deleteAssoc();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=association">
+    <meta http-equiv="refresh" content="0;URL=supprimer_associations">
     <?php
   }
 }elseif(isset($_GET['content']) && $_GET['content'] == "activites"){
@@ -19,7 +19,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->deleteActivities();
     $assocInfos->deletePrice();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=activites">
+    <meta http-equiv="refresh" content="0;URL=supprimer_activites">
     <?php
   }
 }elseif(isset($_GET['content']) && $_GET['content'] == "ecole"){
@@ -31,7 +31,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->deleteSchool();
     $assocInfos->deleteTeacher();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=ecole">
+    <meta http-equiv="refresh" content="0;URL=supprimer_ecole">
     <?php
   }
 }elseif(isset($_GET['content']) && $_GET['content'] == "patrimoine"){
@@ -42,7 +42,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->id = $_GET['confirmDelete'];
     $assocInfos->deletePatrimoine();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=patrimoine">
+    <meta http-equiv="refresh" content="0;URL=supprimer_patrimoine">
     <?php
   }
 }elseif(isset($_GET['content']) && $_GET['content'] == "demarches"){
@@ -53,7 +53,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->id = $_GET['confirmDelete'];
     $assocInfos->deleteDemarche();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=demarches">
+    <meta http-equiv="refresh" content="0;URL=supprimer_demarches">
     <?php
   }
 }elseif(isset($_GET['content']) && $_GET['content'] == "conseil"){
@@ -64,7 +64,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->id = $_GET['confirmDelete'];
     $assocInfos->deleteConseil();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=conseil">
+    <meta http-equiv="refresh" content="0;URL=supprimer_conseil">
     <?php
   }
 }elseif(isset($_GET['content']) && $_GET['content'] == "reunions"){
@@ -75,7 +75,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->id = $_GET['confirmDelete'];
     $assocInfos->deleteCr();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=reunions">
+    <meta http-equiv="refresh" content="0;URL=supprimer_reunions">
     <?php
   }
 }elseif(isset($_GET['content']) && $_GET['content'] == "documents"){
@@ -86,7 +86,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->id = $_GET['confirmDelete'];
     $assocInfos->deleteCom();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=documents">
+    <meta http-equiv="refresh" content="0;URL=supprimer_documents">
     <?php
   }
 }elseif(isset($_GET['content']) && $_GET['content'] == "villinfo"){
@@ -97,7 +97,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     $assocInfos->id = $_GET['confirmDelete'];
     $assocInfos->deleteVillinfo();
     ?>
-    <meta http-equiv="refresh" content="0;URL=deleteContent.php?content=villinfo">
+    <meta http-equiv="refresh" content="0;URL=supprimer_villinfo">
     <?php
   }
 }

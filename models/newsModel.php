@@ -13,6 +13,11 @@ class news extends dataBase {
     public function __construct() {
         parent::__construct();
     }
+    public function fullNews() {
+        $allDemarches = $this->db->query('SELECT `id`,`title`, `body`, `categorie`, `mainPicture`, `date`, `idUser` FROM `news` ORDER BY `id` DESC');
+        $allDemarches->execute();
+        return $allDemarches = $allDemarches->fetchAll(PDO::FETCH_OBJ);
+    }
     public function allNews() {
         $allDemarches = $this->db->query('SELECT `id`,`title`, `body`, `categorie`, `mainPicture`, `date`, `idUser` FROM `news` ORDER BY `id` DESC LIMIT 1,6');
         $allDemarches->execute();
@@ -76,7 +81,7 @@ class news extends dataBase {
         return $addAssoc->execute();
     }
     public function deleteNews() {
-        $query = 'DELETE FROM `demarche` WHERE `id` = :id';
+        $query = 'DELETE FROM `news` WHERE `id` = :id';
         $savedHuntCount = $this->db->prepare($query);
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();

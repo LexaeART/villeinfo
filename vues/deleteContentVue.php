@@ -28,7 +28,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=association" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_associations" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">
@@ -79,7 +79,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=activites" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_activites" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">
@@ -130,7 +130,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=ecole" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_ecole" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">
@@ -181,7 +181,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=patrimoine" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_patrimoine" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">
@@ -232,7 +232,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=demarches" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_demarches" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">
@@ -283,7 +283,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=conseil" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_conseil" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">
@@ -334,7 +334,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=reunions" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_reunions" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">
@@ -385,7 +385,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=documents" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_documents" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">
@@ -436,7 +436,7 @@
                       </div>
                     </div>
                   </form>
-                  <form action="deleteContent.php?content=villinfo" method="post" enctype="multipart/form-data">
+                  <form action="supprimer_villinfo" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-6">
                         <input type="submit" class="btn" name="yesDelete" value="Non">

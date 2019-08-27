@@ -28,7 +28,7 @@
       <div class="col-xs-12 col-lg-6" id="communale">
         <div id="comGlobal">
           <div id="txtCategorie">
-            <a href="viecommunale.php" title="Vie Municipale" id="vieCom">Vie Communale</a>
+            <a href="vie_communale" title="Vie Municipale" id="vieCom">Vie Communale</a>
           </div>
           <div id="com-bg"></div>
         </div>
@@ -36,7 +36,7 @@
       <div class="col-xs-12 col-lg-6" id="municipal">
         <div id="municipalGlobal">
           <div id="txtCategorie">
-            <a href="villinfos.php" title="Vie Municipale" id="vieMun">Vie Municipale</a>
+            <a href="vill_infos" title="Vie Municipale" id="vieMun">Vie Municipale</a>
           </div>
           <div id="municipal-bg"></div>
         </div>

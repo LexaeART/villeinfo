@@ -21,7 +21,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
     }
         $updateAssoc->updateAssoc();
     ?>
-    <meta http-equiv="refresh" content="0;URL=updateContent.php?content=association">
+    <meta http-equiv="refresh" content="0;URL=modifier_associations">
     <?php
   }
 }

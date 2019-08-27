@@ -32,19 +32,19 @@ include_once 'controlers/reunionsControlers.php';
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="conseil.php">Conseil</a>
+          <a class="nav-link" href="conseil_ville">Conseil</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="reunions.php">Réunions</a>
+            <a class="nav-link" href="reunion_ville">Réunions</a>
           </li>
       </ul>
-        <a class="navbar-brand" href="villinfos.php"><img src="assets/images/logovilleMuni.png" /></a>
+        <a class="navbar-brand" href="vill_infos"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="documents.php">Documents</a>
+          <a class="nav-link" href="commissions_ville">Documents</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contactMuni.php">Contact</a>
+          <a class="nav-link" href="contactMunicipale">Contact</a>
         </li>
       </ul>
     </div>
@@ -61,7 +61,7 @@ include_once 'controlers/reunionsControlers.php';
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="index.php">Accueil</a> \ <a href="villinfos.php">Vill'Infos</a> \ Réunions
+                <a href="accueil_ville">Accueil</a> \ <a href="vill_infos">Vill'Infos</a> \ Réunions
               </p>
             </div>
           </div>

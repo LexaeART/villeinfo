@@ -61,14 +61,15 @@ if(!isset($_SESSION['id'])){
             <form id="page-changer" action="" method="post">
               <select name="nav">
                 <option value="">Sélectionnez la page</option>
-                <option value="updateContent.php?content=association">Associations</option>
-                <option value="updateContent.php?content=activites">Activités</option>
-                <option value="updateContent.php?content=ecole">École</option>
-                <option value="updateContent.php?content=patrimoine">Patrimoine</option>
-                <option value="updateContent.php?content=demarches">Démarches</option>
-                <option value="updateContent.php?content=conseil">Conseil</option>
-                <option value="updateContent.php?content=reunions">Réunions</option>
-                <option value="updateContent.php?content=documents">Documents</option>
+                <option value="modifier_associations">Associations</option>
+                <option value="modifier_activites">Activités</option>
+                <option value="modifier_ecole">École</option>
+                <option value="modifier_patrimoine">Patrimoine</option>
+                <option value="modifier_demarches">Démarches</option>
+                <option value="modifier_conseil">Conseil</option>
+                <option value="modifier_reunions">Réunions</option>
+                <option value="modifier_documents">Documents</option>
+                <option value="modifier_villinfo">Villinfo</option>
               </select>
               <input type="submit" value="Go" id="submit" />
             </form>
