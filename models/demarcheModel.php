@@ -44,6 +44,19 @@ class demarches extends dataBase {
         $savedHuntCount->execute();
         return $savedHuntCount;
     }
+    public function updateDemarche() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE demarche SET name = :name,  contact = :contact, doc = :doc, prix = :prix, more = :more WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':contact', $this->contact, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':doc', $this->doc, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':prix', $this->prix, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':more', $this->more, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
+    }
     public function __destruct() {
 
     }

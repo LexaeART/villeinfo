@@ -3,6 +3,7 @@
 class activites extends dataBase {
 
     public $id = 0;
+    public $idTarif = 0;
     public $name = '';
     public $description = '';
     public $picture = '';
@@ -20,7 +21,7 @@ class activites extends dataBase {
         return $showConseil = $showConseil->fetchAll(PDO::FETCH_OBJ);
     }
     public function allTarifs() {
-        $query = 'SELECT `statut`, `prix`, `caution` FROM `tarifs` WHERE `idActivite` = :id';
+        $query = 'SELECT `id`, `statut`, `prix`, `caution` FROM `tarifs` WHERE `idActivite` = :id';
         $allTarifs = $this->db->prepare($query);
         $allTarifs->bindValue(':id', $this->id, PDO::PARAM_INT);
         //Si l'insertion s'est correctement déroulée on retourne vrai
@@ -61,6 +62,28 @@ class activites extends dataBase {
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();
         return $savedHuntCount;
+    }
+    public function updateActivities() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE activites SET name = :name,  description = :description, picture = :picture WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':description', $this->description, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':picture', $this->picture, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
+    }
+    public function updateTarif() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE tarifs SET statut = :statut,  prix = :prix, caution = :caution WHERE id = :idTarif';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':statut', $this->statut, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':prix', $this->prix, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':caution', $this->caution, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':idTarif', $this->idTarif, PDO::PARAM_INT);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
     }
     public function __destruct() {
 

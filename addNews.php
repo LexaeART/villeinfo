@@ -143,7 +143,124 @@ if(!isset($_SESSION['id'])){
         </div>
       </div>
       <?php }elseif (isset($_GET['newsGestion']) && $_GET['newsGestion']=="updateNews") {?>
-        // code...
+      <div class="row">
+        <div class="col-12 titlePage">
+          <div class="row">
+            <div class="col-lg-1 col-md-2 col-sm-3 col-3">
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-8 col-8 title">
+              <h1>Page d'administration de Ville</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12 col-sm-12 col-12" id="navAdmin">
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nom de l'association </th>
+                    <th scope="col">Modifier</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($associationQuery as $associationQuery){ ?>
+                    <div class="modal fade" id="EditProfile<?= $associationQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <p>Modification de <?= $associationQuery->title ?></p>
+                          </div>
+                          <div class="modal-body">
+                            <form action="addNews.php?newsGestion=updateNews&confirmUpdate=<?= $associationQuery->id ?>" method="post" enctype="multipart/form-data">
+                          <div class="form-group">
+                            <label for="nameAssoc">Nom de l'association</label>
+                            <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" value="<?= $associationQuery->title ?>">
+                            <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+                          </div>
+                          <div class="form-group">
+                            <label for="categorieNews">Nom de l'association</label>
+                            <input type="text" class="form-control" id="categorieNews" name="categorieNews" aria-describedby="categorieNews" value="<?= $associationQuery->categorie ?>">
+                            <?= isset($formError['categorieNews']) ? $formError['categorieNews'] : '' ?>
+                          </div>
+                          <div class="form-group">
+                            <label for="descriptionAssoc">Déscription de l'association</label>
+                            <textarea class="form-control" id="descriptionAssoc" name="descriptionAssoc" aria-describedby="descriptionAssoc" value=""><?= $associationQuery->body ?></textarea>
+                        <?= isset($formError['descriptionAssoc']) ? $formError['descriptionAssoc'] : '' ?>
+                          </div>
+                          <div class="form-group">
+                            <label for="pictureAssoc">Image de l'association</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="profilePicture" value="<?= $associationQuery->mainPicture ?>">
+                          </div>
+                          <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier l'association</button>
+                        </form>
+                          </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <tr>
+                    <th scope="row"><?= $associationQuery->id ?></th>
+                    <td><?= $associationQuery->title ?></td>
+                    <td><a name="registration-button" class="registration-link btn btn-danger" data-toggle="modal" data-target="#EditProfile<?= $associationQuery->id ?>"><i class="fas fa-lock"></i> Modifier</a></td>
+                  </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-3 offset-lg-1 col-md-12 col-sm-12 col-12 d-none d-lg-block d-xl-block" id="profilAdmin">
+            <div class="row">
+              <div class="col-10 offset-1" id="imgProfilAdmin">
+              </div>
+
+              <div class="col-10 offset-1" id="profil">
+                <div class="row">
+                  <div class="col-12" id="nameProfil">
+                    <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
+                  </div>
+                  <a href="controlers/logout.php">
+                    <div class="col-12" id="decoProfil">
+                      <div class="row">
+                        <div class="col-3">
+                          <i class="fas fa-power-off"></i>
+                        </div>
+                        <div class="col-6">
+                          <p>Déconnexion</p>
+                        </div>
+                      </div>
+                    </div></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Version mobile -->
+            <div class="col-md-12 col-sm-12 col-12 d-lg-none d-xl-none" id="profilAdminMobile">
+              <div class="row">
+                <div class="col-10 offset-1" id="profilMobile">
+                  <div class="row">
+                    <div class="col-7" id="nameProfilMobile">
+                      <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
+                      <a href="controlers/logout.php">
+                        <div class="col-12" id="decoProfilMobile">
+                          <div class="row">
+                            <div class="col-12">
+                              <i class="fas fa-power-off"></i>Déconnexion
+                            </div>
+                          </div>
+                        </div></a>
+                      </div>
+                      <div class="col-5" id="menuProfilMobi">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       <?php }elseif (isset($_GET['newsGestion']) && $_GET['newsGestion']=="deleteNews") { ?>
         <div class="row">
           <div class="col-12 titlePage">
