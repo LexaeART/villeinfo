@@ -44,10 +44,15 @@ body{
 .innerBackground{
   position: relative;
   height: 100%;
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('../images/article.jpg');
   background-size: cover;
-  background-color:rgba(0,0,0,0.3);
   transition: 0.5s ease all;
+}
+
+.fondDark{
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .innerBackground:hover{
@@ -140,21 +145,21 @@ body{
   transition: 500ms;
 }
 
-.imgActu:before, .imgActu:after {
+#article:before, #article:after {
   content: "";
   position: absolute;
   background: #434933;
   z-index: -1;
 }
 
-.imgActu:before {
+#article:before {
   top: -0.3rem;
   bottom: 100%;
   left: 50%;
   right: 50%;
   transition: bottom .1s 0s, left .3s .1s, right .3s .1s;
 }
-.imgActu:after {
+#article:after {
   top: 100%;
   bottom: -0.3rem;
   left: 50%;
@@ -162,14 +167,14 @@ body{
   transition: top .1s 0s, left .3s .1s, right .3s .1s;
 }
 
-.imgActu:hover:before {
+#article:hover:before {
   top: -0.3rem;
   bottom: 50%;
   left: -0.3rem;
   right: -0.3rem;
   transition: left .3s 0s, right .3s 0s, bottom .1s .3s;
 }
-.imgActu:hover:after {
+#article:hover:after {
   top: 50%;
   bottom: -0.3rem;
   left: -0.3rem;

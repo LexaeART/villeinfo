@@ -59,6 +59,9 @@ include_once 'controlers/newsControler.php';
       <div class="row">
         <div class="col-12" id="VIN">
           <div class="innerBackground" style="background-image:url('media/news/<?= $lastNews->mainPicture ?>')">
+            <div class="fondDark">
+
+            </div>
           </div>
           <div class="col-3 col-lg-1" id="important">
             <p>
