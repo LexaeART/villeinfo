@@ -151,7 +151,6 @@ label {
 }
 label:after {
   display: block;
-  content: "▾";
   font-size: 20px;
   width: 20px;
   position: absolute;
