@@ -207,6 +207,10 @@ body{
   font-size: 26px;
 }
 
+#article{
+  margin-bottom: 30px;
+}
+
 #article:hover h3{
   color: white;
 }
@@ -256,6 +260,22 @@ button {
 
 .fill:hover:before {
   top: 0;
+}
+
+#breadcrumbs {
+    padding-top: 20px;
+    min-height: 60px;
+    background-color: #9cbd57;
+}
+
+#breadcrumbs p {
+    line-height: 20px;
+    color: white;
+    font-family: 'LemonMilk';
+}
+
+#breadcrumbs p a {
+    color: white;
 }
 
 @media screen and (max-width: 994px) {

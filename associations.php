@@ -9,7 +9,7 @@
   <meta name="publisher" content="Kaiartsu">
   <meta name="author" content="Kaiartsu" />
   <meta name="reply-to" content="contact@kaiartsu.fr">
-  <title>Accueil | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
+  <title>Associations | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -68,7 +68,7 @@ include_once 'controlers/associationsController.php';
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Associations
+                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">Vie Communale</a> \ Associations
               </p>
             </div>
           </div>

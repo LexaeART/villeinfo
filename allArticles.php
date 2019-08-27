@@ -68,7 +68,7 @@ include_once 'controlers/newsPaginationControler.php';
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">News</a> \ Tous les articles
+                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">Vie Communale</a> \ Tous les articles
               </p>
             </div>
           </div>
