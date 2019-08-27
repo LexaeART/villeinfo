@@ -79,6 +79,17 @@ include_once 'controlers/newsControler.php';
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12" id="breadcrumbs">
+          <div class="row">
+            <div class="offset-1 col-lg-5 col-xs-11">
+              <p>
+                <a href="index.php">Accueil</a> \ Vie Communale
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row" id="actualités">
         <div class="offset-1 col-3 col-md-3 col-lg-4">
           <hr />
@@ -92,7 +103,7 @@ include_once 'controlers/newsControler.php';
       </div>
       <div class="row" id="filActu">
         <?php foreach ($listNews as $listNews){ ?>
-        <div id="article" class="col-12 col-md-6 col-lg-4">
+        <div id="article" class="col-12 col-md-6 col-lg-3 offset-lg-2">
           <a href="article.php?idArticle=<?= $listNews->id ?>">
             <div class="imgActu" style="background-image:url('media/news/<?= $listNews->mainPicture ?>');">
 

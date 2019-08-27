@@ -9,7 +9,7 @@
   <meta name="publisher" content="Kaiartsu">
   <meta name="author" content="Kaiartsu" />
   <meta name="reply-to" content="contact@kaiartsu.fr">
-  <title>Accueil | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
+  <title>Démarches Administratives | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -67,7 +67,7 @@ include_once 'controlers/demarcheController.php';
           <div class="row">
             <div class="offset-1 col-lg-5 col-xs-11">
               <p>
-                <a href="accueil_ville">Accueil</a> \ <a href="vie_communale">News</a> \ Démarches
+                <a href="index.php">Accueil</a> \ <a href="viecommunale.php">Vie Communale</a> \ Démarches
               </p>
             </div>
           </div>

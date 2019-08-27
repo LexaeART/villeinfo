@@ -1,4 +1,9 @@
 <!doctype html>
+<?php
+include_once 'models/dataBase.php';
+include_once 'models/newsModel.php';
+include_once 'controlers/newsControler.php';
+?>
 <html lang="fr">
 <head>
   <!--        <base href="https://www.villeinfo.fr" />-->
@@ -9,7 +14,7 @@
   <meta name="publisher" content="Kaiartsu">
   <meta name="author" content="Kaiartsu" />
   <meta name="reply-to" content="contact@kaiartsu.fr">
-  <title>Refonte du Site de la Mairie | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
+  <title><?= $oneNews->title ?> | Vie communale | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
   <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -19,11 +24,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://kit.fontawesome.com/9d0dc13277.js"></script>
 </head>
-<?php
-include_once 'models/dataBase.php';
-include_once 'models/newsModel.php';
-include_once 'controlers/newsControler.php';
-?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,6 @@ include_once 'controlers/newsControler.php';
       <div class="container-fluid">
         <div class="row">
           <div class="col-12" id="frontImage"  style="background-image:url('media/news/<?= $oneNews->mainPicture ?>'");>
-            <h1><?= $oneNews->title ?></h1>
           </div>
         </div>
         <div class="row">
@@ -68,7 +67,7 @@ include_once 'controlers/newsControler.php';
             <div class="row">
               <div class="offset-1 col-lg-5 col-xs-11">
                 <p>
-                  <a href="accueil_ville">Accueil</a> \ <a href="vie_communale">News</a> \ <?= $oneNews->title ?>
+                  <a href="index.php">Accueil</a> \ <a href="viecommunale.php">Vie Communale</a> \ <?= $oneNews->title ?>
                 </p>
               </div>
             </div>
@@ -77,15 +76,12 @@ include_once 'controlers/newsControler.php';
         <div class="container">
           <div class="row">
             <div class="col-10 offset-1" id="titleArticle">
-              <p><?= htmlspecialchars_decode($oneNews->title) ?></p>
+              <h1><?= htmlspecialchars_decode($oneNews->title) ?></h1>
             </div>
           </div>
           <div class="row">
-            <div class="col-1" id="titleArticle">
-              <p>Ecrit par <?= htmlspecialchars_decode($oneNews->idUser) ?></p>
-            </div>
-            <div class="col-1" id="titleArticle">
-              <p>le <?= htmlspecialchars_decode($oneNews->date) ?></p>
+            <div class="col-12" id="creationArticle">
+              <em><p>Ecrit par <?= htmlspecialchars_decode($oneNews->idUser) ?> le <?= htmlspecialchars_decode($oneNews->date) ?></p></em>
             </div>
           </div>
           <div class="row">

@@ -42,9 +42,17 @@ body{
 #frontImage h1{
   font-family: 'LemonMilk';
   text-align: center;
-  font-size: calc(1em + 1vw);
+  font-size: calc(2em + 1vw);
   color: white;
   margin-top: 140px;
+}
+
+h1{
+  font-family: 'LemonMilk';
+  text-align: center;
+  font-size: calc(2em + 1vw);
+  color: white;
+  margin-top: 50px;
 }
 
 #breadcrumbs{
@@ -199,6 +207,17 @@ select {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+#creationArticle{
+  text-align: right;
+  text-decoration: underline;
+  color: #434933;
+  font-weight: bold;
+}
+
+
+/* MEDIA QUERRIES */
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select {
     padding-right: 4em;
