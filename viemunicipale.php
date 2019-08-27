@@ -26,22 +26,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="conseil.php">Conseil</a>
+          <a class="nav-link" href="conseil_ville">Conseil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="villinfos.php">Vill'Infos</a>
+          <a class="nav-link" href="vill_infos">Vill'Infos</a>
         </li>
       </ul>
-        <a class="navbar-brand" href="viecommunale.php"><img src="assets/images/logovilleMuni.png" /></a>
+        <a class="navbar-brand" href="vie_communale"><img src="assets/images/logovilleMuni.png" /></a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="reunions.php">Réunions</a>
+          <a class="nav-link" href="reunion_ville">Réunions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="documents.php">Documents</a>
+          <a class="nav-link" href="commissions_ville">Documents</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact</a>
+          <a class="nav-link" href="nous_contacter">Contact</a>
         </li>
       </ul>
     </div>

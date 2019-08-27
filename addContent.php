@@ -61,15 +61,15 @@ if(!isset($_SESSION['id'])){
             <form id="page-changer" action="" method="post">
               <select name="nav">
                 <option value="">Sélectionnez la page</option>
-                <option value="addContent.php?content=association">Associations</option>
-                <option value="addContent.php?content=activites">Activités</option>
-                <option value="addContent.php?content=ecole">École</option>
-                <option value="addContent.php?content=patrimoine">Patrimoine</option>
-                <option value="addContent.php?content=demarches">Démarches</option>
-                <option value="addContent.php?content=conseil">Conseil</option>
-                <option value="addContent.php?content=reunions">Réunions</option>
-                <option value="addContent.php?content=documents">Documents</option>
-                <option value="addContent.php?content=villinfo">Villinfo</option>
+                <option value="ajout_associations">Associations</option>
+                <option value="ajout_activites">Activités</option>
+                <option value="ajout_ecole">École</option>
+                <option value="ajout_patrimoine">Patrimoine</option>
+                <option value="ajout_demarches">Démarches</option>
+                <option value="ajout_conseil">Conseil</option>
+                <option value="ajout_reunions">Réunions</option>
+                <option value="ajout_documents">Documents</option>
+                <option value="ajout_villinfo">Villinfo</option>
               </select>
               <input type="submit" value="Go" id="submit" />
             </form>
@@ -85,7 +85,7 @@ if(!isset($_SESSION['id'])){
                   <div class="col-12" id="nameProfil">
                     <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
                   </div>
-                  <a href="admin.php">
+                  <a href="menu_admin">
                     <div class="row">
                       <div class="col-12" id="backToWeb">
                         <p>
@@ -94,7 +94,7 @@ if(!isset($_SESSION['id'])){
                       </div>
                     </div>
                   </a>
-                  <a href="index.php">
+                  <a href="accueil_ville">
                     <div class="row">
                       <div class="col-12" id="backToWeb">
                         <p>

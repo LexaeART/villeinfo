@@ -54,35 +54,35 @@ if(!isset($_SESSION['id'])){
               </div>
             </div>
             <div class="row">
-              <a href="profilAdmin.php">
+              <a href="gestion_des_admins">
                 <div class="col-12 lineAdmin">
                   <h3>Gérer les profils administrateurs</h3>
                 </div>
               </a>
             </div>
             <div class="row">
-              <a href="addNews.php">
+              <a href="gestion_articles">
                 <div class="col-12 lineAdmin">
                   <h3>Gérer les articles du site</h3>
                 </div>
               </a>
             </div>
             <div class="row">
-              <a href="addContent.php">
+              <a href="ajout_contenu">
                 <div class="col-12 lineAdmin">
                   <h3>Ajouter du contenu sur le site</h3>
                 </div>
               </a>
             </div>
             <div class="row">
-              <a href="updateContent.php">
+              <a href="modifier_contenu">
                 <div class="col-12 lineAdmin">
                   <h3>Modifier du contenu sur le site</h3>
                 </div>
               </a>
             </div>
             <div class="row">
-              <a href="deletecontent.php">
+              <a href="supprimer_contenu">
                 <div class="col-12 lineAdmin">
                   <h3>Supprimer du contenu sur le site</h3>
                 </div>
@@ -99,7 +99,7 @@ if(!isset($_SESSION['id'])){
                   <div class="col-12" id="nameProfil">
                     <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
                   </div>
-                  <a href="index.php">
+                  <a href="accueil_ville">
                     <div class="row">
                       <div class="col-12" id="backToWeb">
                         <p>

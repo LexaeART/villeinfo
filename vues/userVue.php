@@ -89,14 +89,14 @@ if (isset($_GET['updateUser'])){
                 <center><p><?= $allOthersUsers->lastName ?> <?= $allOthersUsers->firstName ?></p></center>
               </div>
               <div class="modal-footer">
-                <form action="profilAdmin.php?deleteUser&confirmDelete=<?=$allOthersUsers->id?>" method="post" enctype="multipart/form-data">
+                <form action="gestion_des_admins?deleteUser&confirmDelete=<?=$allOthersUsers->id?>" method="post" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-6">
                       <input type="submit" class="btn" name="yesDelete" value="Oui">
                     </div>
                   </div>
                 </form>
-                <form action="profilAdmin.php?deleteUser" method="post" enctype="multipart/form-data">
+                <form action="gestion_des_admins?deleteUser" method="post" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-6">
                       <input type="submit" class="btn" name="yesDelete" value="Non">
