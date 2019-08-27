@@ -4,6 +4,7 @@ class ecoles extends dataBase {
 
     public $id = 0;
     public $name = '';
+    public $nameBoss = '';
     public $fonction = '';
     public $img = '';
 
@@ -55,6 +56,26 @@ class ecoles extends dataBase {
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();
         return $savedHuntCount;
+    }
+    public function updateSchool() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE ecoles SET name = :name,  nameBoss = :nameBoss, picture = :picture WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':nameBoss', $this->nameBoss, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':picture', $this->picture, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
+    }
+    public function updateTeacher() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE profs SET name = :name WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
     }
     public function __destruct() {
 

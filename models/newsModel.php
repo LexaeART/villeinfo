@@ -87,6 +87,18 @@ class news extends dataBase {
         $savedHuntCount->execute();
         return $savedHuntCount;
     }
+    public function updateNews() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE news SET title = :title,  body = :body, categorie = :categorie, mainPicture = :mainPicture WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $udateAssoc->bindValue(':title', $this->title, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':body', $this->body, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':categorie', $this->categorie, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':mainPicture', $this->mainPicture, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
+    }
     public function __destruct() {
 
     }

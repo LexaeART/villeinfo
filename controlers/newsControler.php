@@ -54,6 +54,31 @@ if(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "deleteNews"){
     $entetes = 'Content-Type: text/html; charset="UTF-8"'."n";
     mail($destinataire, $sujet, $body, $entetes);*/
   }
+}elseif(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "updateNews"){
+  $updateAssoc = new news();
+  $associationQuery = $updateAssoc->allNews();
+  if(isset($_GET['confirmUpdate'])){
+    $assocInfos = new news();
+    $updateAssoc->id = $_GET['confirmUpdate'];
+        $updateAssoc->title = htmlspecialchars($_POST['nameAssoc']);
+        $updateAssoc->categorie = htmlspecialchars($_POST['categorieNews']);
+        $updateAssoc->body = htmlspecialchars($_POST['descriptionAssoc']);
+    if (isset($_FILES['profilePicture']) && !empty($_FILES['profilePicture'])) {
+        $fichier = basename($_FILES['profilePicture']['name']);
+        $taille_maxi = 100000;
+        $taille = filesize($_FILES['profilePicture']['tmp_name']);
+        $extensions = array('.png', '.gif', '.jpg', '.jpeg');
+        $extension = strrchr($_FILES['profilePicture']['name'], '.');
+        $updateAssoc->mainPicture = htmlspecialchars($_FILES['profilePicture']['name']);
+        $dossier = 'assets/images/';
+        move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
+
+    }
+        $updateAssoc->updateNews();
+    ?>
+    <meta http-equiv="refresh" content="0;URL=../modifier_news">
+    <?php
+  }
 }
 
 $activInfos = new news();
