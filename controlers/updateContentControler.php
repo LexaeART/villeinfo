@@ -181,4 +181,107 @@ elseif(isset($_GET['content']) && $_GET['content'] == "updateNews"){
     <?php
   }
 }
+
+/* MODIFICATION CONSEIL */
+
+elseif(isset($_GET['content']) && $_GET['content'] == "conseil"){
+  $updateAssoc = new conseil();
+  $associationQuery = $updateAssoc->showConseiller();
+  if(isset($_GET['confirmUpdate'])){
+    $assocInfos = new conseil();
+    $updateAssoc->id = $_GET['confirmUpdate'];
+        $updateAssoc->name = htmlspecialchars($_POST['nameAssoc']);
+        $updateAssoc->fonction = htmlspecialchars($_POST['descriptionAssoc']);
+    if (isset($_FILES['profilePicture']) && !empty($_FILES['profilePicture'])) {
+        $fichier = basename($_FILES['profilePicture']['name']);
+        $taille_maxi = 100000;
+        $taille = filesize($_FILES['profilePicture']['tmp_name']);
+        $extensions = array('.png', '.gif', '.jpg', '.jpeg');
+        $extension = strrchr($_FILES['profilePicture']['name'], '.');
+        $updateAssoc->img = htmlspecialchars($_FILES['profilePicture']['name']);
+        $dossier = 'assets/images/';
+        move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
+
+    }
+        $updateAssoc->updateConseil();
+    ?>
+    <meta http-equiv="refresh" content="0;URL=modifier_conseil">
+    <?php
+  }
+}
+
+/* MODIFICATION REUNIONS */
+
+elseif(isset($_GET['content']) && $_GET['content'] == "reunions"){
+  $updateAssoc = new reunions();
+  $associationQuery = $updateAssoc->allCrBis();
+  if(isset($_GET['confirmUpdate'])){
+    $assocInfos = new reunions();
+    $updateAssoc->id = $_GET['confirmUpdate'];
+        $updateAssoc->name = htmlspecialchars($_POST['nameAssoc']);
+    if (isset($_FILES['profilePicture']) && !empty($_FILES['profilePicture'])) {
+        $fichier = basename($_FILES['profilePicture']['name']);
+        $taille_maxi = 100000;
+        $taille = filesize($_FILES['profilePicture']['tmp_name']);
+        $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
+        $extension = strrchr($_FILES['profilePicture']['name'], '.');
+        $updateAssoc->pdf = htmlspecialchars($_FILES['profilePicture']['name']);
+        $dossier = 'assets/images/';
+        move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
+
+    }
+        $updateAssoc->updateCr();
+    ?>
+    <meta http-equiv="refresh" content="0;URL=modifier_reunions">
+    <?php
+  }
+}
+
+/* MODIFICATION DOCUMENTS */
+
+elseif(isset($_GET['content']) && $_GET['content'] == "documents"){
+  $updateAssoc = new commission();
+  $associationQuery = $updateAssoc->showCommission();
+  if(isset($_GET['confirmUpdate'])){
+    $assocInfos = new commission();
+    $updateAssoc->id = $_GET['confirmUpdate'];
+        $updateAssoc->commission = htmlspecialchars($_POST['nameAssoc']);
+        $updateAssoc->objet = htmlspecialchars($_POST['objetCom']);
+        $updateAssoc->titulaire = htmlspecialchars($_POST['titCom']);
+        $updateAssoc->suppleant = htmlspecialchars($_POST['supCom']);
+        $updateAssoc->updateCommission();
+    ?>
+    <meta http-equiv="refresh" content="0;URL=modifier_documents">
+    <?php
+  }
+}
+
+/* MODIFICATION VILLINFO */
+
+elseif(isset($_GET['content']) && $_GET['content'] == "villinfo"){
+  $updateAssoc = new infos();
+  $associationQuery = $updateAssoc->showInfo();
+  if(isset($_GET['confirmUpdate'])){
+    $assocInfos = new infos();
+    $updateAssoc->id = $_GET['confirmUpdate'];
+        $updateAssoc->name = htmlspecialchars($_POST['nameAssoc']);
+            $updateAssoc->trimestre = htmlspecialchars($_POST['triInfos']);
+                $updateAssoc->year = htmlspecialchars($_POST['yearInfos']);
+    if (isset($_FILES['profilePicture']) && !empty($_FILES['profilePicture'])) {
+        $fichier = basename($_FILES['profilePicture']['name']);
+        $taille_maxi = 100000;
+        $taille = filesize($_FILES['profilePicture']['tmp_name']);
+        $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
+        $extension = strrchr($_FILES['profilePicture']['name'], '.');
+        $updateAssoc->corpus = htmlspecialchars($_FILES['profilePicture']['name']);
+        $dossier = 'assets/images/';
+        move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
+
+    }
+        $updateAssoc->updateVillinfo();
+    ?>
+    <meta http-equiv="refresh" content="0;URL=modifier_villinfo">
+    <?php
+  }
+}
 ?>

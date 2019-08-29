@@ -48,6 +48,18 @@ class infos extends dataBase {
         $savedHuntCount->execute();
         return $savedHuntCount;
     }
+    public function updateVillinfo() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE villinfos SET name = :name,  corpus = :corpus, trimestre = :trimestre, year=:year WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':corpus', $this->corpus, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':trimestre', $this->trimestre, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':year', $this->year, PDO::PARAM_INT);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
+    }
     public function __destruct() {
 
     }

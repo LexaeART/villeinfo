@@ -25,7 +25,7 @@ class reunions extends dataBase {
         return $allCr = $allCr->fetchAll(PDO::FETCH_OBJ);
     }
     public function allCrBis() {
-        $allReunions = $this->db->query('SELECT `id`,`name` FROM `compterendus`');
+        $allReunions = $this->db->query('SELECT `id`,`name`, `pdf` FROM `compterendus`');
         $allReunions->execute();
         return $allReunions = $allReunions->fetchAll(PDO::FETCH_OBJ);
     }
@@ -53,6 +53,16 @@ class reunions extends dataBase {
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();
         return $savedHuntCount;
+    }
+    public function updateCr() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE compterendus SET name = :name,  pdf = :pdf WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':pdf', $this->pdf, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
     }
     public function __destruct() {
 
