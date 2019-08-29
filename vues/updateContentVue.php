@@ -359,23 +359,227 @@
     </tbody>
   </table>
     <?php
+
+/* CONSEIL */
+
   }elseif(isset($_GET['content']) && $_GET['content']=='conseil') {
     ?>
-    <form class="" action="#" method="post">
-
-    </form>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nom de l'association </th>
+          <th scope="col">Modifier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($associationQuery as $associationQuery){ ?>
+          <div class="modal fade" id="EditProfile<?= $associationQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p>Modification de <?= $associationQuery->name ?></p>
+                </div>
+                <div class="modal-body">
+                  <form action="updateContent.php?content=conseil&confirmUpdate=<?= $associationQuery->id ?>" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="nameAssoc">Nom de l'association</label>
+                  <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" value="<?= $associationQuery->name ?>">
+                  <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="descriptionAssoc">Déscription de l'association</label>
+                  <textarea class="form-control" id="descriptionAssoc" name="descriptionAssoc" aria-describedby="descriptionAssoc" value=""><?= $associationQuery->fonction ?></textarea>
+              <?= isset($formError['descriptionAssoc']) ? $formError['descriptionAssoc'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="pictureAssoc">Image de l'association</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1" name="profilePicture" value="<?= $associationQuery->img ?>">
+                </div>
+                <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier l'association</button>
+              </form>
+                </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <tr>
+          <th scope="row"><?= $associationQuery->id ?></th>
+          <td><?= $associationQuery->name ?></td>
+          <td><a name="registration-button" class="registration-link btn btn-danger" data-toggle="modal" data-target="#EditProfile<?= $associationQuery->id ?>"><i class="fas fa-lock"></i> Modifier</a></td>
+        </tr>
+      <?php } ?>
+    </tbody>
+  </table>
     <?php
+
+/* REUNIONS */
+
   }elseif(isset($_GET['content']) && $_GET['content']=='reunions') {
     ?>
-    <form class="" action="#" method="post">
-
-    </form>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nom de l'association </th>
+          <th scope="col">Modifier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($associationQuery as $associationQuery){ ?>
+          <div class="modal fade" id="EditProfile<?= $associationQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p>Modification de <?= $associationQuery->name ?></p>
+                </div>
+                <div class="modal-body">
+                  <form action="updateContent.php?content=reunions&confirmUpdate=<?= $associationQuery->id ?>" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="nameAssoc">Nom de l'association</label>
+                  <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" value="<?= $associationQuery->name ?>">
+                  <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="pictureAssoc">Image de l'association</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1" name="profilePicture" value="<?= $associationQuery->pdf ?>">
+                </div>
+                <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier l'association</button>
+              </form>
+                </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <tr>
+          <th scope="row"><?= $associationQuery->id ?></th>
+          <td><?= $associationQuery->name ?></td>
+          <td><a name="registration-button" class="registration-link btn btn-danger" data-toggle="modal" data-target="#EditProfile<?= $associationQuery->id ?>"><i class="fas fa-lock"></i> Modifier</a></td>
+        </tr>
+      <?php } ?>
+    </tbody>
+  </table>
     <?php
+
+/* COMMISSIONS */
+
   }elseif(isset($_GET['content']) && $_GET['content']=='documents') {
     ?>
-    <form class="" action="#" method="post">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nom de l'association </th>
+          <th scope="col">Modifier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($associationQuery as $associationQuery){ ?>
+          <div class="modal fade" id="EditProfile<?= $associationQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p>Modification de <?= $associationQuery->commission ?></p>
+                </div>
+                <div class="modal-body">
+                  <form action="updateContent.php?content=documents&confirmUpdate=<?= $associationQuery->id ?>" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="nameAssoc">Nom de l'association</label>
+                  <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" value="<?= $associationQuery->commission ?>">
+                  <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="objetCom">Nom de l'association</label>
+                  <input type="text" class="form-control" id="nameAssoc" name="objetCom" aria-describedby="objetCom" value="<?= $associationQuery->objet ?>">
+                  <?= isset($formError['objetCom']) ? $formError['objetCom'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="titCom">Nom de l'association</label>
+                  <input type="text" class="form-control" id="titCom" name="titCom" aria-describedby="titCom" value="<?= $associationQuery->titulaire ?>">
+                  <?= isset($formError['titCom']) ? $formError['titCom'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="supCom">Nom de l'association</label>
+                  <input type="text" class="form-control" id="supCom" name="supCom" aria-describedby="supCom" value="<?= $associationQuery->suppleant ?>">
+                  <?= isset($formError['supCom']) ? $formError['supCom'] : '' ?>
+                </div>
+                <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier l'association</button>
+              </form>
+                </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <tr>
+          <th scope="row"><?= $associationQuery->id ?></th>
+          <td><?= $associationQuery->commission ?></td>
+          <td><a name="registration-button" class="registration-link btn btn-danger" data-toggle="modal" data-target="#EditProfile<?= $associationQuery->id ?>"><i class="fas fa-lock"></i> Modifier</a></td>
+        </tr>
+      <?php } ?>
+    </tbody>
+  </table>
+    <?php
 
-    </form>
+/* VILLINFO */
+
+  }elseif(isset($_GET['content']) && $_GET['content']=='villinfo') {
+    ?>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nom de l'association </th>
+          <th scope="col">Modifier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($associationQuery as $associationQuery){ ?>
+          <div class="modal fade" id="EditProfile<?= $associationQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p>Modification de <?= $associationQuery->name ?></p>
+                </div>
+                <div class="modal-body">
+                  <form action="updateContent.php?content=villinfo&confirmUpdate=<?= $associationQuery->id ?>" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="nameAssoc">Nom de l'association</label>
+                  <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" value="<?= $associationQuery->name ?>">
+                  <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="triInfos">Nom de l'association</label>
+                  <input type="text" class="form-control" id="triInfos" name="triInfos" aria-describedby="triInfos" value="<?= $associationQuery->trimestre ?>">
+                  <?= isset($formError['triInfos']) ? $formError['triInfos'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="yearInfos">Nom de l'association</label>
+                  <input type="text" class="form-control" id="yearInfos" name="yearInfos" aria-describedby="yearInfos" value="<?= $associationQuery->year ?>">
+                  <?= isset($formError['yearInfos']) ? $formError['yearInfos'] : '' ?>
+                </div>
+                <div class="form-group">
+                  <label for="pictureAssoc">Image de l'association</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1" name="profilePicture" value="<?= $associationQuery->corpus ?>">
+                </div>
+                <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier l'association</button>
+              </form>
+                </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <tr>
+          <th scope="row"><?= $associationQuery->id ?></th>
+          <td><?= $associationQuery->name ?></td>
+          <td><a name="registration-button" class="registration-link btn btn-danger" data-toggle="modal" data-target="#EditProfile<?= $associationQuery->id ?>"><i class="fas fa-lock"></i> Modifier</a></td>
+        </tr>
+      <?php } ?>
+    </tbody>
+  </table>
     <?php
   }
  ?>

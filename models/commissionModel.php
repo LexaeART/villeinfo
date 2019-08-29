@@ -35,6 +35,18 @@ class commission extends dataBase {
         $savedHuntCount->execute();
         return $savedHuntCount;
     }
+    public function updateCommission() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE commissions SET commission = :commission,  objet = :objet, titulaire = :titulaire, suppleant=:suppleant WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':commission', $this->commission, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':objet', $this->objet, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':titulaire', $this->titulaire, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':suppleant', $this->suppleant, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
+    }
     public function __destruct() {
 
     }

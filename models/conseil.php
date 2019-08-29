@@ -33,6 +33,17 @@ class conseil extends dataBase {
         $savedHuntCount->execute();
         return $savedHuntCount;
     }
+    public function updateConseil() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE conseil SET name = :name,  fonction = :fonction, img = :img WHERE id = :id';
+        $udateAssoc = $this->db->prepare($query);
+        $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':fonction', $this->fonction, PDO::PARAM_STR);
+        $udateAssoc->bindValue(':img', $this->img, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $udateAssoc->execute();
+    }
     public function __destruct() {
 
     }
