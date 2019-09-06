@@ -11,11 +11,11 @@
       </thead>
       <tbody>
         <?php foreach ($associationQuery as $associationQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $associationQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $associationQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <p>Valider la suppression de l'association :</p>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $associationQuery->name ?></p></center>
@@ -56,17 +56,17 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de l'aactivité</th>
+          <th scope="col">Nom de l'activité</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($takeAllQuery as $takeAllQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <p>Valider la suppression de l'activité :</p>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $takeAllQuery->name ?></p></center>
@@ -107,17 +107,17 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de l'aactivité</th>
+          <th scope="col">Nom de l'école</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($takeAllQuery as $takeAllQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <p>Valider la suppression de l'école :</p>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $takeAllQuery->name ?></p></center>
@@ -158,17 +158,17 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de l'aactivité</th>
+          <th scope="col">Nom du patrimoine</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($takeAllQuery as $takeAllQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <h2>Valider la suppression du patrimoine :</h2>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $takeAllQuery->name ?></p></center>
@@ -209,17 +209,17 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de l'aactivité</th>
+          <th scope="col">Nom de la démarche</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($takeAllQuery as $takeAllQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <p>Valider la suppression de la démarche :</p>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $takeAllQuery->name ?></p></center>
@@ -260,17 +260,17 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de l'aactivité</th>
+          <th scope="col">Nom du conseiller</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($takeAllQuery as $takeAllQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <p>Valider la suppression du conseiller :</p>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $takeAllQuery->name ?></p></center>
@@ -311,17 +311,17 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de l'aactivité</th>
+          <th scope="col">Nom de la réunion</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($takeAllQuery as $takeAllQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <p>Valider la suppression de la réunion :</p>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $takeAllQuery->name ?></p></center>
@@ -362,17 +362,17 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de l'aactivité</th>
+          <th scope="col">Nom du document</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($takeAllQuery as $takeAllQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <p>Valider la suppression du document</p>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $takeAllQuery->commission ?></p></center>
@@ -413,17 +413,17 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de l'aactivité</th>
+          <th scope="col">Nom du Vill'Infos</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($takeAllQuery as $takeAllQuery){ ?>
-          <div class="modal fade" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+          <div class="modal fade bd-example-modal-lg" id="EditProfile<?= $takeAllQuery->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p>Valider la suppresion de l'utilisateur :</p>
+                  <p>Valider la suppression du Vill'Infos :</p>
                 </div>
                 <div class="modal-body">
                   <center><p><?= $takeAllQuery->name ?></p></center>

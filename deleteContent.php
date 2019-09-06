@@ -58,7 +58,7 @@ if(!isset($_SESSION['id'])){
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-12 col-sm-12 col-12" id="navAdmin">
-            <h2>Sélectionnez la page sur la quelle vous souhaitez travailler</h2>
+            <h2>Sélectionnez la page sur laquelle vous souhaitez travailler</h2>
             <form id="page-changer" action="" method="post">
               <select name="nav">
                 <option value="">Sélectionnez la page</option>
@@ -86,6 +86,24 @@ if(!isset($_SESSION['id'])){
                   <div class="col-12" id="nameProfil">
                     <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
                   </div>
+                  <a href="menu_admin">
+                    <div class="row">
+                      <div class="col-12" id="backToWeb">
+                        <p>
+                          Retour
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="accueil_ville">
+                    <div class="row">
+                      <div class="col-12" id="backToWeb">
+                        <p>
+                          Retournez sur le site
+                        </p>
+                      </div>
+                    </div>
+                  </a>
                   <a href="controlers/logout.php">
                     <div class="col-12" id="decoProfil">
                       <div class="row">
