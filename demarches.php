@@ -89,7 +89,7 @@ include_once 'controlers/demarcheController.php';
       </div>
       <select id="demarcheName" name="demarcheName">
         <?php foreach ($demarcheQuery as $demarcheQuery){ ?>
-          <option value="<?= $demarcheQuery->id ?>"><?= $demarcheQuery->name ?></option>
+          <option value="<?= $demarcheQuery->id ?>"><?= $demarcheQuery->name ?>></option>
         <?php } ?>
       </select>
       <div class="row">

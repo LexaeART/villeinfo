@@ -58,7 +58,7 @@
   <label for="concernActivity">Activité concérnée</label>
   <select class="" name="concernActivity">
     <?php foreach ($allActivitiesQuery as $allActivitiesQuery){ ?>
-    <option value="<?= $allActivitiesQuery->id ?>"><?= $allActivitiesQuery->name ?></option>
+    <option value="<?= $allActivitiesQuery->id ?>"><?= $allActivitiesQuery->name ?>></option>
     <?php } ?>
   </select>
   <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
