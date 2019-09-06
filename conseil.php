@@ -87,7 +87,7 @@ Le C.C.A.S. est chargé d'étudier les dossiers des personnes en difficulté.
         <?php
           foreach ($conseillers as $conseiller) {
             ?>
-              <div id="change" class="col-lg-5 col-12">
+              <div id="change" class="col-lg-5 col-sm-12">
                 <div class="row">
                   <div class="col-12 col-lg-4 imgAssoc">
                     <a href="assets/images/conseil/<?=$conseiller->img?>" data-lightbox="image-<?=$conseiller->id?>" data-title="<?=$conseiller->name?>"><img src="assets/images/conseil/<?=$conseiller->img?>" /></a>

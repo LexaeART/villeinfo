@@ -100,27 +100,33 @@ include_once 'controlers/newsPaginationControler.php';
               </div>
             </div>
           </div>
-        <?php }
-        if(isset($_GET['order'])){
+
+          <?php }
+          if(isset($_GET['order'])){
+            ?>
+            <div class="row justify-content-between">
+            <div class="button col-3 fill">
+              <a href = "allArticles.php? float-rightpage=<?= $page - 1 ?>&order=asc" class = "<?= $start <= 1 ? 'disabled' : '' ?> btn">Précédente</a>
+            </div>
+            <div class="button col-3 fill">
+              <a href="allArticles.php?page=<?= $page + 1 ?>&order=asc" class="<?= $page >= $maxPagination ? 'disabled' : '' ?> btn">Suivante</a>
+            </div>
+            </div>
+            <?php
+          }else{
+            ?>
+            <div class="row justify-content-around">
+            <div class="button col-3 fill">
+              <a href = "allArticles.php?page=<?= $page - 1 ?>" class = "<?= $start <= 1 ? 'disabled' : '' ?> btn">Précédente</a>
+            </div>
+            <div class="button col-3 fill">
+              <a href="allArticles.php?page=<?= $page + 1 ?>" class="<?= $page >= $maxPagination ? 'disabled' : '' ?> btn">Suivante</a>
+            </div>
+            </div>
+            <?php
+          }
           ?>
-          <div class="button">
-            <a href = "allArticles.php?page=<?= $page - 1 ?>&order=asc" class = "<?= $start <= 1 ? 'disabled' : '' ?> btn">Précédente</a>
-          </div>
-          <div class="button">
-            <a href="allArticles.php?page=<?= $page + 1 ?>&order=asc" class="<?= $page >= $maxPagination ? 'disabled' : '' ?> btn">Suivante</a>
-          </div>
-          <?php
-        }else{
-          ?>
-          <div class="button">
-            <a href = "allArticles.php?page=<?= $page - 1 ?>" class = "<?= $start <= 1 ? 'disabled' : '' ?> btn">Précédente</a>
-          </div>
-          <div class="button">
-            <a href="allArticles.php?page=<?= $page + 1 ?>" class="<?= $page >= $maxPagination ? 'disabled' : '' ?> btn">Suivante</a>
-          </div>
-          <?php
-        }
-        ?>
+
       </div>
     </main>
     <?php
