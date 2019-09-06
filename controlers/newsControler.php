@@ -6,6 +6,7 @@ if(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "deleteNews"){
     $assocInfos = new news();
     $assocInfos->id = $_GET['confirmDelete'];
     $assocInfos->deleteNews();
+    echo '<script>alert("Article supprimé !");</script>';
     ?>
     <meta http-equiv="refresh" content="0;URL=supprimer_news">
     <?php
@@ -44,6 +45,7 @@ if(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "deleteNews"){
     $addActivity->dateDay = date("Y-m-d");
     $addActivity->idUser = $_SESSION['id'];
     $addActivity->addNews();
+    echo '<script>alert("L\'article est bien ajouté !");</script>';
     /*include_once 'models/newsletterModel.php';
     $allNews = new newsletter();
     $allNews->allNews();
@@ -56,7 +58,7 @@ if(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "deleteNews"){
   }
 }elseif(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "updateNews"){
   $updateAssoc = new news();
-  $associationQuery = $updateAssoc->allNews();
+  $associationQuery = $updateAssoc->fullNews();
   if(isset($_GET['confirmUpdate'])){
     $assocInfos = new news();
     $updateAssoc->id = $_GET['confirmUpdate'];
@@ -75,6 +77,7 @@ if(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "deleteNews"){
 
     }
         $updateAssoc->updateNews();
+        echo '<script>alert("Article modifié !");</script>';
     ?>
     <meta http-equiv="refresh" content="0;URL=../modifier_news">
     <?php

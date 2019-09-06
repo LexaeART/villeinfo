@@ -34,6 +34,9 @@ if(!isset($_SESSION['id'])){
   ?>
   <body>
     <div class="container-fluid">
+
+<!-- AJOUT NEWS -->
+
       <?php if (isset($_GET['newsGestion']) && $_GET['newsGestion']=="addNews"){ ?>
       <div class="row">
         <div class="col-12 titlePage">

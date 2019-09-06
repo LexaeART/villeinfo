@@ -140,7 +140,7 @@ elseif(isset($_POST['addConseil'])){
 
 elseif(isset($_POST['addActivity'])){
   $addActivity = new activites();
-  $allActivitiesQuery = $allActivities->allActivites();
+  $allActivitiesQuery = $addActivity->allActivites();
   $formError = array();
 
   if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
