@@ -38,12 +38,12 @@
     <form action="#" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="nameAssoc">Nom de l'activité</label>
-    <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom de l'association">
+    <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom de l'activité">
     <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
   </div>
   <div class="form-group">
     <label for="descriptionAssoc">Description de l'activité</label>
-    <textarea class="form-control" id="descriptionAssoc" name="descriptionAssoc" aria-describedby="descriptionAssoc" placeholder="Description de l'association"></textarea>
+    <textarea class="form-control" id="descriptionAssoc" name="descriptionAssoc" aria-describedby="descriptionAssoc" placeholder="Description de l'activité"></textarea>
 <?php if(isset($formError['descriptionAssoc'])){?><p class="alert alert-danger"><?php echo $formError['descriptionAssoc'];}?></p>
   </div>
   <div class="form-group">
@@ -95,7 +95,7 @@
     <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
   </div>
   <div class="form-group">
-    <label for="descriptionAssoc">Nom de la diréctrice</label>
+    <label for="descriptionAssoc">Nom de la directrice</label>
     <textarea class="form-control" id="descriptionAssoc" name="descriptionAssoc" aria-describedby="descriptionAssoc" placeholder="Nom de la directrice"></textarea>
 <?php if(isset($formError['descriptionAssoc'])){?><p class="alert alert-danger"><?php echo $formError['descriptionAssoc'];}?></p>
   </div>
@@ -117,7 +117,7 @@
   <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
   </div>
 <div class="form-group">
-<label for="nameAssoc">Prénom et Nom de l'enseignant</label>
+<label for="nameAssoc">Prénom et NOM de l'enseignant</label>
 <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Prenom et Nom de l'enseignant">
 <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
 </div>
@@ -191,16 +191,16 @@
 
   }elseif(isset($_GET['content']) && $_GET['content']=='conseil') {
     ?>
-    <h3>Ajout d'un élus</h3>
+    <h3>Ajout d'un élu</h3>
     <form action="#" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="nameAssoc">Nom de l'élu</label>
-    <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom de l'élus">
+    <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom de l'élu">
     <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
   </div>
   <div class="form-group">
     <label for="namePresident">Fonction de l'élu</label>
-    <input type="text" class="form-control" id="namePresident" name="namePresident" aria-describedby="namePresident" placeholder="Fonction de l'élus">
+    <input type="text" class="form-control" id="namePresident" name="namePresident" aria-describedby="namePresident" placeholder="Fonction de l'élu">
     <?php if(isset($formError['namePresident'])){?><p class="alert alert-danger"><?php echo $formError['namePresident'];}?></p>
   </div>
   <div class="form-group">
@@ -225,7 +225,7 @@
   </div>
   <button type="submit" class="btn btn-primary" name="addReunion">Ajouter une réunion</button>
 </form>
-<h3>Ajout d'un Compte-Rendus</h3>
+<h3>Ajout d'un Compte-Rendu</h3>
 <form action="#" method="post" enctype="multipart/form-data">
   <div class="form-group">
   <label for="concernActivity">Réunion concérnée</label>
@@ -237,12 +237,12 @@
   <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
   </div>
 <div class="form-group">
-<label for="nameAssoc">Nom du Compte-Rendus</label>
-<input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom du Compte-Rendus">
+<label for="nameAssoc">Nom du Compte-Rendu</label>
+<input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" placeholder="Nom du Compte-Rendu">
 <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
 </div>
 <div class="form-group">
-<label for="pictureAssoc">PDF du Compte-Rendus</label>
+<label for="pictureAssoc">PDF du Compte-Rendu</label>
 <input type="file" class="form-control-file" id="exampleFormControlFile1" name="profilePicture">
 </div>
 <button type="submit" class="btn btn-primary" name="addCr">Ajouter le Compte-Rendu</button>
@@ -273,7 +273,7 @@
   </div>
   <div class="form-group">
     <label for="nameSup">Membres suppléants</label>
-    <input type="text" class="form-control" id="nameSup" name="nameSup" aria-describedby="nameSup" placeholder="Nom des suppleants">
+    <input type="text" class="form-control" id="nameSup" name="nameSup" aria-describedby="nameSup" placeholder="Nom des suppléants">
     <?php if(isset($formError['nameSup'])){?><p class="alert alert-danger"><?php echo $formError['nameSup'];}?></p>
   </div>
   <button type="submit" class="btn btn-primary" name="addCommissions">Ajouter la commission</button>

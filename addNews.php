@@ -52,7 +52,7 @@ if(!isset($_SESSION['id'])){
       <div class="container" id="containerAdmin">
         <div class="row">
           <div class="col-lg-8 col-md-12 col-sm-12 col-12" id="navAdmin">
-            <h2>Ajout d'une News</h2>
+            <h2>Ajout d'un article</h2>
             <form action="#" method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="titleNews">Titre de l'article</label>
@@ -60,7 +60,7 @@ if(!isset($_SESSION['id'])){
                 <?= isset($formError['titleNews']) ? $formError['titleNews'] : '' ?>
               </div>
               <div class="form-group">
-                <label for="bodyNews">Contenu de l'article</label>
+                <label for="bodyNews">Corps de l'article</label>
                 <textarea class="form-control" id="bodyNews" name="bodyNews" aria-describedby="bodyNews" placeholder="Corps de l'article"></textarea>
                 <?= isset($formError['bodyNews']) ? $formError['bodyNews'] : '' ?>
               </div>
@@ -164,7 +164,7 @@ if(!isset($_SESSION['id'])){
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nom de l'association </th>
+                    <th scope="col">Nom de l'article </th>
                     <th scope="col">Modifier</th>
                   </tr>
                 </thead>
@@ -179,25 +179,25 @@ if(!isset($_SESSION['id'])){
                           <div class="modal-body">
                             <form action="addNews.php?newsGestion=updateNews&confirmUpdate=<?= $associationQuery->id ?>" method="post" enctype="multipart/form-data">
                           <div class="form-group">
-                            <label for="nameAssoc">Nom de l'association</label>
+                            <label for="nameAssoc">Titre de l'article</label>
                             <input type="text" class="form-control" id="nameAssoc" name="nameAssoc" aria-describedby="nameAssoc" value="<?= $associationQuery->title ?>">
                             <?= isset($formError['nameAssoc']) ? $formError['nameAssoc'] : '' ?>
                           </div>
                           <div class="form-group">
-                            <label for="categorieNews">Nom de l'association</label>
+                            <label for="categorieNews">Catégorie de l'article</label>
                             <input type="text" class="form-control" id="categorieNews" name="categorieNews" aria-describedby="categorieNews" value="<?= $associationQuery->categorie ?>">
                             <?= isset($formError['categorieNews']) ? $formError['categorieNews'] : '' ?>
                           </div>
                           <div class="form-group">
-                            <label for="descriptionAssoc">Déscription de l'association</label>
+                            <label for="descriptionAssoc">Corps de l'article</label>
                             <textarea class="form-control" id="descriptionAssoc" name="descriptionAssoc" aria-describedby="descriptionAssoc" value=""><?= $associationQuery->body ?></textarea>
                         <?= isset($formError['descriptionAssoc']) ? $formError['descriptionAssoc'] : '' ?>
                           </div>
                           <div class="form-group">
-                            <label for="pictureAssoc">Image de l'association</label>
+                            <label for="pictureAssoc">Image de l'article</label>
                             <input type="file" class="form-control-file" id="exampleFormControlFile1" name="profilePicture" value="<?= $associationQuery->mainPicture ?>">
                           </div>
-                          <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier l'association</button>
+                          <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier l'article</button>
                         </form>
                           </div>
                             </div>
@@ -224,6 +224,24 @@ if(!isset($_SESSION['id'])){
                   <div class="col-12" id="nameProfil">
                     <h3><?= $connectedInfos->firstName ?> <?= $connectedInfos->lastName ?></h3>
                   </div>
+                  <a href="menu_admin">
+                    <div class="row">
+                      <div class="col-12" id="backToWeb">
+                        <p>
+                          Retour
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="accueil_ville">
+                    <div class="row">
+                      <div class="col-12" id="backToWeb">
+                        <p>
+                          Retournez sur le site
+                        </p>
+                      </div>
+                    </div>
+                  </a>
                   <a href="controlers/logout.php">
                     <div class="col-12" id="decoProfil">
                       <div class="row">
@@ -234,9 +252,9 @@ if(!isset($_SESSION['id'])){
                           <p>Déconnexion</p>
                         </div>
                       </div>
-                    </div></a>
-                  </div>
+                  </div></a>
                 </div>
+              </div>
               </div>
             </div>
             <!-- Version mobile -->
@@ -279,12 +297,12 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12 col-12" id="navAdmin">
-              <h2>Page de suppresion d'une News</h2>
+              <h2>Page de suppresion d'un article</h2>
               <table class="table table-sm">
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nom de l'association </th>
+                    <th scope="col">Nom de l'article </th>
                     <th scope="col">Supprimer</th>
                   </tr>
                 </thead>
@@ -294,7 +312,7 @@ if(!isset($_SESSION['id'])){
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <p>Valider la suppresion de la News :</p>
+                            <p>Valider la suppresion de l'article :</p>
                           </div>
                           <div class="modal-body">
                             <center><p><?= $takeAllQuery->title ?></p></center>
@@ -420,21 +438,21 @@ if(!isset($_SESSION['id'])){
             <div class="row">
               <a href="ajout_news">
                 <div class="col-12 lineAdmin">
-                  <h3>Ajouter une News</h3>
+                  <h3>Ajouter un article</h3>
                 </div>
               </a>
             </div>
             <div class="row">
               <a href="modifier_news">
                 <div class="col-12 lineAdmin">
-                  <h3>Modifier une News</h3>
+                  <h3>Modifier un article</h3>
                 </div>
               </a>
             </div>
             <div class="row">
               <a href="supprimer_news">
                 <div class="col-12 lineAdmin">
-                  <h3>Supprimer une News</h3>
+                  <h3>Supprimer un article</h3>
                 </div>
               </a>
             </div>

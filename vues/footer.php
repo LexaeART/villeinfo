@@ -12,17 +12,17 @@
             <h2>Inscription à la newsletter</h2>
             <form action="#" method="post" enctype="multipart/form-data">
           <div class="form-group">
-            <label for="mail">Votre adresse Mail</label>
+            <label for="mail">Votre adresse mail</label>
             <input type="mail" class="form-control" id="mail" name="mail" aria-describedby="mail" value="">
           </div>
           <?= isset($formError['mail']) ? $formError['mail'] : '' ?>
           <div class="form-group">
-            <label for="lastName">Votre Nom</label>
+            <label for="lastName">Votre nom</label>
             <input type="text" class="form-control" id="lastName" name="lastName" aria-describedby="lastName" value="">
           </div>
           <?= isset($formError['lastName']) ? $formError['lastName'] : '' ?>
           <div class="form-group">
-            <label for="firstName">Votre Prénom</label>
+            <label for="firstName">Votre prénom</label>
             <input type="text" class="form-control" id="firstName" name="firstName" aria-describedby="firstName" value="">
           </div>
           <?= isset($formError['firstName']) ? $formError['firstName'] : '' ?>
@@ -30,7 +30,7 @@
             <div class="row">
               <div class="col-12">
                 <input type="checkbox" name="accept" id="accept" value="accept" class="checkbox" tabindex="1">
-<label for="accept" class="checkbox__label"><span class="checkbox__text">Vos informations serrons conservées afin que vous puissiez recevoir les newsletters, il vous serra possible de vous désabonner sans frais supplémentaires et à tout moment sur le site de la commune de ville ou via chaque mail que vous recevrez.</span></label>
+<label for="accept" class="checkbox__label"><span class="checkbox__text">Vos informations seront conservées afin que vous puissiez recevoir les newsletters, il vous sera possible de vous désabonner sans frais supplémentaires et à tout moment sur le site de la commune de ville ou via chaque mail que vous recevrez.</span></label>
               </div>
                   <?= isset($formError['accept']) ? $formError['accept'] : '' ?>
 

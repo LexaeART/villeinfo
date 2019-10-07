@@ -221,7 +221,7 @@
                         <input type="text" class="form-control" id="statusPrice" name="statusPrice" aria-describedby="statusPrice" value="<?= $tarifsQuery->name ?>">
                         <?php if(isset($formError['statusPrice'])){?><p class="alert alert-danger"><?php echo $formError['statusPrice'];}?></p>
                       </div>
-                      <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier enseignants</button>
+                      <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier enseignant</button>
                         <hr>
                       </form>
                     <?php } ?>
@@ -270,7 +270,7 @@
                   <?php if(isset($formError['nameAssoc'])){?><p class="alert alert-danger"><?php echo $formError['nameAssoc'];}?></p>
                 </div>
                 <div class="form-group">
-                  <label for="descriptionAssoc">description du patrimoine</label>
+                  <label for="descriptionAssoc">Description du patrimoine</label>
                   <textarea class="form-control" id="descriptionAssoc" name="descriptionAssoc" aria-describedby="descriptionAssoc" value=""><?= $associationQuery->description ?></textarea>
               <?php if(isset($formError['descriptionAssoc'])){?><p class="alert alert-danger"><?php echo $formError['descriptionAssoc'];}?></p>
                 </div>
@@ -472,7 +472,7 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Nom de la comission </th>
+          <th scope="col">Nom de la commission </th>
           <th scope="col">Modifier</th>
         </tr>
       </thead>
@@ -506,7 +506,7 @@
                   <input type="text" class="form-control" id="supCom" name="supCom" aria-describedby="supCom" value="<?= $associationQuery->suppleant ?>">
                   <?php if(isset($formError['supCom'])){?><p class="alert alert-danger"><?php echo $formError['supCom'];}?></p>
                 </div>
-                <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier le document</button>
+                <button type="submit" class="btn btn-primary" name="confirmUpdate">Modifier la commission</button>
               </form>
                 </div>
                   </div>
