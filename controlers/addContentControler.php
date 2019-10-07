@@ -1,4 +1,10 @@
 <?php
+  $addActivity = new activites();
+  $allActivitiesQuery = $addActivity->allActivites();
+    $allSchool = new ecoles();
+    $allSchool = $allSchool->allEcoles();
+      $allReunions = new reunions();
+      $allReunions = $allReunions->allReunions();
 /* AJOUT ASSOCIATION */
 
 if(isset($_POST['addAssoc'])){
@@ -140,7 +146,6 @@ elseif(isset($_POST['addConseil'])){
 
 elseif(isset($_POST['addActivity'])){
   $addActivity = new activites();
-  $allActivitiesQuery = $addActivity->allActivites();
   $formError = array();
 
   if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
@@ -202,7 +207,6 @@ elseif(isset($_POST['addPriceActivity'])){
 
 elseif(isset($_POST['addSchool'])){
   $addActivity = new ecoles();
-  $allSchool = $allSchool->allEcoles();
   $formError = array();
 
   if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
@@ -256,7 +260,6 @@ elseif(isset($_POST['addTeacher'])){
 
 elseif(isset($_POST['addReunion'])){
   $addActivity = new reunions();
-  $allReunions = $allReunions->allReunions();
   $formError = array();
 
   if (isset($_POST['nameAssoc']) && !empty($_POST['nameAssoc'])) {
