@@ -16,7 +16,7 @@ include_once 'controlers/villinfosController.php';
   <meta name="reply-to" content="contact@kaiartsu.fr">
   <title>Vill'infos | Vie Municipale | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
-  <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
+  <link rel="icon" type="image/png" href="assets/images/logovillet.png" />
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/villinfos.css" rel="stylesheet" type="text/css"/>
   <link href="assets/css/footerMuni.css" rel="stylesheet" type="text/css"/>

@@ -11,7 +11,7 @@ if(!isset($_SESSION['id'])){
   <head>
     <meta charset="UTF-8">
     <title>Administration de Ville - Connexion</title>
-    <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
+    <link rel="icon" type="image/png" href="assets/images/logovillet.png" />
     <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/sub.css" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

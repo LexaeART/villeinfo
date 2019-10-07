@@ -21,7 +21,7 @@ if(!isset($_SESSION['id'])){
     <meta name="reply-to" content="contact@kaiartsu.fr">
     <title>Accueil | Mairie de la commune de Ville | Hauts-de-France</title>
     <!-- Link CSS -->
-    <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
+    <link rel="icon" type="image/png" href="assets/images/logovillet.png" />
     <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/admin.css" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

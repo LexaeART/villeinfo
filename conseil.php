@@ -16,7 +16,7 @@
   <meta name="reply-to" content="contact@kaiartsu.fr">
   <title>Conseil | Vie Municipale | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
-  <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
+  <link rel="icon" type="image/png" href="assets/images/logovillet.png" />
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/lib/lightbox/css/lightbox.css" rel="stylesheet" />
   <link href="assets/css/conseil.css" rel="stylesheet" type="text/css"/>

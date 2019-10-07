@@ -11,7 +11,7 @@
   <meta name="reply-to" content="contact@kaiartsu.fr">
   <title>Charte de confidentialité | Mairie de la commune de Ville | Hauts-de-France</title>
   <!-- Link CSS -->
-  <link rel="shortcut icon" type="assets/images/logo/fav.png" href="assets/images/logo/fav.png"/>
+  <link rel="icon" type="image/png" href="assets/images/logovillet.png" />
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/mentions.css" rel="stylesheet" type="text/css"/>
   <link href="assets/css/footer.css" rel="stylesheet" type="text/css"/>
