@@ -15,8 +15,7 @@ if(!isset($_SESSION['id'])){
     <!--        <meta name="generator" content="Jekyll v3.8.5" />-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Kaiartsu est une agence web basée en Hauts-de-France. Spécialisée dans le développement de site web et d'identité visuelle." />
-    <meta name="publisher" content="Kaiartsu">
+    <meta name="description" content="Retrouvez tous les services et démarches, les infos pratiques, les actualités et événements de la commune de Ville." />    <meta name="publisher" content="Kaiartsu">
     <meta name="author" content="Kaiartsu" />
     <meta name="reply-to" content="contact@kaiartsu.fr">
     <title>Accueil | Mairie de la commune de Ville | Hauts-de-France</title>
