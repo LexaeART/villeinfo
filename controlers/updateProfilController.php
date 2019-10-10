@@ -49,7 +49,7 @@ if (isset($_POST['updateInfos'])) {
         $user->updateInfoUsers();
         $formErrorPseudo['validInfos'] = 'Modification enregistrées ! Redirection vers la page de profil !';
         ?>
-        <meta http-equiv="refresh" content="1;URL=../adminLogin.php ?>">
+        <meta http-equiv="refresh" content="1;URL=/connexion">
         <?php
     }
 }

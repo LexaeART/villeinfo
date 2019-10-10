@@ -1,4 +1,5 @@
 <?php
+include_once 'config.php';
 
 class demarches extends dataBase {
 
@@ -13,12 +14,12 @@ class demarches extends dataBase {
         parent::__construct();
     }
     public function allDemarches() {
-        $allDemarches = $this->db->query('SELECT `id`,`name`, `contact`, `doc`, `prix`, `more` FROM `demarche`');
+        $allDemarches = $this->db->query('SELECT `id`,`name`, `contact`, `doc`, `prix`, `more` FROM '.self::PREFIX.'demarche');
         $allDemarches->execute();
         return $allDemarches = $allDemarches->fetchAll(PDO::FETCH_OBJ);
     }
     public function allDemarchesInfos() {
-        $query = 'SELECT `id`,`name`, `contact`, `doc`, `prix`, `more` FROM `demarche` WHERE `id` = :id';
+        $query = 'SELECT `id`,`name`, `contact`, `doc`, `prix`, `more` FROM '.self::PREFIX.'demarche WHERE `id` = :id';
         $allDemarchesInfos = $this->db->prepare($query);
         $allDemarchesInfos->bindValue(':id', $this->id, PDO::PARAM_INT);
         //Si l'insertion s'est correctement déroulée on retourne vrai
@@ -27,7 +28,7 @@ class demarches extends dataBase {
     }
     public function addDemarche() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'INSERT INTO `demarche`(`name`, `contact`, `doc`, `prix`, `more`) VALUES(:name, :contact, :doc, :prix, :more)';
+        $query = 'INSERT INTO '.self::PREFIX.'demarche(`name`, `contact`, `doc`, `prix`, `more`) VALUES(:name, :contact, :doc, :prix, :more)';
         $addAssoc = $this->db->prepare($query);
         $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
         $addAssoc->bindValue(':contact', $this->contact, PDO::PARAM_STR);
@@ -38,7 +39,7 @@ class demarches extends dataBase {
         return $addAssoc->execute();
     }
     public function deleteDemarche() {
-        $query = 'DELETE FROM `demarche` WHERE `id` = :id';
+        $query = 'DELETE FROM '.self::PREFIX.'demarche WHERE `id` = :id';
         $savedHuntCount = $this->db->prepare($query);
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();
@@ -46,7 +47,7 @@ class demarches extends dataBase {
     }
     public function updateDemarche() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'UPDATE demarche SET name = :name,  contact = :contact, doc = :doc, prix = :prix, more = :more WHERE id = :id';
+        $query = 'UPDATE '.self::PREFIX.'demarche SET name = :name,  contact = :contact, doc = :doc, prix = :prix, more = :more WHERE id = :id';
         $udateAssoc = $this->db->prepare($query);
         $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
         $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);

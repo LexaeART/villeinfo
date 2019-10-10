@@ -1,4 +1,4 @@
-<?php include 'models/dataBase.php'; ?>
+<?php include '../models/dataBase.php'; ?>
 <?php
 
 session_unset();
@@ -7,5 +7,5 @@ session_start();
 $_SESSION['connected'] = 0;
 $_SESSION['id'] = 0;
 $_SESSION['pseudo'] = 'Visiteur';
-header('Location: ../adminlogin.php');
+header('Location: connexion');
 ?>

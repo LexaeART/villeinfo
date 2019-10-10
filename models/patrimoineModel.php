@@ -1,4 +1,5 @@
 <?php
+include_once 'config.php';
 
 class patrimoine extends dataBase {
 
@@ -12,14 +13,14 @@ class patrimoine extends dataBase {
     }
 
     public function allPatrimoine() {
-        $showConseil = $this->db->query('SELECT `id`,`name`,`description`, `picture` FROM `patrimoine`');
+        $showConseil = $this->db->query('SELECT `id`,`name`,`description`, `picture` FROM '.self::PREFIX.'patrimoine');
         $showConseil->execute();
         return $showConseil = $showConseil->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function addPatrimoine() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'INSERT INTO `patrimoine`(`name`, `description`, `picture`) VALUES(:name, :description, :picture)';
+        $query = 'INSERT INTO '.self::PREFIX.'patrimoine(`name`, `description`, `picture`) VALUES(:name, :description, :picture)';
         $addAssoc = $this->db->prepare($query);
         $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
         $addAssoc->bindValue(':description', $this->description, PDO::PARAM_STR);
@@ -28,7 +29,7 @@ class patrimoine extends dataBase {
         return $addAssoc->execute();
     }
     public function deletePatrimoine() {
-        $query = 'DELETE FROM `patrimoine` WHERE `id` = :id';
+        $query = 'DELETE FROM '.self::PREFIX.'patrimoine WHERE `id` = :id';
         $savedHuntCount = $this->db->prepare($query);
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();
@@ -36,7 +37,7 @@ class patrimoine extends dataBase {
     }
     public function updatePatrimoine() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'UPDATE patrimoine SET name = :name,  description = :description, picture = :picture WHERE id = :id';
+        $query = 'UPDATE '.self::PREFIX.'patrimoine SET name = :name,  description = :description, picture = :picture WHERE id = :id';
         $udateAssoc = $this->db->prepare($query);
         $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
         $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);

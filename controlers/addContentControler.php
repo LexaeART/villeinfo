@@ -33,7 +33,7 @@ if(isset($_POST['addAssoc'])){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addModel->picture = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'assets/images/';
+    $dossier = '../assets/images/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
@@ -65,7 +65,7 @@ elseif(isset($_POST['addPatrimoine'])){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addPatrimoine->picture = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'assets/images/';
+    $dossier = '../assets/images/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
@@ -133,7 +133,7 @@ elseif(isset($_POST['addConseil'])){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addConseil->img = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'assets/images/conseil/';
+    $dossier = '../assets/images/conseil/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
@@ -165,7 +165,7 @@ elseif(isset($_POST['addActivity'])){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addActivity->picture = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'assets/images/conseil/';
+    $dossier = '../assets/images/conseil/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
@@ -226,7 +226,7 @@ elseif(isset($_POST['addSchool'])){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addActivity->picture = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'assets/images/conseil/';
+    $dossier = '../assets/images/conseil/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
@@ -295,7 +295,7 @@ elseif(isset($_POST['addCr'])){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addActivity->pdf = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'media/cr/';
+    $dossier = '../media/cr/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
@@ -369,7 +369,7 @@ elseif(isset($_POST['addVillinfo'])){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addActivity->corpus = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'media/vilinfo/';
+    $dossier = '../media/vilinfo/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
@@ -415,7 +415,7 @@ elseif(isset($_POST['addNews'])){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addActivity->mainPicture = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'media/news/';
+    $dossier = '../media/news/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
