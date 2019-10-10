@@ -37,7 +37,7 @@ if(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "deleteNews"){
     $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
     $extension = strrchr($_FILES['profilePicture']['name'], '.');
     $addActivity->mainPicture = htmlspecialchars($_FILES['profilePicture']['name']);
-    $dossier = 'media/news/';
+    $dossier = '../media/news/';
     move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
   }
@@ -72,7 +72,7 @@ if(isset($_GET['newsGestion']) && $_GET['newsGestion'] == "deleteNews"){
         $extensions = array('.png', '.gif', '.jpg', '.jpeg');
         $extension = strrchr($_FILES['profilePicture']['name'], '.');
         $updateAssoc->mainPicture = htmlspecialchars($_FILES['profilePicture']['name']);
-        $dossier = 'assets/images/';
+        $dossier = '../assets/images/';
         move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
     }

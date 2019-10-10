@@ -1,5 +1,6 @@
 <?php
-class dataBase {
+include_once 'config.php';
+class dataBase extends config {
     //L'attribut $db sera disponible dans ses enfants
     protected $db;
     /*
@@ -8,7 +9,7 @@ class dataBase {
      */
     public function __construct() {
         try {
-            $this->db = new PDO('mysql:host=localhost;dbname=ville;charset=utf8', 'root', '');
+            $this->db = new PDO('mysql:host='.self::HOSTNAME.';dbname='.self::DBNAME.';charset=utf8', ''.self::USERDB.'', ''.self::PSWDB.'');
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }

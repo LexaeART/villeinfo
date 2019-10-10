@@ -19,7 +19,7 @@ if(isset($_GET['content']) && $_GET['content'] == "association"){
         $extensions = array('.png', '.gif', '.jpg', '.jpeg');
         $extension = strrchr($_FILES['profilePicture']['name'], '.');
         $updateAssoc->picture = htmlspecialchars($_FILES['profilePicture']['name']);
-        $dossier = 'assets/images/';
+        $dossier = '../assets/images/';
         move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
     }
@@ -48,7 +48,7 @@ elseif(isset($_GET['content']) && $_GET['content'] == "activites"){
         $extensions = array('.png', '.gif', '.jpg', '.jpeg');
         $extension = strrchr($_FILES['profilePicture']['name'], '.');
         $updateAssoc->picture = htmlspecialchars($_FILES['profilePicture']['name']);
-        $dossier = 'assets/images/';
+        $dossier = '../assets/images/';
         move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
     }
@@ -91,7 +91,7 @@ elseif(isset($_GET['content']) && $_GET['content'] == "ecole"){
         $extensions = array('.png', '.gif', '.jpg', '.jpeg');
         $extension = strrchr($_FILES['profilePicture']['name'], '.');
         $updateAssoc->picture = htmlspecialchars($_FILES['profilePicture']['name']);
-        $dossier = 'assets/images/';
+        $dossier = '../assets/images/';
         move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
     }
@@ -131,7 +131,7 @@ elseif(isset($_GET['content']) && $_GET['content'] == "patrimoine"){
         $extensions = array('.png', '.gif', '.jpg', '.jpeg');
         $extension = strrchr($_FILES['profilePicture']['name'], '.');
         $updateAssoc->picture = htmlspecialchars($_FILES['profilePicture']['name']);
-        $dossier = 'assets/images/';
+        $dossier = '../assets/images/';
         move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
     }
@@ -199,7 +199,7 @@ elseif(isset($_GET['content']) && $_GET['content'] == "conseil"){
         $extensions = array('.png', '.gif', '.jpg', '.jpeg');
         $extension = strrchr($_FILES['profilePicture']['name'], '.');
         $updateAssoc->img = htmlspecialchars($_FILES['profilePicture']['name']);
-        $dossier = 'assets/images/';
+        $dossier = '../assets/images/';
         move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
     }
@@ -226,7 +226,7 @@ elseif(isset($_GET['content']) && $_GET['content'] == "reunions"){
         $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
         $extension = strrchr($_FILES['profilePicture']['name'], '.');
         $updateAssoc->pdf = htmlspecialchars($_FILES['profilePicture']['name']);
-        $dossier = 'assets/images/';
+        $dossier = '../assets/images/';
         move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
     }
@@ -274,7 +274,7 @@ elseif(isset($_GET['content']) && $_GET['content'] == "villinfo"){
         $extensions = array('.png', '.gif', '.jpg', '.jpeg', '.pdf');
         $extension = strrchr($_FILES['profilePicture']['name'], '.');
         $updateAssoc->corpus = htmlspecialchars($_FILES['profilePicture']['name']);
-        $dossier = 'assets/images/';
+        $dossier = '../assets/images/';
         move_uploaded_file($_FILES['profilePicture']['tmp_name'], $dossier . $fichier);
 
     }

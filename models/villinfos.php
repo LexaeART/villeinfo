@@ -1,4 +1,5 @@
 <?php
+include_once 'config.php';
 
 class infos extends dataBase {
 
@@ -12,18 +13,18 @@ class infos extends dataBase {
     }
 
     public function showInfo() {
-        $showInfo = $this->db->query('SELECT `id`,`name`, `corpus`, `trimestre`, `year` FROM `villinfos`');
+        $showInfo = $this->db->query('SELECT `id`,`name`, `corpus`, `trimestre`, `year` FROM '.self::PREFIX.'villinfos');
         $showInfo->execute();
         return $showInfo = $showInfo->fetchAll(PDO::FETCH_OBJ);
     }
     public function allYears() {
-        $allYears = $this->db->query('SELECT `id`,`year` FROM `villinfos` GROUP BY `year`');
+        $allYears = $this->db->query('SELECT `id`,`year` FROM '.self::PREFIX.'villinfos GROUP BY `year`');
         $allYears->execute();
         return $allYears = $allYears->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function infosByYear() {
-        $query = 'SELECT `id`,`name`, `corpus`, `trimestre`, `year` FROM `villinfos` WHERE `year`=:id';
+        $query = 'SELECT `id`,`name`, `corpus`, `trimestre`, `year` FROM '.self::PREFIX.'villinfos WHERE `year`=:id';
         $allDemarchesInfos = $this->db->prepare($query);
         $allDemarchesInfos->bindValue(':id', $this->id, PDO::PARAM_INT);
         //Si l'insertion s'est correctement déroulée on retourne vrai
@@ -32,7 +33,7 @@ class infos extends dataBase {
     }
     public function addVillinfo() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'INSERT INTO `villinfos`(`name`, `corpus`, `trimestre`, `year`) VALUES(:name, :corpus, :trimestre, :year)';
+        $query = 'INSERT INTO '.self::PREFIX.'villinfos(`name`, `corpus`, `trimestre`, `year`) VALUES(:name, :corpus, :trimestre, :year)';
         $addAssoc = $this->db->prepare($query);
         $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
         $addAssoc->bindValue(':corpus', $this->corpus, PDO::PARAM_STR);
@@ -42,7 +43,7 @@ class infos extends dataBase {
         return $addAssoc->execute();
     }
     public function deleteVillinfo() {
-        $query = 'DELETE FROM `villinfos` WHERE `id` = :id';
+        $query = 'DELETE FROM '.self::PREFIX.'villinfos WHERE `id` = :id';
         $savedHuntCount = $this->db->prepare($query);
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();
@@ -50,7 +51,7 @@ class infos extends dataBase {
     }
     public function updateVillinfo() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'UPDATE villinfos SET name = :name,  corpus = :corpus, trimestre = :trimestre, year=:year WHERE id = :id';
+        $query = 'UPDATE '.self::PREFIX.'villinfos SET name = :name,  corpus = :corpus, trimestre = :trimestre, year=:year WHERE id = :id';
         $udateAssoc = $this->db->prepare($query);
         $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
         $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);

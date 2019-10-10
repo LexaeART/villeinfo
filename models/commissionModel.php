@@ -1,4 +1,5 @@
 <?php
+include_once 'config.php';
 
 class commission extends dataBase {
 
@@ -13,13 +14,13 @@ class commission extends dataBase {
     }
 
     public function showCommission() {
-        $showCommission = $this->db->query('SELECT `id`,`commission`, `objet`, `titulaire`, `suppleant` FROM `commissions`');
+        $showCommission = $this->db->query('SELECT `id`,`commission`, `objet`, `titulaire`, `suppleant` FROM '.self::PREFIX.'commissions');
         $showCommission->execute();
         return $showCommission = $showCommission->fetchAll(PDO::FETCH_OBJ);
     }
     public function addCommission() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'INSERT INTO `commissions`(`commission`, `objet`, `titulaire`, `suppleant`) VALUES(:name, :objet, :titulaire, :suppleant)';
+        $query = 'INSERT INTO '.self::PREFIX.'commissions(`commission`, `objet`, `titulaire`, `suppleant`) VALUES(:name, :objet, :titulaire, :suppleant)';
         $addAssoc = $this->db->prepare($query);
         $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
         $addAssoc->bindValue(':objet', $this->objet, PDO::PARAM_STR);
@@ -29,7 +30,7 @@ class commission extends dataBase {
         return $addAssoc->execute();
     }
     public function deleteCom() {
-        $query = 'DELETE FROM `commissions` WHERE `id` = :id';
+        $query = 'DELETE FROM '.self::PREFIX.'commissions WHERE `id` = :id';
         $savedHuntCount = $this->db->prepare($query);
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();
@@ -37,7 +38,7 @@ class commission extends dataBase {
     }
     public function updateCommission() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'UPDATE commissions SET commission = :commission,  objet = :objet, titulaire = :titulaire, suppleant=:suppleant WHERE id = :id';
+        $query = 'UPDATE '.self::PREFIX.'commissions SET commission = :commission,  objet = :objet, titulaire = :titulaire, suppleant=:suppleant WHERE id = :id';
         $udateAssoc = $this->db->prepare($query);
         $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
         $udateAssoc->bindValue(':commission', $this->commission, PDO::PARAM_STR);

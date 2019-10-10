@@ -1,8 +1,8 @@
 <?php
-include_once 'models/dataBase.php';
-include_once 'models/users.php';
+include_once '../models/dataBase.php';
+include_once '../models/users.php';
 if (isset($_GET['updateUser'])){
-  include_once 'controlers/updateProfilController.php';
+  include_once '../controlers/updateProfilController.php';
   ?>
   <div class="row">
     <div class="col-12">
@@ -65,7 +65,7 @@ if (isset($_GET['updateUser'])){
   </form>
   <?php
 }elseif(isset($_GET['deleteUser'])){
-  include_once 'controlers/deleteuserController.php';
+  include_once '../controlers/deleteuserController.php';
   ?>
   <table class="table table-sm">
     <thead>

@@ -1,4 +1,5 @@
 <?php
+include_once 'config.php';
 
 class associations extends dataBase {
 
@@ -13,13 +14,13 @@ class associations extends dataBase {
     }
 
     public function allAssoc() {
-        $showConseil = $this->db->query('SELECT `id`,`name`,`president`,`description`, `picture` FROM `associations`');
+        $showConseil = $this->db->query('SELECT `id`,`name`,`president`,`description`, `picture` FROM '.self::PREFIX.'associations');
         $showConseil->execute();
         return $showConseil = $showConseil->fetchAll(PDO::FETCH_OBJ);
     }
     public function addAssoc() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'INSERT INTO `associations`(`name`, `president`, `description`, `picture`) VALUES(:name, :president, :description, :picture)';
+        $query = 'INSERT INTO '.self::PREFIX.'associations(`name`, `president`, `description`, `picture`) VALUES(:name, :president, :description, :picture)';
         $addAssoc = $this->db->prepare($query);
         $addAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);
         $addAssoc->bindValue(':president', $this->president, PDO::PARAM_STR);
@@ -30,7 +31,7 @@ class associations extends dataBase {
     }
 
     public function deleteAssoc() {
-        $query = 'DELETE FROM `associations` WHERE `id` = :id';
+        $query = 'DELETE FROM '.self::PREFIX.'associations WHERE `id` = :id';
         $savedHuntCount = $this->db->prepare($query);
         $savedHuntCount->bindValue(':id', $this->id, PDO::PARAM_INT);
         $savedHuntCount->execute();
@@ -39,7 +40,7 @@ class associations extends dataBase {
 
     public function updateAssoc() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'UPDATE associations SET name = :name, president = :president, description = :description, picture = :picture WHERE id = :id';
+        $query = 'UPDATE '.self::PREFIX.'associations SET name = :name, president = :president, description = :description, picture = :picture WHERE id = :id';
         $udateAssoc = $this->db->prepare($query);
         $udateAssoc->bindValue(':id', $this->id, PDO::PARAM_STR);
         $udateAssoc->bindValue(':name', $this->name, PDO::PARAM_STR);

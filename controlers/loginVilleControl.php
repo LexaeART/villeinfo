@@ -37,7 +37,7 @@ if (isset($_POST['logInSubmit'])) {
             $_SESSION['id']=$login->id;
             $_SESSION['connected']=1;
                 ?>
-                <meta http-equiv="refresh" content="0.1;URL=/menu_admin_<?= $login->id ?>">
+                <meta http-equiv="refresh" content="0.1;URL=menu_admin_<?= $login->id ?>">
                 <?php
             }
         } else {
